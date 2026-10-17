@@ -90,11 +90,9 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
     setNow(nowStr);
     const tick = setInterval(() => setNow(londonNow()), 60_000);
 
-    // Start today, or tomorrow once everything today has finished.
-    const anyLeftToday = sessions.some((s) => s.day === t && s.end > nowStr);
-    const start = anyLeftToday ? tDate : addDays(tDate, 1);
+    // Today through the same weekday next week.
     const upcoming = Array.from({ length: WINDOW_DAYS }, (_, i) => {
-      const date = addDays(start, i);
+      const date = addDays(tDate, i);
       return { day: dayOfDate(date), date };
     });
     setSlots(upcoming);
@@ -134,7 +132,7 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
       clearInterval(tick);
       window.removeEventListener(EVT_TIMETABLE_FILTER, onFilter);
     };
-  }, [centres, lockedCentre, sessions]);
+  }, [centres, lockedCentre]);
 
   // Keep the URL in step so filtered views can be shared or bookmarked.
   useEffect(() => {
