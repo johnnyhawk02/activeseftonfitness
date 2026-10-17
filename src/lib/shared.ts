@@ -59,7 +59,25 @@ export type Session = {
   tags?: SessionTag[];
   /** Short qualifier from the published timetable, e.g. "2.5 lanes" or "Families only". */
   note?: string;
+  /** The matching slot in the booking system, for a link straight to its "Book now" page. */
+  booking?: BookingRef;
 };
+
+export type BookingRef = {
+  activityId: string;
+  locationId: string;
+  group: string;
+  /** Local end time as the booking system stores it, e.g. "10:29:59". */
+  end: string;
+};
+
+/**
+ * When the booking references in timetable.json were collected. Booking-system IDs change when a
+ * centre changes its timetable, and a stale ID lands on an empty search page — so after
+ * BOOKING_REFS_MAX_AGE_DAYS links fall back to the (still useful) filtered search until refreshed.
+ */
+export const BOOKING_REFS_CHECKED = '2026-10-17';
+const BOOKING_REFS_MAX_AGE_DAYS = 42;
 
 export type Notice = { id: string; tone: 'info' | 'warning'; message: string; link?: { label: string; href: string } };
 
@@ -94,13 +112,13 @@ const londonParts = (d: Date) =>
       .map((p) => [p.type, Number(p.value)]),
   ) as Record<'year' | 'month' | 'day' | 'hour' | 'minute', number>;
 
-/** UTC instant of a Europe/London wall-clock date ("2026-10-19") and time ("09:30"). */
+/** UTC instant of a Europe/London wall-clock date ("2026-10-19") and time ("09:30" or "10:29:59"). */
 function londonToUtc(date: string, time: string) {
   const [y, mo, d] = date.split('-').map(Number);
-  const [h, mi] = time.split(':').map(Number);
-  const guess = Date.UTC(y, mo - 1, d, h, mi);
+  const [h, mi, sec = 0] = time.split(':').map(Number);
+  const guess = Date.UTC(y, mo - 1, d, h, mi, sec);
   const p = londonParts(new Date(guess));
-  const offset = Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute) - guess;
+  const offset = Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute, sec) - guess;
   return new Date(guess - offset);
 }
 
@@ -111,16 +129,33 @@ function nextDate(day: Day, now: Date) {
   return new Date(Date.UTC(p.year, p.month - 1, p.day + diff)).toISOString().slice(0, 10);
 }
 
+const utcIso = (d: Date) => d.toISOString().replace('.000Z', 'Z');
+
 /**
- * Deep link into the booking portal: the session's centre and activity group on its next date,
- * starting from its start time, so it is the first result (with live spaces and "Book now").
+ * Deep link into the booking portal for the session's next occurrence.
+ * With a fresh booking reference it opens that slot's "Book now" page (price options, then checkout);
+ * otherwise it opens the centre's search for that activity group, starting from the session's time,
+ * so the session is the first result.
  */
 export function sessionBookingUrl(s: Session, siteId: string, now = new Date()) {
   const date = nextDate(s.day, now);
+  const refsAgeDays = (now.getTime() - Date.parse(BOOKING_REFS_CHECKED)) / 86_400_000;
+  if (s.booking && refsAgeDays <= BOOKING_REFS_MAX_AGE_DAYS) {
+    // Same parameters (and order) the portal itself uses for its "Book now" button.
+    const details = new URLSearchParams({
+      activityEndTime: utcIso(londonToUtc(date, s.booking.end)),
+      activityGroupId: s.booking.group,
+      activityId: s.booking.activityId,
+      activityStartTime: utcIso(londonToUtc(date, s.start)),
+      locationId: s.booking.locationId,
+      siteId,
+    });
+    return `${BOOKING_URL}/details?${details}`;
+  }
   const params = new URLSearchParams({
     siteId,
     activityGroupId: bookingGroup(s),
-    dateFrom: londonToUtc(date, s.start).toISOString().replace('.000Z', 'Z'),
+    dateFrom: utcIso(londonToUtc(date, s.start)),
     dateTo: date,
   });
   return `${BOOKING_URL}?${params}`;
