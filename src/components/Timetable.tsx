@@ -8,6 +8,7 @@ import {
   DAY_NAMES,
   EVT_TIMETABLE_FILTER,
   formatTime,
+  sessionBookingUrl,
   todayKey,
   type Category,
   type Day,
@@ -16,7 +17,7 @@ import {
   type TimetableFilterDetail,
 } from '../lib/shared';
 
-type CentreOption = { id: string; name: string; shortName: string };
+type CentreOption = { id: string; name: string; shortName: string; bookingSiteId: string };
 
 type Props = {
   sessions: Session[];
@@ -52,6 +53,9 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
   const searchId = useId();
 
   const centreName = useMemo(() => Object.fromEntries(centres.map((c) => [c.id, c.name])), [centres]);
+  const siteId = useMemo(() => Object.fromEntries(centres.map((c) => [c.id, c.bookingSiteId])), [centres]);
+  // Deep links depend on today's date, so they're built after mount (the server render keeps the generic URL).
+  const bookHref = (s: Session) => (now ? sessionBookingUrl(s, siteId[s.centerId]) : BOOKING_URL);
   const centreShort = useMemo(() => Object.fromEntries(centres.map((c) => [c.id, c.shortName])), [centres]);
 
   // Initial state from the URL (shareable filters), then listen for filter requests from other islands.
@@ -311,7 +315,7 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
                             <td className="py-4 pr-4 align-top">{!past && <StatusBadge session={s} />}</td>
                           )}
                           <td className="py-3.5 text-right align-top">
-                            {past ? <span className="text-xs text-muted">Finished</span> : <BookButton session={s} centreName={centreName[s.centerId]} />}
+                            {past ? <span className="text-xs text-muted">Finished</span> : <BookButton session={s} centreName={centreName[s.centerId]} href={bookHref(s)} />}
                           </td>
                         </tr>
                       );
@@ -391,7 +395,7 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
                               </dl>
                               {!past && (
                                 <div className="mt-4">
-                                  <BookButton session={s} centreName={centreName[s.centerId]} block />
+                                  <BookButton session={s} centreName={centreName[s.centerId]} href={bookHref(s)} block />
                                 </div>
                               )}
                             </div>
@@ -493,10 +497,10 @@ function Tags({ tags, inline }: { tags?: SessionTag[]; inline?: boolean }) {
   );
 }
 
-function BookButton({ session, centreName, block }: { session: Session; centreName: string; block?: boolean }) {
+function BookButton({ session, centreName, href, block }: { session: Session; centreName: string; href: string; block?: boolean }) {
   return (
     <a
-      href={BOOKING_URL}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       className={`inline-flex items-center justify-center gap-1.5 rounded-lg bg-sage px-3.5 py-2 text-sm font-semibold whitespace-nowrap text-white hover:bg-sage-hover ${

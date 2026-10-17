@@ -22,6 +22,8 @@ export type Center = {
   id: string;
   name: string;
   shortName: string;
+  /** Site code in the Gladstone booking system, e.g. "MLC". */
+  bookingSiteId: string;
   town: string;
   image: string;
   imageAlt: string;
@@ -68,6 +70,62 @@ export function imageSrcSet(image: string) {
 }
 
 /** 24h "07:30" → "7:30am" */
+/** Booking-system activity group a session is listed under. */
+export function bookingGroup(s: Session) {
+  if (s.title === 'Kayak Taster') return 'MAINPOOL';
+  if (s.title === 'Aqua Fit') return 'AQUACLASS';
+  if (s.category === 'Swimming') return 'SWIMSESSIONS';
+  if (s.tags?.includes('Virtual')) return 'VIRTUALCLASSES';
+  return 'GROUPFITNESS';
+}
+
+const londonParts = (d: Date) =>
+  Object.fromEntries(
+    new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Europe/London',
+      hourCycle: 'h23',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+    })
+      .formatToParts(d)
+      .map((p) => [p.type, Number(p.value)]),
+  ) as Record<'year' | 'month' | 'day' | 'hour' | 'minute', number>;
+
+/** UTC instant of a Europe/London wall-clock date ("2026-10-19") and time ("09:30"). */
+function londonToUtc(date: string, time: string) {
+  const [y, mo, d] = date.split('-').map(Number);
+  const [h, mi] = time.split(':').map(Number);
+  const guess = Date.UTC(y, mo - 1, d, h, mi);
+  const p = londonParts(new Date(guess));
+  const offset = Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute) - guess;
+  return new Date(guess - offset);
+}
+
+/** London date ("YYYY-MM-DD") of the next time this weekday comes round, today included. */
+function nextDate(day: Day, now: Date) {
+  const p = londonParts(now);
+  const diff = (DAYS.indexOf(day) - DAYS.indexOf(todayKey(now)) + 7) % 7;
+  return new Date(Date.UTC(p.year, p.month - 1, p.day + diff)).toISOString().slice(0, 10);
+}
+
+/**
+ * Deep link into the booking portal: the session's centre and activity group on its next date,
+ * starting from its start time, so it is the first result (with live spaces and "Book now").
+ */
+export function sessionBookingUrl(s: Session, siteId: string, now = new Date()) {
+  const date = nextDate(s.day, now);
+  const params = new URLSearchParams({
+    siteId,
+    activityGroupId: bookingGroup(s),
+    dateFrom: londonToUtc(date, s.start).toISOString().replace('.000Z', 'Z'),
+    dateTo: date,
+  });
+  return `${BOOKING_URL}?${params}`;
+}
+
 export function formatTime(t: string) {
   const [h, m] = t.split(':').map(Number);
   const suffix = h >= 12 ? 'pm' : 'am';

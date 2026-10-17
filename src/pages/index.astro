@@ -21,7 +21,7 @@ import { centers, sessions } from '../lib/data';
       </p>
     </div>
     <div class="mt-8">
-      <Timetable client:idle sessions={sessions} centres={centers.map(({ id, name, shortName }) => ({ id, name, shortName }))} />
+      <Timetable client:idle sessions={sessions} centres={centers.map(({ id, name, shortName, bookingSiteId }) => ({ id, name, shortName, bookingSiteId }))} />
     </div>
   </section>
 </Layout>

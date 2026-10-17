@@ -107,7 +107,7 @@ const others = centers.filter((c) => c.id !== centre.id);
       <h2 id="timetable-heading" class="mt-2 text-4xl font-medium text-ink">Classes &amp; sessions</h2>
       {centre.timetableNote && <p class="mt-3 max-w-2xl text-muted">{centre.timetableNote}</p>}
       <div class="mt-8">
-        <Timetable client:idle sessions={centreSessions} centres={[{ id: centre.id, name: centre.name, shortName: centre.shortName }]} lockedCentre={centre.id} />
+        <Timetable client:idle sessions={centreSessions} centres={[{ id: centre.id, name: centre.name, shortName: centre.shortName, bookingSiteId: centre.bookingSiteId }]} lockedCentre={centre.id} />
       </div>
     </section>
 
