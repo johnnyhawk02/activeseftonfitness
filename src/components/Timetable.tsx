@@ -348,15 +348,21 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
                           <span className="mt-0.5 block truncate text-sm text-muted">
                             {lockedCentre ? s.room : `${centreShort[s.centerId]} · ${s.room}`}
                           </span>
-                          {(past || s.status || s.tags?.length) && (
-                            <span className="mt-2 flex flex-wrap items-center gap-1.5">
-                              {past ? <span className="text-xs text-muted">Finished</span> : <StatusBadge session={s} compact />}
-                              <Tags tags={s.tags} inline />
-                            </span>
-                          )}
                         </span>
                         <ChevronDown aria-hidden className={`mt-1 size-5 shrink-0 text-muted transition-transform ${open ? 'rotate-180' : ''}`} />
                       </button>
+                      {/* Book sits outside the toggle so it's always one tap away. */}
+                      <div className="flex items-center gap-3 pr-4 pb-4 pl-[5.875rem]">
+                        <span className="flex min-w-0 flex-1 flex-wrap items-center gap-1.5">
+                          {!past && <StatusBadge session={s} compact />}
+                          <Tags tags={s.tags} inline />
+                        </span>
+                        {past ? (
+                          <span className="text-xs text-muted">Finished</span>
+                        ) : (
+                          <BookButton session={s} centreName={centreName[s.centerId]} href={bookHref(s)} />
+                        )}
+                      </div>
                       <AnimatePresence initial={false}>
                         {open && (
                           <m.div
@@ -393,11 +399,6 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
                                   </>
                                 )}
                               </dl>
-                              {!past && (
-                                <div className="mt-4">
-                                  <BookButton session={s} centreName={centreName[s.centerId]} href={bookHref(s)} block />
-                                </div>
-                              )}
                             </div>
                           </m.div>
                         )}
@@ -497,15 +498,13 @@ function Tags({ tags, inline }: { tags?: SessionTag[]; inline?: boolean }) {
   );
 }
 
-function BookButton({ session, centreName, href, block }: { session: Session; centreName: string; href: string; block?: boolean }) {
+function BookButton({ session, centreName, href }: { session: Session; centreName: string; href: string }) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center gap-1.5 rounded-lg bg-sage px-3.5 py-2 text-sm font-semibold whitespace-nowrap text-white hover:bg-sage-hover ${
-        block ? 'w-full py-3' : ''
-      }`}
+      className="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-lg bg-sage px-3.5 py-2 text-sm font-semibold whitespace-nowrap text-white hover:bg-sage-hover"
     >
       Book Session
       <span className="sr-only">
