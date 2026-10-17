@@ -29,32 +29,22 @@
     "payOnTheDay": true
   },
   {
-    "id": "8e134c2d47",
+    "id": "2aa1709ab0",
     "centerId": "meadows",
     "day": "Mon",
     "start": "06:30",
-    "end": "12:00",
+    "end": "08:00",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
+    "note": "Lane 1",
     "booking": {
       "activityId": "M2CLPUB06300626",
       "locationId": "MZMP000001",
       "group": "SWIMSESSIONS",
       "end": "07:59:59"
     }
-  },
-  {
-    "id": "4d35eff465",
-    "centerId": "meadows",
-    "day": "Mon",
-    "start": "06:30",
-    "end": "09:00",
-    "title": "Public Swim",
-    "category": "Swimming",
-    "room": "Learner Pool",
-    "instructor": null
   },
   {
     "id": "b4aec4ba59",
@@ -111,11 +101,11 @@
     }
   },
   {
-    "id": "dc00ceca6a",
+    "id": "3c5a4832be",
     "centerId": "bootle",
     "day": "Mon",
     "start": "07:00",
-    "end": "09:00",
+    "end": "08:00",
     "title": "Lane Swim",
     "category": "Swimming",
     "room": "Main Pool",
@@ -148,11 +138,11 @@
     }
   },
   {
-    "id": "6111e89703",
+    "id": "e88a233b95",
     "centerId": "dunes",
     "day": "Mon",
     "start": "07:00",
-    "end": "19:00",
+    "end": "08:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
@@ -162,6 +152,24 @@
       "locationId": "DZMP000004",
       "group": "SWIMSESSIONS",
       "end": "08:29:59"
+    }
+  },
+  {
+    "id": "6d9605ab4f",
+    "centerId": "meadows",
+    "day": "Mon",
+    "start": "07:00",
+    "end": "07:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M1CLPUB07000225",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "07:29:59"
     }
   },
   {
@@ -222,6 +230,24 @@
     }
   },
   {
+    "id": "f87be6c341",
+    "centerId": "meadows",
+    "day": "Mon",
+    "start": "07:30",
+    "end": "08:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M1CLPUB07300225",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "07:59:59"
+    }
+  },
+  {
     "id": "589c70c5b3",
     "centerId": "meadows",
     "day": "Mon",
@@ -240,6 +266,23 @@
       "locationId": "MZSTU00001",
       "group": "VIRTUALCLASSES",
       "end": "08:29:59"
+    }
+  },
+  {
+    "id": "0dd59480c8",
+    "centerId": "bootle",
+    "day": "Mon",
+    "start": "08:00",
+    "end": "09:00",
+    "title": "Lane Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLLAN08000926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "08:59:59"
     }
   },
   {
@@ -274,6 +317,24 @@
     ]
   },
   {
+    "id": "d8227caf58",
+    "centerId": "meadows",
+    "day": "Mon",
+    "start": "08:00",
+    "end": "09:10",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M1CLPUB08000225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "09:09:59"
+    }
+  },
+  {
     "id": "df2c693475",
     "centerId": "meadows",
     "day": "Mon",
@@ -294,11 +355,28 @@
     }
   },
   {
-    "id": "21c8c86355",
+    "id": "f3b0642c76",
+    "centerId": "dunes",
+    "day": "Mon",
+    "start": "08:30",
+    "end": "10:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D1CLPUB08300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "09:59:59"
+    }
+  },
+  {
+    "id": "d897b2def5",
     "centerId": "bootle",
     "day": "Mon",
     "start": "09:00",
-    "end": "12:00",
+    "end": "10:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
@@ -342,6 +420,24 @@
     "instructor": null,
     "note": "Over 60s and under 16s (term time only), pay on the day",
     "payOnTheDay": true
+  },
+  {
+    "id": "479aee53ba",
+    "centerId": "meadows",
+    "day": "Mon",
+    "start": "09:00",
+    "end": "09:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M1CLPUB09000225",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "09:29:59"
+    }
   },
   {
     "id": "8b807611be",
@@ -469,6 +565,24 @@
     }
   },
   {
+    "id": "1d2069f153",
+    "centerId": "meadows",
+    "day": "Mon",
+    "start": "09:30",
+    "end": "10:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M1CLPUB09300825",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "10:29:59"
+    }
+  },
+  {
     "id": "4f26017c4d",
     "centerId": "netherton",
     "day": "Mon",
@@ -527,7 +641,7 @@
     }
   },
   {
-    "id": "cf5d2173ef",
+    "id": "18414a38c4",
     "centerId": "dunes",
     "day": "Mon",
     "start": "10:00",
@@ -562,11 +676,11 @@
     }
   },
   {
-    "id": "31459128b4",
+    "id": "1196c3f4b0",
     "centerId": "dunes",
     "day": "Mon",
     "start": "10:00",
-    "end": "13:00",
+    "end": "11:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Learner Pool",
@@ -588,6 +702,41 @@
     "category": "Group Fitness",
     "room": "Studio",
     "instructor": null
+  },
+  {
+    "id": "d604753924",
+    "centerId": "bootle",
+    "day": "Mon",
+    "start": "10:30",
+    "end": "12:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB10300926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "11:59:59"
+    }
+  },
+  {
+    "id": "7e918f936e",
+    "centerId": "meadows",
+    "day": "Mon",
+    "start": "10:30",
+    "end": "11:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M1CLPUB10300825",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "11:29:59"
+    }
   },
   {
     "id": "fae3ba5e13",
@@ -644,6 +793,23 @@
       "locationId": "CZSTU00001",
       "group": "GROUPFITNESS",
       "end": "11:59:59"
+    }
+  },
+  {
+    "id": "2430617bc1",
+    "centerId": "dunes",
+    "day": "Mon",
+    "start": "11:00",
+    "end": "12:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D1CLPUB11000425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "12:29:59"
     }
   },
   {
@@ -733,6 +899,24 @@
     }
   },
   {
+    "id": "406f0e9c48",
+    "centerId": "meadows",
+    "day": "Mon",
+    "start": "11:30",
+    "end": "12:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M1CLPUB11300825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "12:29:59"
+    }
+  },
+  {
     "id": "f5dbf2a2f3",
     "centerId": "netherton",
     "day": "Mon",
@@ -750,7 +934,7 @@
     }
   },
   {
-    "id": "79e2ce3a75",
+    "id": "d0869f1017",
     "centerId": "bootle",
     "day": "Mon",
     "start": "12:00",
@@ -765,18 +949,6 @@
       "group": "SWIMSESSIONS",
       "end": "12:59:59"
     }
-  },
-  {
-    "id": "3bc10a5bb3",
-    "centerId": "meadows",
-    "day": "Mon",
-    "start": "12:00",
-    "end": "13:00",
-    "title": "Adults Only Swim",
-    "category": "Swimming",
-    "room": "Main Pool",
-    "instructor": null,
-    "note": "2.5 lanes"
   },
   {
     "id": "18c0a4f677",
@@ -831,6 +1003,23 @@
     }
   },
   {
+    "id": "ba64ac832e",
+    "centerId": "dunes",
+    "day": "Mon",
+    "start": "12:30",
+    "end": "14:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D1CLPUB12300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "13:59:59"
+    }
+  },
+  {
     "id": "f7d96f3313",
     "centerId": "meadows",
     "day": "Mon",
@@ -866,16 +1055,15 @@
     "note": "Choose a class on screen"
   },
   {
-    "id": "fee143f4bd",
+    "id": "d9d3b1699b",
     "centerId": "bootle",
     "day": "Mon",
     "start": "13:00",
-    "end": "19:00",
+    "end": "14:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Half pool",
     "booking": {
       "activityId": "B8CLPUB13000926",
       "locationId": "BZSPH00008",
@@ -922,21 +1110,38 @@
     }
   },
   {
-    "id": "623104af4c",
+    "id": "e99b825c68",
     "centerId": "meadows",
     "day": "Mon",
     "start": "13:00",
-    "end": "19:00",
+    "end": "14:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Lessons in 2 lanes from 3pm",
+    "note": "Lane 1",
     "booking": {
       "activityId": "M1CLPUB13000825",
       "locationId": "MZMP000001",
       "group": "SWIMSESSIONS",
       "end": "14:29:59"
+    }
+  },
+  {
+    "id": "9350ef94ab",
+    "centerId": "dunes",
+    "day": "Mon",
+    "start": "14:00",
+    "end": "16:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D1CLPUB14000425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "15:59:59"
     }
   },
   {
@@ -949,6 +1154,41 @@
     "category": "Group Fitness",
     "room": "Studio 1",
     "instructor": null
+  },
+  {
+    "id": "f9d82794ee",
+    "centerId": "meadows",
+    "day": "Mon",
+    "start": "14:00",
+    "end": "15:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M1CLPUB14000825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "14:59:59"
+    }
+  },
+  {
+    "id": "40fcd11f84",
+    "centerId": "bootle",
+    "day": "Mon",
+    "start": "14:30",
+    "end": "16:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB14300926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "15:59:59"
+    }
   },
   {
     "id": "41883bbd04",
@@ -965,6 +1205,24 @@
       "locationId": "DZSTU00001",
       "group": "GROUPFITNESS",
       "end": "15:29:59"
+    }
+  },
+  {
+    "id": "3f48febd44",
+    "centerId": "meadows",
+    "day": "Mon",
+    "start": "14:30",
+    "end": "16:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M1CLPUB14300825",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "15:59:59"
     }
   },
   {
@@ -989,6 +1247,41 @@
     }
   },
   {
+    "id": "d6b45ea0cd",
+    "centerId": "meadows",
+    "day": "Mon",
+    "start": "15:30",
+    "end": "17:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M1CLPUB15300825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "16:59:59"
+    }
+  },
+  {
+    "id": "2f55830fa9",
+    "centerId": "bootle",
+    "day": "Mon",
+    "start": "16:00",
+    "end": "17:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB16000926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "17:29:59"
+    }
+  },
+  {
     "id": "62108a16e6",
     "centerId": "dunes",
     "day": "Mon",
@@ -1006,6 +1299,23 @@
       "locationId": "DZSTU00002",
       "group": "VIRTUALCLASSES",
       "end": "16:44:59"
+    }
+  },
+  {
+    "id": "15904d956f",
+    "centerId": "dunes",
+    "day": "Mon",
+    "start": "16:00",
+    "end": "17:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D1CLPUB16000425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "17:29:59"
     }
   },
   {
@@ -1051,6 +1361,24 @@
     }
   },
   {
+    "id": "ab97c3ef1a",
+    "centerId": "meadows",
+    "day": "Mon",
+    "start": "16:00",
+    "end": "17:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M1CLPUB16000225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "17:29:59"
+    }
+  },
+  {
     "id": "e4346d55f1",
     "centerId": "bootle",
     "day": "Mon",
@@ -1080,11 +1408,11 @@
     "note": "Subject to availability and party bookings"
   },
   {
-    "id": "2dcc54d80e",
+    "id": "d47c280e26",
     "centerId": "bootle",
     "day": "Mon",
     "start": "17:00",
-    "end": "20:00",
+    "end": "18:00",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Leisure Pool",
@@ -1168,6 +1496,40 @@
     }
   },
   {
+    "id": "85edb20880",
+    "centerId": "bootle",
+    "day": "Mon",
+    "start": "17:30",
+    "end": "19:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB17300926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "18:59:59"
+    }
+  },
+  {
+    "id": "e9fddc7319",
+    "centerId": "dunes",
+    "day": "Mon",
+    "start": "17:30",
+    "end": "19:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D1CLPUB17300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "18:59:59"
+    }
+  },
+  {
     "id": "dec75c5f0b",
     "centerId": "dunes",
     "day": "Mon",
@@ -1185,6 +1547,24 @@
     }
   },
   {
+    "id": "44687fbb46",
+    "centerId": "meadows",
+    "day": "Mon",
+    "start": "17:30",
+    "end": "19:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M1CLPUB17300225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "18:59:59"
+    }
+  },
+  {
     "id": "27ff911d31",
     "centerId": "bootle",
     "day": "Mon",
@@ -1199,6 +1579,23 @@
       "locationId": "BZSPH00012",
       "group": "GROUPFITNESS",
       "end": "18:44:59"
+    }
+  },
+  {
+    "id": "43938f66ee",
+    "centerId": "bootle",
+    "day": "Mon",
+    "start": "18:00",
+    "end": "19:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Leisure Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB18000926",
+      "locationId": "BZSPH00011",
+      "group": "SWIMSESSIONS",
+      "end": "18:59:59"
     }
   },
   {
@@ -1273,6 +1670,24 @@
       "locationId": "LZSTU00001",
       "group": "GROUPFITNESS",
       "end": "18:44:59"
+    }
+  },
+  {
+    "id": "d0f5c109d0",
+    "centerId": "meadows",
+    "day": "Mon",
+    "start": "18:00",
+    "end": "19:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M1CLPUB18000825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "18:59:59"
     }
   },
   {
@@ -1398,6 +1813,23 @@
     }
   },
   {
+    "id": "488efa141e",
+    "centerId": "bootle",
+    "day": "Mon",
+    "start": "19:00",
+    "end": "20:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Leisure Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB19000926",
+      "locationId": "BZSPH00011",
+      "group": "SWIMSESSIONS",
+      "end": "19:59:59"
+    }
+  },
+  {
     "id": "d17b6f2682",
     "centerId": "crosby",
     "day": "Mon",
@@ -1447,7 +1879,7 @@
     "instructor": null
   },
   {
-    "id": "b4ab205325",
+    "id": "681e59bb1d",
     "centerId": "dunes",
     "day": "Mon",
     "start": "19:00",
@@ -1519,7 +1951,7 @@
     }
   },
   {
-    "id": "2509e5a81b",
+    "id": "3a40014177",
     "centerId": "bootle",
     "day": "Mon",
     "start": "19:15",
@@ -1528,7 +1960,6 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Half pool",
     "booking": {
       "activityId": "B1CLADT19150726",
       "locationId": "BZSPH00005",
@@ -1585,7 +2016,7 @@
     }
   },
   {
-    "id": "e37277f550",
+    "id": "5f1502980a",
     "centerId": "bootle",
     "day": "Mon",
     "start": "20:00",
@@ -1642,7 +2073,7 @@
     }
   },
   {
-    "id": "2b6987830a",
+    "id": "c3057777cd",
     "centerId": "meadows",
     "day": "Mon",
     "start": "21:00",
@@ -1651,6 +2082,7 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
+    "note": "Lane 1",
     "booking": {
       "activityId": "M1CLPUB21000126",
       "locationId": "MZMP000001",
@@ -1681,32 +2113,22 @@
     }
   },
   {
-    "id": "22a3e6d3c2",
+    "id": "b07f4a3df9",
     "centerId": "meadows",
     "day": "Tue",
     "start": "06:30",
-    "end": "12:00",
+    "end": "08:00",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
+    "note": "Lane 1",
     "booking": {
       "activityId": "M2CLPUB06300626",
       "locationId": "MZMP000001",
       "group": "SWIMSESSIONS",
       "end": "07:59:59"
     }
-  },
-  {
-    "id": "02c6429a3b",
-    "centerId": "meadows",
-    "day": "Tue",
-    "start": "06:30",
-    "end": "09:00",
-    "title": "Public Swim",
-    "category": "Swimming",
-    "room": "Learner Pool",
-    "instructor": null
   },
   {
     "id": "67d8aaaeb4",
@@ -1751,11 +2173,11 @@
     }
   },
   {
-    "id": "36bd66744e",
+    "id": "077a007649",
     "centerId": "bootle",
     "day": "Tue",
     "start": "07:00",
-    "end": "09:00",
+    "end": "08:00",
     "title": "Lane Swim",
     "category": "Swimming",
     "room": "Main Pool",
@@ -1788,11 +2210,11 @@
     }
   },
   {
-    "id": "0d19167302",
+    "id": "cf304d972b",
     "centerId": "dunes",
     "day": "Tue",
     "start": "07:00",
-    "end": "19:30",
+    "end": "08:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
@@ -1882,6 +2304,41 @@
     }
   },
   {
+    "id": "93e7300696",
+    "centerId": "bootle",
+    "day": "Tue",
+    "start": "08:00",
+    "end": "09:00",
+    "title": "Lane Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLLAN08000926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "08:59:59"
+    }
+  },
+  {
+    "id": "d5aaf71336",
+    "centerId": "meadows",
+    "day": "Tue",
+    "start": "08:00",
+    "end": "09:10",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M2CLPUB08000225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "09:09:59"
+    }
+  },
+  {
     "id": "ae9cafe1f0",
     "centerId": "crosby",
     "day": "Tue",
@@ -1934,21 +2391,55 @@
     }
   },
   {
-    "id": "af01df4096",
-    "centerId": "bootle",
+    "id": "f90d20d96f",
+    "centerId": "dunes",
     "day": "Tue",
-    "start": "09:00",
-    "end": "12:00",
+    "start": "08:30",
+    "end": "10:00",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Half pool",
+    "booking": {
+      "activityId": "D1CLPUB08300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "09:59:59"
+    }
+  },
+  {
+    "id": "347bd54708",
+    "centerId": "bootle",
+    "day": "Tue",
+    "start": "09:00",
+    "end": "10:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
     "booking": {
       "activityId": "B8CLPUB09000926",
       "locationId": "BZSPH00008",
       "group": "SWIMSESSIONS",
       "end": "10:29:59"
+    }
+  },
+  {
+    "id": "7d4d6658f2",
+    "centerId": "meadows",
+    "day": "Tue",
+    "start": "09:00",
+    "end": "10:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M2CLPUB09000225",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "09:59:59"
     }
   },
   {
@@ -2037,6 +2528,24 @@
     }
   },
   {
+    "id": "285436f3f8",
+    "centerId": "meadows",
+    "day": "Tue",
+    "start": "09:30",
+    "end": "11:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M2CLPUB09300225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "10:59:59"
+    }
+  },
+  {
     "id": "03c024da23",
     "centerId": "netherton",
     "day": "Tue",
@@ -2122,6 +2631,23 @@
     }
   },
   {
+    "id": "2401740df3",
+    "centerId": "dunes",
+    "day": "Tue",
+    "start": "10:00",
+    "end": "11:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB10000425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "11:29:59"
+    }
+  },
+  {
     "id": "8fab009c83",
     "centerId": "litherland",
     "day": "Tue",
@@ -2153,6 +2679,23 @@
       "locationId": "DZSPH00001",
       "group": "GROUPFITNESS",
       "end": "10:59:59"
+    }
+  },
+  {
+    "id": "1d6c656fe0",
+    "centerId": "bootle",
+    "day": "Tue",
+    "start": "10:30",
+    "end": "12:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB10300926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "11:59:59"
     }
   },
   {
@@ -2227,6 +2770,24 @@
     }
   },
   {
+    "id": "ea0b6eb501",
+    "centerId": "meadows",
+    "day": "Tue",
+    "start": "11:00",
+    "end": "12:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M2CLPUB11000825",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "11:59:59"
+    }
+  },
+  {
     "id": "82c6097258",
     "centerId": "dunes",
     "day": "Tue",
@@ -2281,7 +2842,42 @@
     }
   },
   {
-    "id": "043e11230d",
+    "id": "ec5e547046",
+    "centerId": "dunes",
+    "day": "Tue",
+    "start": "11:30",
+    "end": "13:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB11300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "12:59:59"
+    }
+  },
+  {
+    "id": "b5f8c5d02b",
+    "centerId": "meadows",
+    "day": "Tue",
+    "start": "11:30",
+    "end": "12:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M2CLPUB11300825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "12:29:59"
+    }
+  },
+  {
+    "id": "8431c0ee9a",
     "centerId": "bootle",
     "day": "Tue",
     "start": "12:00",
@@ -2310,17 +2906,6 @@
     "tags": [
       "Virtual"
     ]
-  },
-  {
-    "id": "38c0af09e4",
-    "centerId": "meadows",
-    "day": "Tue",
-    "start": "12:00",
-    "end": "13:00",
-    "title": "Adults Only Swim",
-    "category": "Swimming",
-    "room": "Main Pool",
-    "instructor": null
   },
   {
     "id": "7a8cc54f92",
@@ -2448,19 +3033,35 @@
     ]
   },
   {
-    "id": "8efe9aa072",
+    "id": "1115555e04",
     "centerId": "bootle",
     "day": "Tue",
     "start": "13:00",
-    "end": "19:00",
+    "end": "14:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Half pool",
     "booking": {
       "activityId": "B8CLPUB13000926",
       "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "14:29:59"
+    }
+  },
+  {
+    "id": "6f8133bc65",
+    "centerId": "dunes",
+    "day": "Tue",
+    "start": "13:00",
+    "end": "14:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB13000425",
+      "locationId": "DZMP000004",
       "group": "SWIMSESSIONS",
       "end": "14:29:59"
     }
@@ -2480,16 +3081,16 @@
     ]
   },
   {
-    "id": "1d09fe9f8f",
+    "id": "c74434451b",
     "centerId": "meadows",
     "day": "Tue",
     "start": "13:00",
-    "end": "19:45",
+    "end": "14:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Lessons in 2 lanes from 3pm",
+    "note": "Lane 1",
     "booking": {
       "activityId": "M2CLPUB13000825",
       "locationId": "MZMP000001",
@@ -2531,6 +3132,76 @@
     }
   },
   {
+    "id": "95d061acf1",
+    "centerId": "meadows",
+    "day": "Tue",
+    "start": "14:00",
+    "end": "15:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M2CLPUB14000825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "14:59:59"
+    }
+  },
+  {
+    "id": "9605011721",
+    "centerId": "bootle",
+    "day": "Tue",
+    "start": "14:30",
+    "end": "16:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB14300926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "15:59:59"
+    }
+  },
+  {
+    "id": "755cc536c9",
+    "centerId": "dunes",
+    "day": "Tue",
+    "start": "14:30",
+    "end": "16:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB14300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "16:29:59"
+    }
+  },
+  {
+    "id": "f8cb27d0d6",
+    "centerId": "meadows",
+    "day": "Tue",
+    "start": "14:30",
+    "end": "15:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M2CLPUB14300825",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "15:29:59"
+    }
+  },
+  {
     "id": "4633af5bda",
     "centerId": "bootle",
     "day": "Tue",
@@ -2545,6 +3216,41 @@
       "locationId": "BZSPH00012",
       "group": "GROUPFITNESS",
       "end": "15:59:59"
+    }
+  },
+  {
+    "id": "ed56f56317",
+    "centerId": "meadows",
+    "day": "Tue",
+    "start": "15:30",
+    "end": "17:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M2CLPUB15300825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "16:59:59"
+    }
+  },
+  {
+    "id": "2a39e1a24e",
+    "centerId": "bootle",
+    "day": "Tue",
+    "start": "16:00",
+    "end": "17:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB16000926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "17:29:59"
     }
   },
   {
@@ -2632,6 +3338,41 @@
     }
   },
   {
+    "id": "61cf39bfb2",
+    "centerId": "meadows",
+    "day": "Tue",
+    "start": "16:00",
+    "end": "18:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M2CLPUB16000225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "17:59:59"
+    }
+  },
+  {
+    "id": "bcece662d7",
+    "centerId": "dunes",
+    "day": "Tue",
+    "start": "16:30",
+    "end": "18:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB16300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "17:59:59"
+    }
+  },
+  {
     "id": "86f224c3c5",
     "centerId": "dunes",
     "day": "Tue",
@@ -2661,11 +3402,11 @@
     "note": "Subject to availability and party bookings"
   },
   {
-    "id": "fc53ecacb6",
+    "id": "09a1e00462",
     "centerId": "bootle",
     "day": "Tue",
     "start": "17:00",
-    "end": "20:00",
+    "end": "18:00",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Leisure Pool",
@@ -2695,6 +3436,23 @@
       "locationId": "CZSTU0000",
       "group": "VIRTUALCLASSES",
       "end": "17:29:59"
+    }
+  },
+  {
+    "id": "40bfd66a18",
+    "centerId": "bootle",
+    "day": "Tue",
+    "start": "17:30",
+    "end": "19:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB17300926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "18:59:59"
     }
   },
   {
@@ -2772,6 +3530,23 @@
     }
   },
   {
+    "id": "2a675962a6",
+    "centerId": "bootle",
+    "day": "Tue",
+    "start": "18:00",
+    "end": "19:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Leisure Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB18000926",
+      "locationId": "BZSPH00011",
+      "group": "SWIMSESSIONS",
+      "end": "18:59:59"
+    }
+  },
+  {
     "id": "c6a282e615",
     "centerId": "bootle",
     "day": "Tue",
@@ -2786,6 +3561,23 @@
       "locationId": "BZSPH00012",
       "group": "GROUPFITNESS",
       "end": "18:59:59"
+    }
+  },
+  {
+    "id": "39b87ef8a4",
+    "centerId": "dunes",
+    "day": "Tue",
+    "start": "18:00",
+    "end": "19:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB18000425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "19:29:59"
     }
   },
   {
@@ -2820,6 +3612,24 @@
       "locationId": "LZSTU00001",
       "group": "GROUPFITNESS",
       "end": "18:59:59"
+    }
+  },
+  {
+    "id": "13b72d8906",
+    "centerId": "meadows",
+    "day": "Tue",
+    "start": "18:00",
+    "end": "19:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M2CLPUB18000126",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "19:29:59"
     }
   },
   {
@@ -2947,6 +3757,23 @@
     }
   },
   {
+    "id": "bddbbdac5d",
+    "centerId": "bootle",
+    "day": "Tue",
+    "start": "19:00",
+    "end": "20:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Leisure Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB19000926",
+      "locationId": "BZSPH00011",
+      "group": "SWIMSESSIONS",
+      "end": "19:59:59"
+    }
+  },
+  {
     "id": "cdb9de67e0",
     "centerId": "dunes",
     "day": "Tue",
@@ -3026,17 +3853,6 @@
     "title": "Strength & Conditioning",
     "category": "Group Fitness",
     "room": "Studio",
-    "instructor": null
-  },
-  {
-    "id": "1bcb49dfd0",
-    "centerId": "meadows",
-    "day": "Tue",
-    "start": "19:15",
-    "end": "20:00",
-    "title": "Public Swim",
-    "category": "Swimming",
-    "room": "Learner Pool",
     "instructor": null
   },
   {
@@ -3131,7 +3947,7 @@
     }
   },
   {
-    "id": "a3ee167986",
+    "id": "9027179d1f",
     "centerId": "bootle",
     "day": "Tue",
     "start": "20:00",
@@ -3224,18 +4040,25 @@
     }
   },
   {
-    "id": "4585245fee",
+    "id": "7a95c67473",
     "centerId": "meadows",
     "day": "Tue",
     "start": "20:30",
-    "end": "21:45",
+    "end": "21:30",
     "title": "Adults Only Swim",
     "category": "Swimming",
     "room": "Main Pool",
-    "instructor": null
+    "instructor": null,
+    "note": "Lane 2",
+    "booking": {
+      "activityId": "M2CLPUB20300126",
+      "locationId": "MZMP000002",
+      "group": "SWIMSESSIONS",
+      "end": "21:29:59"
+    }
   },
   {
-    "id": "56b58710e5",
+    "id": "18c850de19",
     "centerId": "dunes",
     "day": "Tue",
     "start": "21:00",
@@ -3287,32 +4110,22 @@
     "payOnTheDay": true
   },
   {
-    "id": "64f51fab6e",
+    "id": "72b5dd8095",
     "centerId": "meadows",
     "day": "Wed",
     "start": "06:30",
-    "end": "12:00",
+    "end": "08:00",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
+    "note": "Lane 1",
     "booking": {
       "activityId": "M3CLPUB06300525",
       "locationId": "MZMP000001",
       "group": "SWIMSESSIONS",
       "end": "07:59:59"
     }
-  },
-  {
-    "id": "95620c7072",
-    "centerId": "meadows",
-    "day": "Wed",
-    "start": "06:30",
-    "end": "09:00",
-    "title": "Public Swim",
-    "category": "Swimming",
-    "room": "Learner Pool",
-    "instructor": null
   },
   {
     "id": "c741fe2002",
@@ -3349,11 +4162,11 @@
     }
   },
   {
-    "id": "5dad202395",
+    "id": "f3f457c3eb",
     "centerId": "bootle",
     "day": "Wed",
     "start": "07:00",
-    "end": "09:00",
+    "end": "08:00",
     "title": "Lane Swim",
     "category": "Swimming",
     "room": "Main Pool",
@@ -3403,11 +4216,11 @@
     }
   },
   {
-    "id": "c4bc12f27a",
+    "id": "a9b7666a1c",
     "centerId": "dunes",
     "day": "Wed",
     "start": "07:00",
-    "end": "19:30",
+    "end": "08:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
@@ -3417,6 +4230,24 @@
       "locationId": "DZMP000004",
       "group": "SWIMSESSIONS",
       "end": "08:29:59"
+    }
+  },
+  {
+    "id": "90a8a2b0f5",
+    "centerId": "meadows",
+    "day": "Wed",
+    "start": "07:00",
+    "end": "07:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M3CLPUB07000225",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "07:29:59"
     }
   },
   {
@@ -3457,6 +4288,24 @@
     }
   },
   {
+    "id": "06abf29972",
+    "centerId": "meadows",
+    "day": "Wed",
+    "start": "07:30",
+    "end": "08:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M3CLPUB07300225",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "07:59:59"
+    }
+  },
+  {
     "id": "d10b8bb1e6",
     "centerId": "meadows",
     "day": "Wed",
@@ -3474,6 +4323,23 @@
       "locationId": "MZSTU00002",
       "group": "VIRTUALCLASSES",
       "end": "08:29:59"
+    }
+  },
+  {
+    "id": "46f4176697",
+    "centerId": "bootle",
+    "day": "Wed",
+    "start": "08:00",
+    "end": "09:00",
+    "title": "Lane Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLLAN08000926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "08:59:59"
     }
   },
   {
@@ -3511,6 +4377,24 @@
       "locationId": "MZSTU00001",
       "group": "VIRTUALCLASSES",
       "end": "08:59:59"
+    }
+  },
+  {
+    "id": "1f6abbfde9",
+    "centerId": "meadows",
+    "day": "Wed",
+    "start": "08:00",
+    "end": "09:10",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M3CLPUB08000225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "09:09:59"
     }
   },
   {
@@ -3552,6 +4436,23 @@
     }
   },
   {
+    "id": "f5132c55ef",
+    "centerId": "dunes",
+    "day": "Wed",
+    "start": "08:30",
+    "end": "10:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D1CLPUB08300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "09:59:59"
+    }
+  },
+  {
     "id": "fb919362df",
     "centerId": "litherland",
     "day": "Wed",
@@ -3572,11 +4473,11 @@
     }
   },
   {
-    "id": "b985dfebe2",
+    "id": "67aa2bcb6a",
     "centerId": "bootle",
     "day": "Wed",
     "start": "09:00",
-    "end": "12:00",
+    "end": "10:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
@@ -3586,6 +4487,24 @@
       "locationId": "BZSPH00008",
       "group": "SWIMSESSIONS",
       "end": "10:29:59"
+    }
+  },
+  {
+    "id": "f1796a22b1",
+    "centerId": "meadows",
+    "day": "Wed",
+    "start": "09:00",
+    "end": "09:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M3CLPUB09000825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "09:29:59"
     }
   },
   {
@@ -3674,6 +4593,24 @@
       "locationId": "MZSTU00001",
       "group": "GROUPFITNESS",
       "end": "10:29:59"
+    }
+  },
+  {
+    "id": "ec63293ed5",
+    "centerId": "meadows",
+    "day": "Wed",
+    "start": "09:30",
+    "end": "11:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M2CLPUB09300225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "10:59:59"
     }
   },
   {
@@ -3776,15 +4713,21 @@
     }
   },
   {
-    "id": "a83d6214b2",
+    "id": "14d5fb186a",
     "centerId": "dunes",
     "day": "Wed",
     "start": "10:00",
-    "end": "13:00",
+    "end": "11:30",
     "title": "Public Swim",
     "category": "Swimming",
-    "room": "Learner Pool",
-    "instructor": null
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB10000425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "11:29:59"
+    }
   },
   {
     "id": "47760a55d5",
@@ -3813,6 +4756,23 @@
       "locationId": "BZSPH00012",
       "group": "GROUPFITNESS",
       "end": "10:59:59"
+    }
+  },
+  {
+    "id": "48fe2dde76",
+    "centerId": "bootle",
+    "day": "Wed",
+    "start": "10:30",
+    "end": "12:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB10300926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "11:59:59"
     }
   },
   {
@@ -3907,6 +4867,24 @@
     }
   },
   {
+    "id": "82aaa7f08a",
+    "centerId": "meadows",
+    "day": "Wed",
+    "start": "11:00",
+    "end": "12:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M2CLPUB11000825",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "11:59:59"
+    }
+  },
+  {
     "id": "2d462548c1",
     "centerId": "bootle",
     "day": "Wed",
@@ -3952,7 +4930,59 @@
     }
   },
   {
-    "id": "f44ada406b",
+    "id": "1f8583c66b",
+    "centerId": "dunes",
+    "day": "Wed",
+    "start": "11:30",
+    "end": "13:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB11300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "12:59:59"
+    }
+  },
+  {
+    "id": "4e5fb9438e",
+    "centerId": "dunes",
+    "day": "Wed",
+    "start": "11:30",
+    "end": "13:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Learner Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D3CLPUB11300525",
+      "locationId": "DZSP000001",
+      "group": "SWIMSESSIONS",
+      "end": "12:59:59"
+    }
+  },
+  {
+    "id": "35674a1c95",
+    "centerId": "meadows",
+    "day": "Wed",
+    "start": "11:30",
+    "end": "12:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M2CLPUB11300825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "12:29:59"
+    }
+  },
+  {
+    "id": "21a7409d88",
     "centerId": "bootle",
     "day": "Wed",
     "start": "12:00",
@@ -3967,17 +4997,6 @@
       "group": "SWIMSESSIONS",
       "end": "12:59:59"
     }
-  },
-  {
-    "id": "46e62e47a8",
-    "centerId": "meadows",
-    "day": "Wed",
-    "start": "12:00",
-    "end": "13:00",
-    "title": "Adults Only Swim",
-    "category": "Swimming",
-    "room": "Main Pool",
-    "instructor": null
   },
   {
     "id": "588253c0db",
@@ -4064,16 +5083,15 @@
     "note": "Choose a class on screen"
   },
   {
-    "id": "caafe65abe",
+    "id": "09d1c05f7e",
     "centerId": "bootle",
     "day": "Wed",
     "start": "13:00",
-    "end": "19:00",
+    "end": "14:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Half pool",
     "booking": {
       "activityId": "B8CLPUB13000926",
       "locationId": "BZSPH00008",
@@ -4082,16 +5100,33 @@
     }
   },
   {
-    "id": "1907d4bdbc",
-    "centerId": "meadows",
+    "id": "d4b1349cd6",
+    "centerId": "dunes",
     "day": "Wed",
     "start": "13:00",
-    "end": "20:00",
+    "end": "14:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Lessons in 2 lanes from 3pm",
+    "booking": {
+      "activityId": "D2CLPUB13000425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "14:29:59"
+    }
+  },
+  {
+    "id": "29d32bffff",
+    "centerId": "meadows",
+    "day": "Wed",
+    "start": "13:00",
+    "end": "14:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
     "booking": {
       "activityId": "M2CLPUB13000825",
       "locationId": "MZMP000001",
@@ -4120,16 +5155,74 @@
     }
   },
   {
-    "id": "5e68e29fdf",
-    "centerId": "dunes",
+    "id": "4cbe5706ff",
+    "centerId": "meadows",
     "day": "Wed",
-    "start": "14:30",
-    "end": "15:30",
-    "title": "Calm Waters",
+    "start": "14:00",
+    "end": "15:00",
+    "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Calming music and gentle lighting"
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M2CLPUB14000825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "14:59:59"
+    }
+  },
+  {
+    "id": "511e63115b",
+    "centerId": "bootle",
+    "day": "Wed",
+    "start": "14:30",
+    "end": "16:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB14300926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "15:59:59"
+    }
+  },
+  {
+    "id": "def9888bb9",
+    "centerId": "dunes",
+    "day": "Wed",
+    "start": "14:30",
+    "end": "16:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB14300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "16:29:59"
+    }
+  },
+  {
+    "id": "5f76f9c050",
+    "centerId": "meadows",
+    "day": "Wed",
+    "start": "14:30",
+    "end": "16:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M3CLPUB14300225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "15:59:59"
+    }
   },
   {
     "id": "8d8d1256c6",
@@ -4149,6 +5242,41 @@
       "locationId": "CZSTU0000",
       "group": "VIRTUALCLASSES",
       "end": "15:44:59"
+    }
+  },
+  {
+    "id": "8c65f4f0fd",
+    "centerId": "meadows",
+    "day": "Wed",
+    "start": "15:30",
+    "end": "17:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M2CLPUB15300825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "16:59:59"
+    }
+  },
+  {
+    "id": "d2063bdea5",
+    "centerId": "bootle",
+    "day": "Wed",
+    "start": "16:00",
+    "end": "17:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB16000926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "17:29:59"
     }
   },
   {
@@ -4230,6 +5358,41 @@
     }
   },
   {
+    "id": "30bc0c6431",
+    "centerId": "meadows",
+    "day": "Wed",
+    "start": "16:00",
+    "end": "17:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M3CLPUB16000225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "17:29:59"
+    }
+  },
+  {
+    "id": "df535f6a47",
+    "centerId": "dunes",
+    "day": "Wed",
+    "start": "16:30",
+    "end": "18:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB16300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "17:59:59"
+    }
+  },
+  {
     "id": "a4675f2984",
     "centerId": "bootle",
     "day": "Wed",
@@ -4242,11 +5405,11 @@
     "note": "Subject to availability and party bookings"
   },
   {
-    "id": "5e3f8e2996",
+    "id": "e4eccb1b6c",
     "centerId": "bootle",
     "day": "Wed",
     "start": "17:00",
-    "end": "20:00",
+    "end": "18:00",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Leisure Pool",
@@ -4367,6 +5530,41 @@
     ]
   },
   {
+    "id": "d77f1ac02a",
+    "centerId": "bootle",
+    "day": "Wed",
+    "start": "17:30",
+    "end": "19:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB17300926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "18:59:59"
+    }
+  },
+  {
+    "id": "bdc167cf49",
+    "centerId": "meadows",
+    "day": "Wed",
+    "start": "17:30",
+    "end": "19:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M3CLPUB1730225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "18:59:59"
+    }
+  },
+  {
     "id": "2b0e34255d",
     "centerId": "dunes",
     "day": "Wed",
@@ -4381,6 +5579,23 @@
       "locationId": "DZSPL00005",
       "group": "AQUACLASS",
       "end": "18:29:59"
+    }
+  },
+  {
+    "id": "547112ffcd",
+    "centerId": "bootle",
+    "day": "Wed",
+    "start": "18:00",
+    "end": "19:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Leisure Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB18000926",
+      "locationId": "BZSPH00011",
+      "group": "SWIMSESSIONS",
+      "end": "18:59:59"
     }
   },
   {
@@ -4418,6 +5633,23 @@
       "locationId": "CZMEE00001",
       "group": "GROUPFITNESS",
       "end": "18:59:59"
+    }
+  },
+  {
+    "id": "0319f89563",
+    "centerId": "dunes",
+    "day": "Wed",
+    "start": "18:00",
+    "end": "19:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB18000425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "19:29:59"
     }
   },
   {
@@ -4619,6 +5851,23 @@
     }
   },
   {
+    "id": "6e5ce93897",
+    "centerId": "bootle",
+    "day": "Wed",
+    "start": "19:00",
+    "end": "20:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Leisure Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB19000926",
+      "locationId": "BZSPH00011",
+      "group": "SWIMSESSIONS",
+      "end": "19:59:59"
+    }
+  },
+  {
     "id": "44cb884589",
     "centerId": "bootle",
     "day": "Wed",
@@ -4726,17 +5975,6 @@
     }
   },
   {
-    "id": "e2873a5d9f",
-    "centerId": "meadows",
-    "day": "Wed",
-    "start": "19:15",
-    "end": "20:00",
-    "title": "Public Swim",
-    "category": "Swimming",
-    "room": "Learner Pool",
-    "instructor": null
-  },
-  {
     "id": "44e40ad967",
     "centerId": "netherton",
     "day": "Wed",
@@ -4754,7 +5992,7 @@
     }
   },
   {
-    "id": "3af5663783",
+    "id": "3e56e453e5",
     "centerId": "bootle",
     "day": "Wed",
     "start": "20:00",
@@ -4788,7 +6026,7 @@
     }
   },
   {
-    "id": "18588460e5",
+    "id": "4ea380a479",
     "centerId": "meadows",
     "day": "Wed",
     "start": "20:00",
@@ -4797,6 +6035,7 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
+    "note": "Lane 1",
     "booking": {
       "activityId": "M5CLPUB20000825",
       "locationId": "MZMP000001",
@@ -4842,7 +6081,7 @@
     }
   },
   {
-    "id": "5a7afc4ad3",
+    "id": "3a31c6c6c1",
     "centerId": "dunes",
     "day": "Wed",
     "start": "20:30",
@@ -4860,7 +6099,7 @@
     }
   },
   {
-    "id": "8df2cbbf20",
+    "id": "f51c2f6c8c",
     "centerId": "meadows",
     "day": "Wed",
     "start": "21:00",
@@ -4869,6 +6108,7 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
+    "note": "Lane 1",
     "booking": {
       "activityId": "M1CLPUB21000126",
       "locationId": "MZMP000001",
@@ -4899,32 +6139,22 @@
     }
   },
   {
-    "id": "16cf05a2ea",
+    "id": "5b0f2c835a",
     "centerId": "meadows",
     "day": "Thu",
     "start": "06:30",
-    "end": "12:00",
+    "end": "08:00",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
+    "note": "Lane 1",
     "booking": {
       "activityId": "M4CLPUB06300525",
       "locationId": "MZMP000001",
       "group": "SWIMSESSIONS",
       "end": "07:59:59"
     }
-  },
-  {
-    "id": "e9351edc3d",
-    "centerId": "meadows",
-    "day": "Thu",
-    "start": "06:30",
-    "end": "09:00",
-    "title": "Public Swim",
-    "category": "Swimming",
-    "room": "Learner Pool",
-    "instructor": null
   },
   {
     "id": "c337bae9f0",
@@ -4968,11 +6198,11 @@
     }
   },
   {
-    "id": "608e8795f7",
+    "id": "bcc4f21508",
     "centerId": "bootle",
     "day": "Thu",
     "start": "07:00",
-    "end": "09:00",
+    "end": "08:00",
     "title": "Lane Swim",
     "category": "Swimming",
     "room": "Main Pool",
@@ -5005,11 +6235,11 @@
     }
   },
   {
-    "id": "4decc16612",
+    "id": "893b401bb4",
     "centerId": "dunes",
     "day": "Thu",
     "start": "07:00",
-    "end": "19:30",
+    "end": "08:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
@@ -5039,6 +6269,24 @@
       "locationId": "MZSTU00001",
       "group": "VIRTUALCLASSES",
       "end": "07:59:59"
+    }
+  },
+  {
+    "id": "8a4668345d",
+    "centerId": "meadows",
+    "day": "Thu",
+    "start": "07:00",
+    "end": "07:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M3CLPUB07000225",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "07:29:59"
     }
   },
   {
@@ -5099,6 +6347,24 @@
     }
   },
   {
+    "id": "8362abdd91",
+    "centerId": "meadows",
+    "day": "Thu",
+    "start": "07:30",
+    "end": "08:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M3CLPUB07300225",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "07:59:59"
+    }
+  },
+  {
     "id": "b58168aa90",
     "centerId": "meadows",
     "day": "Thu",
@@ -5116,6 +6382,41 @@
       "locationId": "MZSTU00002",
       "group": "VIRTUALCLASSES",
       "end": "08:29:59"
+    }
+  },
+  {
+    "id": "4befd40f8c",
+    "centerId": "bootle",
+    "day": "Thu",
+    "start": "08:00",
+    "end": "09:00",
+    "title": "Lane Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLLAN08000926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "08:59:59"
+    }
+  },
+  {
+    "id": "d33930e12e",
+    "centerId": "meadows",
+    "day": "Thu",
+    "start": "08:00",
+    "end": "09:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M4CLPUB08000225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "09:29:59"
     }
   },
   {
@@ -5177,6 +6478,23 @@
     }
   },
   {
+    "id": "26c50e3c27",
+    "centerId": "dunes",
+    "day": "Thu",
+    "start": "08:30",
+    "end": "10:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D1CLPUB08300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "09:59:59"
+    }
+  },
+  {
     "id": "3c1b6e4ee0",
     "centerId": "litherland",
     "day": "Thu",
@@ -5197,11 +6515,11 @@
     }
   },
   {
-    "id": "6fbfc8d0db",
+    "id": "9dda76b8af",
     "centerId": "bootle",
     "day": "Thu",
     "start": "09:00",
-    "end": "12:00",
+    "end": "10:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
@@ -5211,6 +6529,24 @@
       "locationId": "BZSPH00008",
       "group": "SWIMSESSIONS",
       "end": "10:29:59"
+    }
+  },
+  {
+    "id": "7a361c384a",
+    "centerId": "meadows",
+    "day": "Thu",
+    "start": "09:00",
+    "end": "09:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M3CLPUB09000825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "09:29:59"
     }
   },
   {
@@ -5336,6 +6672,24 @@
     }
   },
   {
+    "id": "7dabd7d814",
+    "centerId": "meadows",
+    "day": "Thu",
+    "start": "09:30",
+    "end": "11:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M2CLPUB09300225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "10:59:59"
+    }
+  },
+  {
     "id": "3e3f2226a1",
     "centerId": "netherton",
     "day": "Thu",
@@ -5384,6 +6738,23 @@
     }
   },
   {
+    "id": "1a4d0ffabe",
+    "centerId": "dunes",
+    "day": "Thu",
+    "start": "10:00",
+    "end": "11:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB10000425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "11:29:59"
+    }
+  },
+  {
     "id": "abe1321a1b",
     "centerId": "dunes",
     "day": "Thu",
@@ -5398,6 +6769,23 @@
       "locationId": "DZSTU00001",
       "group": "GROUPFITNESS",
       "end": "10:59:59"
+    }
+  },
+  {
+    "id": "08e0a0d37a",
+    "centerId": "bootle",
+    "day": "Thu",
+    "start": "10:30",
+    "end": "12:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB10300926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "11:59:59"
     }
   },
   {
@@ -5489,6 +6877,24 @@
     }
   },
   {
+    "id": "54159e9f08",
+    "centerId": "meadows",
+    "day": "Thu",
+    "start": "11:00",
+    "end": "12:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M2CLPUB11000825",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "11:59:59"
+    }
+  },
+  {
     "id": "66bb85d71a",
     "centerId": "dunes",
     "day": "Thu",
@@ -5523,6 +6929,41 @@
     }
   },
   {
+    "id": "fdb40a8cce",
+    "centerId": "dunes",
+    "day": "Thu",
+    "start": "11:30",
+    "end": "13:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB11300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "12:59:59"
+    }
+  },
+  {
+    "id": "4af96dca36",
+    "centerId": "meadows",
+    "day": "Thu",
+    "start": "11:30",
+    "end": "12:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M2CLPUB11300825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "12:29:59"
+    }
+  },
+  {
     "id": "9ef185ad27",
     "centerId": "meadows",
     "day": "Thu",
@@ -5534,7 +6975,7 @@
     "instructor": null
   },
   {
-    "id": "2c39093daf",
+    "id": "b9a7ceafa5",
     "centerId": "bootle",
     "day": "Thu",
     "start": "12:00",
@@ -5549,18 +6990,6 @@
       "group": "SWIMSESSIONS",
       "end": "12:59:59"
     }
-  },
-  {
-    "id": "f86113fe92",
-    "centerId": "meadows",
-    "day": "Thu",
-    "start": "12:00",
-    "end": "13:00",
-    "title": "Adults Only Swim",
-    "category": "Swimming",
-    "room": "Main Pool",
-    "instructor": null,
-    "note": "2.5 lanes"
   },
   {
     "id": "dfc805cef0",
@@ -5728,16 +7157,15 @@
     "note": "Choose a class on screen"
   },
   {
-    "id": "60b2d37ead",
+    "id": "fdff45e1bd",
     "centerId": "bootle",
     "day": "Thu",
     "start": "13:00",
-    "end": "19:00",
+    "end": "14:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Half pool",
     "booking": {
       "activityId": "B8CLPUB13000926",
       "locationId": "BZSPH00008",
@@ -5787,6 +7215,23 @@
     }
   },
   {
+    "id": "0a3e2a415b",
+    "centerId": "dunes",
+    "day": "Thu",
+    "start": "13:00",
+    "end": "14:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB13000425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "14:29:59"
+    }
+  },
+  {
     "id": "c488737626",
     "centerId": "dunes",
     "day": "Thu",
@@ -5800,16 +7245,16 @@
     "payOnTheDay": true
   },
   {
-    "id": "f3f939f6cb",
+    "id": "6be2bd8004",
     "centerId": "meadows",
     "day": "Thu",
     "start": "13:00",
-    "end": "19:00",
+    "end": "14:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Lessons in 2 lanes from 3pm",
+    "note": "Lane 1",
     "booking": {
       "activityId": "M2CLPUB13000825",
       "locationId": "MZMP000001",
@@ -5835,6 +7280,76 @@
       "locationId": "LZSTU00001",
       "group": "VIRTUALCLASSES",
       "end": "14:59:59"
+    }
+  },
+  {
+    "id": "fb59cf17fc",
+    "centerId": "meadows",
+    "day": "Thu",
+    "start": "14:00",
+    "end": "15:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M2CLPUB14000825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "14:59:59"
+    }
+  },
+  {
+    "id": "21b02500d1",
+    "centerId": "bootle",
+    "day": "Thu",
+    "start": "14:30",
+    "end": "16:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB14300926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "15:59:59"
+    }
+  },
+  {
+    "id": "d8019fe799",
+    "centerId": "dunes",
+    "day": "Thu",
+    "start": "14:30",
+    "end": "16:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB14300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "16:29:59"
+    }
+  },
+  {
+    "id": "34c227a467",
+    "centerId": "meadows",
+    "day": "Thu",
+    "start": "14:30",
+    "end": "15:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M2CLPUB14300825",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "15:29:59"
     }
   },
   {
@@ -5876,6 +7391,41 @@
       "locationId": "LZSTU00001",
       "group": "VIRTUALCLASSES",
       "end": "15:59:59"
+    }
+  },
+  {
+    "id": "150b49e6d2",
+    "centerId": "meadows",
+    "day": "Thu",
+    "start": "15:30",
+    "end": "17:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M4CLPUB15300225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "16:59:59"
+    }
+  },
+  {
+    "id": "df051451de",
+    "centerId": "bootle",
+    "day": "Thu",
+    "start": "16:00",
+    "end": "17:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB16000926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "17:29:59"
     }
   },
   {
@@ -5950,6 +7500,23 @@
     ]
   },
   {
+    "id": "942da01ee9",
+    "centerId": "dunes",
+    "day": "Thu",
+    "start": "16:30",
+    "end": "18:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB16300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "17:59:59"
+    }
+  },
+  {
     "id": "dd4197086b",
     "centerId": "bootle",
     "day": "Thu",
@@ -5962,11 +7529,11 @@
     "note": "Subject to availability and party bookings"
   },
   {
-    "id": "9ac44711b1",
+    "id": "53c5235650",
     "centerId": "bootle",
     "day": "Thu",
     "start": "17:00",
-    "end": "20:00",
+    "end": "18:00",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Leisure Pool",
@@ -6005,6 +7572,24 @@
     "payOnTheDay": true
   },
   {
+    "id": "6d1df7e19c",
+    "centerId": "meadows",
+    "day": "Thu",
+    "start": "17:00",
+    "end": "18:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M4CLPUB17000225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "18:29:59"
+    }
+  },
+  {
     "id": "5d1549b6c6",
     "centerId": "dunes",
     "day": "Thu",
@@ -6019,6 +7604,23 @@
       "locationId": "DZSTU00001",
       "group": "GROUPFITNESS",
       "end": "17:59:59"
+    }
+  },
+  {
+    "id": "0f43797d4f",
+    "centerId": "bootle",
+    "day": "Thu",
+    "start": "17:30",
+    "end": "19:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB17300926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "18:59:59"
     }
   },
   {
@@ -6096,6 +7698,23 @@
     }
   },
   {
+    "id": "0197fb2c6d",
+    "centerId": "bootle",
+    "day": "Thu",
+    "start": "18:00",
+    "end": "19:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Leisure Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB18000926",
+      "locationId": "BZSPH00011",
+      "group": "SWIMSESSIONS",
+      "end": "18:59:59"
+    }
+  },
+  {
     "id": "b554373bb5",
     "centerId": "crosby",
     "day": "Thu",
@@ -6113,6 +7732,23 @@
       "locationId": "CZSTU0000",
       "group": "VIRTUALCLASSES",
       "end": "18:29:59"
+    }
+  },
+  {
+    "id": "81f14069e1",
+    "centerId": "dunes",
+    "day": "Thu",
+    "start": "18:00",
+    "end": "19:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB18000425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "19:29:59"
     }
   },
   {
@@ -6221,6 +7857,24 @@
     }
   },
   {
+    "id": "03a0f18d7a",
+    "centerId": "meadows",
+    "day": "Thu",
+    "start": "18:30",
+    "end": "19:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M4CLPUB18300225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "18:59:59"
+    }
+  },
+  {
     "id": "25b3743e6e",
     "centerId": "meadows",
     "day": "Thu",
@@ -6237,6 +7891,23 @@
       "activityId": "M4CLTAI18300126",
       "locationId": "MZSTU00001",
       "group": "GROUPFITNESS",
+      "end": "19:59:59"
+    }
+  },
+  {
+    "id": "acb2341a94",
+    "centerId": "bootle",
+    "day": "Thu",
+    "start": "19:00",
+    "end": "20:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Leisure Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB19000926",
+      "locationId": "BZSPH00011",
+      "group": "SWIMSESSIONS",
       "end": "19:59:59"
     }
   },
@@ -6349,7 +8020,7 @@
     }
   },
   {
-    "id": "8883e24716",
+    "id": "679b52d2bc",
     "centerId": "bootle",
     "day": "Thu",
     "start": "20:00",
@@ -6387,7 +8058,7 @@
     }
   },
   {
-    "id": "3e116693e0",
+    "id": "b9bbd591c9",
     "centerId": "dunes",
     "day": "Thu",
     "start": "21:00",
@@ -6404,7 +8075,7 @@
     }
   },
   {
-    "id": "a5f8475fbe",
+    "id": "38f0de87fe",
     "centerId": "meadows",
     "day": "Thu",
     "start": "21:00",
@@ -6413,6 +8084,7 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
+    "note": "Lane 1",
     "booking": {
       "activityId": "M1CLPUB21000126",
       "locationId": "MZMP000001",
@@ -6450,32 +8122,22 @@
     "payOnTheDay": true
   },
   {
-    "id": "1ebf30e361",
+    "id": "10fe7e6f91",
     "centerId": "meadows",
     "day": "Fri",
     "start": "06:30",
-    "end": "12:00",
+    "end": "08:00",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
+    "note": "Lane 1",
     "booking": {
       "activityId": "M5CLPUB06300525",
       "locationId": "MZMP000001",
       "group": "SWIMSESSIONS",
       "end": "07:59:59"
     }
-  },
-  {
-    "id": "ba26eec118",
-    "centerId": "meadows",
-    "day": "Fri",
-    "start": "06:30",
-    "end": "09:00",
-    "title": "Public Swim",
-    "category": "Swimming",
-    "room": "Learner Pool",
-    "instructor": null
   },
   {
     "id": "54a9891a41",
@@ -6513,11 +8175,11 @@
     }
   },
   {
-    "id": "3d4ff4a7d4",
+    "id": "7d4804be74",
     "centerId": "bootle",
     "day": "Fri",
     "start": "07:00",
-    "end": "09:00",
+    "end": "08:00",
     "title": "Lane Swim",
     "category": "Swimming",
     "room": "Main Pool",
@@ -6550,11 +8212,11 @@
     }
   },
   {
-    "id": "a634e5adc7",
+    "id": "8c1e79f0e0",
     "centerId": "dunes",
     "day": "Fri",
     "start": "07:00",
-    "end": "21:30",
+    "end": "08:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
@@ -6564,6 +8226,24 @@
       "locationId": "DZMP000004",
       "group": "SWIMSESSIONS",
       "end": "08:29:59"
+    }
+  },
+  {
+    "id": "195172fbb6",
+    "centerId": "meadows",
+    "day": "Fri",
+    "start": "07:00",
+    "end": "07:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M3CLPUB07000225",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "07:29:59"
     }
   },
   {
@@ -6624,6 +8304,24 @@
     }
   },
   {
+    "id": "b9be1ad9c4",
+    "centerId": "meadows",
+    "day": "Fri",
+    "start": "07:30",
+    "end": "08:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M3CLPUB07300225",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "07:59:59"
+    }
+  },
+  {
     "id": "d17ec1696d",
     "centerId": "meadows",
     "day": "Fri",
@@ -6641,6 +8339,23 @@
       "locationId": "MZSTU00002",
       "group": "VIRTUALCLASSES",
       "end": "08:14:59"
+    }
+  },
+  {
+    "id": "67978d8c46",
+    "centerId": "bootle",
+    "day": "Fri",
+    "start": "08:00",
+    "end": "09:00",
+    "title": "Lane Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLLAN08000926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "08:59:59"
     }
   },
   {
@@ -6696,6 +8411,24 @@
     }
   },
   {
+    "id": "f8fe63a3df",
+    "centerId": "meadows",
+    "day": "Fri",
+    "start": "08:00",
+    "end": "09:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M5CLPUB08000225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "08:59:59"
+    }
+  },
+  {
     "id": "384e32c575",
     "centerId": "crosby",
     "day": "Fri",
@@ -6717,16 +8450,32 @@
     }
   },
   {
-    "id": "a3e5f6079f",
-    "centerId": "bootle",
+    "id": "4be09d0e3b",
+    "centerId": "dunes",
     "day": "Fri",
-    "start": "09:00",
-    "end": "12:00",
+    "start": "08:30",
+    "end": "10:00",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Half pool",
+    "booking": {
+      "activityId": "D1CLPUB08300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "09:59:59"
+    }
+  },
+  {
+    "id": "87aa9198ac",
+    "centerId": "bootle",
+    "day": "Fri",
+    "start": "09:00",
+    "end": "10:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
     "booking": {
       "activityId": "B8CLPUB09000926",
       "locationId": "BZSPH00008",
@@ -6752,6 +8501,24 @@
       "locationId": "DZSTU00002",
       "group": "VIRTUALCLASSES",
       "end": "09:44:59"
+    }
+  },
+  {
+    "id": "29cc29d933",
+    "centerId": "meadows",
+    "day": "Fri",
+    "start": "09:00",
+    "end": "09:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M3CLPUB09000825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "09:29:59"
     }
   },
   {
@@ -6840,6 +8607,24 @@
     }
   },
   {
+    "id": "98d1fdcd79",
+    "centerId": "meadows",
+    "day": "Fri",
+    "start": "09:30",
+    "end": "11:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M2CLPUB09300225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "10:59:59"
+    }
+  },
+  {
     "id": "ba9e9a7ed8",
     "centerId": "netherton",
     "day": "Fri",
@@ -6902,6 +8687,23 @@
     }
   },
   {
+    "id": "6856bb8161",
+    "centerId": "dunes",
+    "day": "Fri",
+    "start": "10:00",
+    "end": "11:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB10000425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "11:29:59"
+    }
+  },
+  {
     "id": "caf88a8654",
     "centerId": "meadows",
     "day": "Fri",
@@ -6933,6 +8735,23 @@
       "locationId": "MZSTU00001",
       "group": "GROUPFITNESS",
       "end": "11:04:59"
+    }
+  },
+  {
+    "id": "4de93008c5",
+    "centerId": "bootle",
+    "day": "Fri",
+    "start": "10:30",
+    "end": "12:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB10300926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "11:59:59"
     }
   },
   {
@@ -7007,6 +8826,24 @@
     }
   },
   {
+    "id": "9f3f159bf3",
+    "centerId": "meadows",
+    "day": "Fri",
+    "start": "11:00",
+    "end": "12:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M2CLPUB11000825",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "11:59:59"
+    }
+  },
+  {
     "id": "fc83069cea",
     "centerId": "meadows",
     "day": "Fri",
@@ -7041,6 +8878,41 @@
     }
   },
   {
+    "id": "d84522a19e",
+    "centerId": "dunes",
+    "day": "Fri",
+    "start": "11:30",
+    "end": "13:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D2CLPUB11300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "12:59:59"
+    }
+  },
+  {
+    "id": "7b6f8cdcb1",
+    "centerId": "meadows",
+    "day": "Fri",
+    "start": "11:30",
+    "end": "12:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M2CLPUB11300825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "12:29:59"
+    }
+  },
+  {
     "id": "59122c1a08",
     "centerId": "netherton",
     "day": "Fri",
@@ -7058,7 +8930,7 @@
     }
   },
   {
-    "id": "85ee1d5dcb",
+    "id": "9f8a8819aa",
     "centerId": "bootle",
     "day": "Fri",
     "start": "12:00",
@@ -7093,18 +8965,6 @@
       "group": "VIRTUALCLASSES",
       "end": "12:29:59"
     }
-  },
-  {
-    "id": "e8beca43c6",
-    "centerId": "meadows",
-    "day": "Fri",
-    "start": "12:00",
-    "end": "13:00",
-    "title": "Adults Only Swim",
-    "category": "Swimming",
-    "room": "Main Pool",
-    "instructor": null,
-    "note": "2.5 lanes"
   },
   {
     "id": "75a2ddf725",
@@ -7225,16 +9085,15 @@
     "note": "Choose a class on screen"
   },
   {
-    "id": "c5bb3e83ca",
+    "id": "b32cdea8e8",
     "centerId": "bootle",
     "day": "Fri",
     "start": "13:00",
-    "end": "19:00",
+    "end": "14:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Half pool",
     "booking": {
       "activityId": "B8CLPUB13000926",
       "locationId": "BZSPH00008",
@@ -7264,16 +9123,33 @@
     }
   },
   {
-    "id": "e12a5cf01a",
-    "centerId": "meadows",
+    "id": "056a7495a5",
+    "centerId": "dunes",
     "day": "Fri",
     "start": "13:00",
-    "end": "20:00",
+    "end": "14:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Lessons in 2 lanes from 3pm",
+    "booking": {
+      "activityId": "D2CLPUB13000425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "14:29:59"
+    }
+  },
+  {
+    "id": "3d75c834f2",
+    "centerId": "meadows",
+    "day": "Fri",
+    "start": "13:00",
+    "end": "14:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
     "booking": {
       "activityId": "M2CLPUB13000825",
       "locationId": "MZMP000001",
@@ -7296,6 +9172,58 @@
       "locationId": "MZSTU00001",
       "group": "GROUPFITNESS",
       "end": "14:04:59"
+    }
+  },
+  {
+    "id": "2e4433a873",
+    "centerId": "meadows",
+    "day": "Fri",
+    "start": "14:00",
+    "end": "15:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M2CLPUB14000825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "14:59:59"
+    }
+  },
+  {
+    "id": "7bb79eab64",
+    "centerId": "bootle",
+    "day": "Fri",
+    "start": "14:30",
+    "end": "16:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB14300926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "15:59:59"
+    }
+  },
+  {
+    "id": "52923ee5c1",
+    "centerId": "dunes",
+    "day": "Fri",
+    "start": "14:30",
+    "end": "16:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D5CLPUB14300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "15:59:59"
     }
   },
   {
@@ -7338,6 +9266,76 @@
       "locationId": "CZSTU0000",
       "group": "VIRTUALCLASSES",
       "end": "15:44:59"
+    }
+  },
+  {
+    "id": "13c3822c4a",
+    "centerId": "meadows",
+    "day": "Fri",
+    "start": "15:00",
+    "end": "17:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M5CLPUB15000225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "16:59:59"
+    }
+  },
+  {
+    "id": "f8d2b26036",
+    "centerId": "meadows",
+    "day": "Fri",
+    "start": "15:30",
+    "end": "17:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M2CLPUB15300825",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "16:59:59"
+    }
+  },
+  {
+    "id": "ae908b31fe",
+    "centerId": "bootle",
+    "day": "Fri",
+    "start": "16:00",
+    "end": "17:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB16000926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "17:29:59"
+    }
+  },
+  {
+    "id": "9224ed6909",
+    "centerId": "dunes",
+    "day": "Fri",
+    "start": "16:00",
+    "end": "17:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D1CLPUB16000425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "17:29:59"
     }
   },
   {
@@ -7448,11 +9446,11 @@
     "note": "Subject to availability and party bookings"
   },
   {
-    "id": "a560884625",
+    "id": "635a0e0a84",
     "centerId": "bootle",
     "day": "Fri",
     "start": "17:00",
-    "end": "20:00",
+    "end": "18:00",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Leisure Pool",
@@ -7499,6 +9497,24 @@
     }
   },
   {
+    "id": "7300273ade",
+    "centerId": "meadows",
+    "day": "Fri",
+    "start": "17:00",
+    "end": "19:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M5CLPUB17000225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "18:59:59"
+    }
+  },
+  {
     "id": "4ba1510b2b",
     "centerId": "crosby",
     "day": "Fri",
@@ -7516,6 +9532,23 @@
       "locationId": "CZSTU00001",
       "group": "GROUPFITNESS",
       "end": "18:14:59"
+    }
+  },
+  {
+    "id": "875c3f6864",
+    "centerId": "bootle",
+    "day": "Fri",
+    "start": "17:30",
+    "end": "19:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB17300926",
+      "locationId": "BZSPH00008",
+      "group": "SWIMSESSIONS",
+      "end": "18:59:59"
     }
   },
   {
@@ -7539,6 +9572,23 @@
     }
   },
   {
+    "id": "899c160b20",
+    "centerId": "dunes",
+    "day": "Fri",
+    "start": "17:30",
+    "end": "19:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D1CLPUB17300425",
+      "locationId": "DZMP000004",
+      "group": "SWIMSESSIONS",
+      "end": "18:59:59"
+    }
+  },
+  {
     "id": "c53ea12571",
     "centerId": "meadows",
     "day": "Fri",
@@ -7553,6 +9603,23 @@
       "locationId": "MZSTU00002",
       "group": "GROUPFITNESS",
       "end": "18:14:59"
+    }
+  },
+  {
+    "id": "bda55a76e5",
+    "centerId": "bootle",
+    "day": "Fri",
+    "start": "18:00",
+    "end": "19:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Leisure Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB18000926",
+      "locationId": "BZSPH00011",
+      "group": "SWIMSESSIONS",
+      "end": "18:59:59"
     }
   },
   {
@@ -7644,7 +9711,7 @@
     }
   },
   {
-    "id": "ca3fdc3218",
+    "id": "31335a38fa",
     "centerId": "bootle",
     "day": "Fri",
     "start": "19:00",
@@ -7656,6 +9723,23 @@
     "booking": {
       "activityId": "B5CLADU19000825",
       "locationId": "BZSPH00005",
+      "group": "SWIMSESSIONS",
+      "end": "19:59:59"
+    }
+  },
+  {
+    "id": "610ab90b43",
+    "centerId": "bootle",
+    "day": "Fri",
+    "start": "19:00",
+    "end": "20:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Leisure Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "B8CLPUB19000926",
+      "locationId": "BZSPH00011",
       "group": "SWIMSESSIONS",
       "end": "19:59:59"
     }
@@ -7714,15 +9798,22 @@
     "note": "Disco music and lighting"
   },
   {
-    "id": "3d6b7ded35",
+    "id": "530358f664",
     "centerId": "meadows",
     "day": "Fri",
     "start": "19:00",
     "end": "20:00",
     "title": "Public Swim",
     "category": "Swimming",
-    "room": "Learner Pool",
-    "instructor": null
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M5CLPUB19000225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "19:59:59"
+    }
   },
   {
     "id": "5748bcc6e7",
@@ -7745,7 +9836,7 @@
     }
   },
   {
-    "id": "463ee27dca",
+    "id": "d300086640",
     "centerId": "bootle",
     "day": "Fri",
     "start": "20:00",
@@ -7763,7 +9854,7 @@
     }
   },
   {
-    "id": "bdb9c8ada4",
+    "id": "a085ca2fa1",
     "centerId": "dunes",
     "day": "Fri",
     "start": "20:00",
@@ -7781,7 +9872,7 @@
     }
   },
   {
-    "id": "baeac7cff3",
+    "id": "07f95b2c22",
     "centerId": "meadows",
     "day": "Fri",
     "start": "20:00",
@@ -7790,7 +9881,7 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Tri Club in 1 lane",
+    "note": "Lane 1",
     "booking": {
       "activityId": "M5CLPUB20000825",
       "locationId": "MZMP000001",
@@ -7840,16 +9931,16 @@
     }
   },
   {
-    "id": "2b0960a659",
+    "id": "811732513f",
     "centerId": "meadows",
     "day": "Sat",
     "start": "08:00",
-    "end": "16:00",
+    "end": "08:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Lessons in 2 lanes until 12pm; club in 3 lanes from 12pm",
+    "note": "Lane 3",
     "booking": {
       "activityId": "M6CLPUB08000326",
       "locationId": "MZMP000003",
@@ -7878,7 +9969,25 @@
     }
   },
   {
-    "id": "800057356e",
+    "id": "01eb1d5f90",
+    "centerId": "meadows",
+    "day": "Sat",
+    "start": "08:30",
+    "end": "10:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M6CLPUB08300225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "09:59:59"
+    }
+  },
+  {
+    "id": "43895ea19b",
     "centerId": "bootle",
     "day": "Sat",
     "start": "09:00",
@@ -7887,7 +9996,6 @@
     "category": "Swimming",
     "room": "Leisure Pool",
     "instructor": null,
-    "note": "Time banded",
     "booking": {
       "activityId": "B6CLPUB09000426",
       "locationId": "BZSPH00011",
@@ -8070,7 +10178,25 @@
     }
   },
   {
-    "id": "d1b5c4a9f2",
+    "id": "dbba746633",
+    "centerId": "meadows",
+    "day": "Sat",
+    "start": "10:00",
+    "end": "11:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M6CLPUB10000225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "11:29:59"
+    }
+  },
+  {
+    "id": "a5fc2cc300",
     "centerId": "bootle",
     "day": "Sat",
     "start": "10:15",
@@ -8079,7 +10205,6 @@
     "category": "Swimming",
     "room": "Leisure Pool",
     "instructor": null,
-    "note": "Time banded",
     "booking": {
       "activityId": "B6CLPUB10150426",
       "locationId": "BZSPH00011",
@@ -8243,7 +10368,7 @@
     }
   },
   {
-    "id": "b83fba1ff6",
+    "id": "ba049e60bf",
     "centerId": "bootle",
     "day": "Sat",
     "start": "11:30",
@@ -8252,7 +10377,6 @@
     "category": "Swimming",
     "room": "Leisure Pool",
     "instructor": null,
-    "note": "Time banded",
     "booking": {
       "activityId": "B6CLPUB11300426",
       "locationId": "BZSPH00011",
@@ -8281,6 +10405,24 @@
     }
   },
   {
+    "id": "440d8910c2",
+    "centerId": "meadows",
+    "day": "Sat",
+    "start": "11:30",
+    "end": "13:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M6CLPUB10300225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "12:59:59"
+    }
+  },
+  {
     "id": "6768566791",
     "centerId": "meadows",
     "day": "Sat",
@@ -8302,11 +10444,11 @@
     }
   },
   {
-    "id": "611bf486fb",
+    "id": "10070e0c0f",
     "centerId": "dunes",
     "day": "Sat",
     "start": "12:00",
-    "end": "16:00",
+    "end": "14:00",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
@@ -8319,11 +10461,11 @@
     }
   },
   {
-    "id": "4b5dcf7e33",
+    "id": "a7a7193f84",
     "centerId": "dunes",
     "day": "Sat",
     "start": "12:00",
-    "end": "16:00",
+    "end": "14:00",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Learner Pool",
@@ -8334,17 +10476,6 @@
       "group": "SWIMSESSIONS",
       "end": "13:59:59"
     }
-  },
-  {
-    "id": "2b7c6f2a27",
-    "centerId": "meadows",
-    "day": "Sat",
-    "start": "12:00",
-    "end": "16:00",
-    "title": "Public Swim",
-    "category": "Swimming",
-    "room": "Learner Pool",
-    "instructor": null
   },
   {
     "id": "6ee0851c21",
@@ -8368,7 +10499,7 @@
     }
   },
   {
-    "id": "e7a7196b34",
+    "id": "13b4c4cbeb",
     "centerId": "bootle",
     "day": "Sat",
     "start": "12:45",
@@ -8377,25 +10508,12 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Time banded",
     "booking": {
       "activityId": "B6CLPUB12451225",
       "locationId": "BZSPH00008",
       "group": "SWIMSESSIONS",
       "end": "13:59:59"
     }
-  },
-  {
-    "id": "2c1df5c522",
-    "centerId": "bootle",
-    "day": "Sat",
-    "start": "12:45",
-    "end": "14:00",
-    "title": "Public Swim",
-    "category": "Swimming",
-    "room": "Leisure Pool",
-    "instructor": null,
-    "note": "Time banded"
   },
   {
     "id": "33ec343749",
@@ -8452,6 +10570,24 @@
       "locationId": "MZSTU00002",
       "group": "VIRTUALCLASSES",
       "end": "13:29:59"
+    }
+  },
+  {
+    "id": "1a079df92e",
+    "centerId": "meadows",
+    "day": "Sat",
+    "start": "13:00",
+    "end": "15:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M6CLPUB13000225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "14:59:59"
     }
   },
   {
@@ -8543,7 +10679,7 @@
     }
   },
   {
-    "id": "68c1191173",
+    "id": "30674dfcf2",
     "centerId": "bootle",
     "day": "Sat",
     "start": "14:15",
@@ -8552,25 +10688,12 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Time banded · may change for private parties",
     "booking": {
       "activityId": "B6CLPUB14150625",
       "locationId": "BZSPH00008",
       "group": "SWIMSESSIONS",
       "end": "15:29:59"
     }
-  },
-  {
-    "id": "361e63d49c",
-    "centerId": "bootle",
-    "day": "Sat",
-    "start": "14:15",
-    "end": "15:30",
-    "title": "Public Swim",
-    "category": "Swimming",
-    "room": "Leisure Pool",
-    "instructor": null,
-    "note": "Time banded · may change for private parties"
   },
   {
     "id": "6f20272d8a",
@@ -8615,21 +10738,39 @@
     }
   },
   {
-    "id": "cfb1b8c64b",
+    "id": "a48785fcb6",
     "centerId": "meadows",
     "day": "Sun",
     "start": "08:00",
-    "end": "15:00",
+    "end": "08:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Lessons in 2 lanes until 12pm",
+    "note": "Lane 3",
     "booking": {
       "activityId": "M6CLPUB08000326",
       "locationId": "MZMP000003",
       "group": "SWIMSESSIONS",
       "end": "08:29:59"
+    }
+  },
+  {
+    "id": "384e4f7372",
+    "centerId": "meadows",
+    "day": "Sun",
+    "start": "08:30",
+    "end": "10:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M7CLPUB08300225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "09:59:59"
     }
   },
   {
@@ -8648,7 +10789,7 @@
     ]
   },
   {
-    "id": "2bee4342fa",
+    "id": "4aa50f3090",
     "centerId": "bootle",
     "day": "Sun",
     "start": "09:00",
@@ -8657,7 +10798,6 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Time banded",
     "booking": {
       "activityId": "B7CLPUB09001225",
       "locationId": "BZSPH00008",
@@ -8666,23 +10806,11 @@
     }
   },
   {
-    "id": "604af96847",
-    "centerId": "bootle",
-    "day": "Sun",
-    "start": "09:00",
-    "end": "10:15",
-    "title": "Public Swim",
-    "category": "Swimming",
-    "room": "Leisure Pool",
-    "instructor": null,
-    "note": "Time banded"
-  },
-  {
-    "id": "4dd96f02a5",
+    "id": "fb87750733",
     "centerId": "dunes",
     "day": "Sun",
     "start": "09:00",
-    "end": "16:00",
+    "end": "10:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Main Pool",
@@ -8695,11 +10823,11 @@
     }
   },
   {
-    "id": "71f8135cf2",
+    "id": "7fff542ee4",
     "centerId": "dunes",
     "day": "Sun",
     "start": "09:00",
-    "end": "16:00",
+    "end": "10:30",
     "title": "Public Swim",
     "category": "Swimming",
     "room": "Learner Pool",
@@ -8846,7 +10974,25 @@
     }
   },
   {
-    "id": "5054a0fe82",
+    "id": "5db597e1fe",
+    "centerId": "meadows",
+    "day": "Sun",
+    "start": "10:00",
+    "end": "11:30",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M7CLPUB10000225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "11:29:59"
+    }
+  },
+  {
+    "id": "0947be9603",
     "centerId": "bootle",
     "day": "Sun",
     "start": "10:15",
@@ -8855,25 +11001,12 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Time banded",
     "booking": {
       "activityId": "B7CLPUB10151225",
       "locationId": "BZSPH00008",
       "group": "SWIMSESSIONS",
       "end": "11:29:59"
     }
-  },
-  {
-    "id": "cfb56e14f2",
-    "centerId": "bootle",
-    "day": "Sun",
-    "start": "10:15",
-    "end": "11:30",
-    "title": "Public Swim",
-    "category": "Swimming",
-    "room": "Leisure Pool",
-    "instructor": null,
-    "note": "Time banded"
   },
   {
     "id": "7678402d5f",
@@ -8927,6 +11060,40 @@
       "locationId": "CZSTU00001",
       "group": "GROUPFITNESS",
       "end": "11:29:59"
+    }
+  },
+  {
+    "id": "635e084fd8",
+    "centerId": "dunes",
+    "day": "Sun",
+    "start": "10:30",
+    "end": "12:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D7CLPUB10300425",
+      "locationId": "DZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "11:59:59"
+    }
+  },
+  {
+    "id": "80720e8743",
+    "centerId": "dunes",
+    "day": "Sun",
+    "start": "10:30",
+    "end": "12:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Learner Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D7CLPUB10300525",
+      "locationId": "DZSP000001",
+      "group": "SWIMSESSIONS",
+      "end": "11:59:59"
     }
   },
   {
@@ -9005,7 +11172,7 @@
     }
   },
   {
-    "id": "3a6c8186da",
+    "id": "af343f8adb",
     "centerId": "bootle",
     "day": "Sun",
     "start": "11:30",
@@ -9014,25 +11181,12 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Time banded",
     "booking": {
       "activityId": "B7CLPUB11301225",
       "locationId": "BZSPH00008",
       "group": "SWIMSESSIONS",
       "end": "12:44:59"
     }
-  },
-  {
-    "id": "b1c5c73176",
-    "centerId": "bootle",
-    "day": "Sun",
-    "start": "11:30",
-    "end": "12:45",
-    "title": "Public Swim",
-    "category": "Swimming",
-    "room": "Leisure Pool",
-    "instructor": null,
-    "note": "Time banded"
   },
   {
     "id": "4fbba1bed1",
@@ -9072,6 +11226,58 @@
     }
   },
   {
+    "id": "00a4588295",
+    "centerId": "meadows",
+    "day": "Sun",
+    "start": "11:30",
+    "end": "13:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M7CLPUB11300225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "12:59:59"
+    }
+  },
+  {
+    "id": "63fcf511fb",
+    "centerId": "dunes",
+    "day": "Sun",
+    "start": "12:00",
+    "end": "14:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D6CLPUB12000425",
+      "locationId": "DZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "13:59:59"
+    }
+  },
+  {
+    "id": "3900576a69",
+    "centerId": "dunes",
+    "day": "Sun",
+    "start": "12:00",
+    "end": "14:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Learner Pool",
+    "instructor": null,
+    "booking": {
+      "activityId": "D6CLPUB12000525",
+      "locationId": "DZSP000001",
+      "group": "SWIMSESSIONS",
+      "end": "13:59:59"
+    }
+  },
+  {
     "id": "f6b2d0893f",
     "centerId": "meadows",
     "day": "Sun",
@@ -9084,17 +11290,6 @@
     "tags": [
       "Virtual"
     ]
-  },
-  {
-    "id": "fe920acbbb",
-    "centerId": "meadows",
-    "day": "Sun",
-    "start": "12:00",
-    "end": "15:00",
-    "title": "Public Swim",
-    "category": "Swimming",
-    "room": "Learner Pool",
-    "instructor": null
   },
   {
     "id": "902478663e",
@@ -9139,7 +11334,7 @@
     }
   },
   {
-    "id": "98cc66d926",
+    "id": "3ae4b01d27",
     "centerId": "bootle",
     "day": "Sun",
     "start": "12:45",
@@ -9148,25 +11343,12 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Time banded",
     "booking": {
       "activityId": "B6CLPUB12451225",
       "locationId": "BZSPH00008",
       "group": "SWIMSESSIONS",
       "end": "13:59:59"
     }
-  },
-  {
-    "id": "d1016daf30",
-    "centerId": "bootle",
-    "day": "Sun",
-    "start": "12:45",
-    "end": "14:00",
-    "title": "Public Swim",
-    "category": "Swimming",
-    "room": "Leisure Pool",
-    "instructor": null,
-    "note": "Time banded"
   },
   {
     "id": "362142715a",
@@ -9207,6 +11389,24 @@
       "locationId": "LZSTU00001",
       "group": "VIRTUALCLASSES",
       "end": "13:59:59"
+    }
+  },
+  {
+    "id": "265dcebd86",
+    "centerId": "meadows",
+    "day": "Sun",
+    "start": "13:00",
+    "end": "15:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 1",
+    "booking": {
+      "activityId": "M7CLPUB13000225",
+      "locationId": "MZMP000001",
+      "group": "SWIMSESSIONS",
+      "end": "14:59:59"
     }
   },
   {
@@ -9292,7 +11492,25 @@
     }
   },
   {
-    "id": "e2450cc09d",
+    "id": "bffaf2a0d6",
+    "centerId": "meadows",
+    "day": "Sun",
+    "start": "14:00",
+    "end": "15:00",
+    "title": "Public Swim",
+    "category": "Swimming",
+    "room": "Main Pool",
+    "instructor": null,
+    "note": "Lane 3",
+    "booking": {
+      "activityId": "M7CLPUB14000725",
+      "locationId": "MZMP000003",
+      "group": "SWIMSESSIONS",
+      "end": "14:59:59"
+    }
+  },
+  {
+    "id": "d38ebe63df",
     "centerId": "bootle",
     "day": "Sun",
     "start": "14:15",
@@ -9301,25 +11519,12 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Time banded · may change for private parties",
     "booking": {
       "activityId": "B7CLPUB14150625",
       "locationId": "BZSPH00008",
       "group": "SWIMSESSIONS",
       "end": "15:29:59"
     }
-  },
-  {
-    "id": "0d9330785a",
-    "centerId": "bootle",
-    "day": "Sun",
-    "start": "14:15",
-    "end": "15:30",
-    "title": "Public Swim",
-    "category": "Swimming",
-    "room": "Leisure Pool",
-    "instructor": null,
-    "note": "Time banded · may change for private parties"
   },
   {
     "id": "4925d0562d",
