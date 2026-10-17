@@ -124,25 +124,48 @@ function londonToUtc(date: string, time: string) {
   return new Date(guess - offset);
 }
 
+/** Today's date in London as "YYYY-MM-DD". */
+export function londonDateKey(now = new Date()) {
+  const p = londonParts(now);
+  return new Date(Date.UTC(p.year, p.month - 1, p.day)).toISOString().slice(0, 10);
+}
+
+/** "YYYY-MM-DD" plus n days. */
+export function addDays(date: string, n: number) {
+  const [y, m, d] = date.split('-').map(Number);
+  return new Date(Date.UTC(y, m - 1, d + n)).toISOString().slice(0, 10);
+}
+
+/** Weekday key of a "YYYY-MM-DD" date. */
+export function dayOfDate(date: string): Day {
+  return DAYS[(new Date(`${date}T12:00:00Z`).getUTCDay() + 6) % 7];
+}
+
 /** London date ("YYYY-MM-DD") of the next time this weekday comes round, today included. */
 function nextDate(day: Day, now: Date) {
-  const p = londonParts(now);
   const diff = (DAYS.indexOf(day) - DAYS.indexOf(todayKey(now)) + 7) % 7;
-  return new Date(Date.UTC(p.year, p.month - 1, p.day + diff)).toISOString().slice(0, 10);
+  return addDays(londonDateKey(now), diff);
+}
+
+/** Online booking for a date opens 7 days before, at 6:30am London time. */
+export function bookingOpensAt(date: string) {
+  return londonToUtc(addDays(date, -7), '06:30');
 }
 
 const utcIso = (d: Date) => d.toISOString().replace('.000Z', 'Z');
 
 /**
- * Deep link into the booking portal for the session's next occurrence.
+ * Deep link into the booking portal for the session on `onDate` (default: its next occurrence).
  * With a fresh booking reference it opens that slot's "Book now" page (price options, then checkout);
  * otherwise it opens the centre's search for that activity group, starting from the session's time,
  * so the session is the first result.
  */
-export function sessionBookingUrl(s: Session, siteId: string, now = new Date()) {
-  const date = nextDate(s.day, now);
+export function sessionBookingUrl(s: Session, siteId: string, now = new Date(), onDate?: string) {
+  const date = onDate ?? nextDate(s.day, now);
   const refsAgeDays = (now.getTime() - Date.parse(BOOKING_REFS_CHECKED)) / 86_400_000;
-  if (s.booking && refsAgeDays <= BOOKING_REFS_MAX_AGE_DAYS) {
+  // The details page bounces to an empty search before booking opens; the search shows "Opens …".
+  const open = now >= bookingOpensAt(date);
+  if (s.booking && open && refsAgeDays <= BOOKING_REFS_MAX_AGE_DAYS) {
     // Same parameters (and order) the portal itself uses for its "Book now" button.
     const details = new URLSearchParams({
       activityEndTime: utcIso(londonToUtc(date, s.booking.end)),

@@ -7,7 +7,11 @@ import {
   DAYS,
   DAY_NAMES,
   EVT_TIMETABLE_FILTER,
+  addDays,
+  bookingOpensAt,
+  dayOfDate,
   formatTime,
+  londonDateKey,
   sessionBookingUrl,
   todayKey,
   type Category,
@@ -33,6 +37,14 @@ const CATEGORY_ICONS: Record<Category, typeof Waves> = {
   Sports: Trophy,
 };
 
+/** Bookings open a week ahead, so the tabs cover the next 8 days. */
+const WINDOW_DAYS = 8;
+
+type Slot = { day: Day; date: string | null };
+
+const longDate = (date: string) =>
+  new Intl.DateTimeFormat('en-GB', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC' }).format(new Date(`${date}T12:00:00Z`));
+
 const londonNow = () =>
   new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZone: 'Europe/London' }).format(new Date());
 
@@ -46,8 +58,11 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
   const [query, setQuery] = useState('');
   const [centre, setCentre] = useState(lockedCentre ?? 'all');
   const [category, setCategory] = useState<Category | 'all'>('all');
-  const [day, setDay] = useState<Day>('Mon');
+  // Tabs are weekdays until mount (server render has no "today"), then the next 8 dates.
+  const [slots, setSlots] = useState<Slot[]>(DAYS.map((day) => ({ day, date: null })));
+  const [sel, setSel] = useState(0);
   const [today, setToday] = useState<Day | null>(null);
+  const [todayDate, setTodayDate] = useState<string | null>(null);
   const [now, setNow] = useState<string | null>(null);
   const [expanded, setExpanded] = useState<string | null>(null);
   const searchId = useId();
@@ -55,29 +70,55 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
   const centreName = useMemo(() => Object.fromEntries(centres.map((c) => [c.id, c.name])), [centres]);
   const siteId = useMemo(() => Object.fromEntries(centres.map((c) => [c.id, c.bookingSiteId])), [centres]);
   // Deep links depend on today's date, so they're built after mount (the server render keeps the generic URL).
-  const bookHref = (s: Session) => (now ? sessionBookingUrl(s, siteId[s.centerId]) : BOOKING_URL);
+  // Sessions on the last day of the window aren't bookable until 6:30am a week before.
+  const opensLabel = (date: string | null) => {
+    if (!date || !now) return null;
+    const opens = bookingOpensAt(date);
+    if (new Date() >= opens) return null;
+    return `Opens ${new Intl.DateTimeFormat('en-GB', { weekday: 'short', timeZone: 'Europe/London' }).format(opens)} 6:30am`;
+  };
+  const bookHref = (s: Session) => (now ? sessionBookingUrl(s, siteId[s.centerId], new Date(), slots[sel]?.date ?? undefined) : BOOKING_URL);
   const centreShort = useMemo(() => Object.fromEntries(centres.map((c) => [c.id, c.shortName])), [centres]);
 
   // Initial state from the URL (shareable filters), then listen for filter requests from other islands.
   useEffect(() => {
     const t = todayKey();
+    const tDate = londonDateKey();
+    const nowStr = londonNow();
     setToday(t);
-    setNow(londonNow());
+    setTodayDate(tDate);
+    setNow(nowStr);
     const tick = setInterval(() => setNow(londonNow()), 60_000);
 
-    const apply = (d: TimetableFilterDetail) => {
+    // Start today, or tomorrow once everything today has finished.
+    const anyLeftToday = sessions.some((s) => s.day === t && s.end > nowStr);
+    const start = anyLeftToday ? tDate : addDays(tDate, 1);
+    const upcoming = Array.from({ length: WINDOW_DAYS }, (_, i) => {
+      const date = addDays(start, i);
+      return { day: dayOfDate(date), date };
+    });
+    setSlots(upcoming);
+
+    const indexFor = (dateOrDay: string) => {
+      const byDate = upcoming.findIndex((w) => w.date === dateOrDay);
+      return byDate >= 0 ? byDate : upcoming.findIndex((w) => w.day === dateOrDay);
+    };
+
+    const apply = (d: TimetableFilterDetail & { date?: string }) => {
       if (d.query !== undefined) setQuery(d.query);
       if (d.centre && !lockedCentre) setCentre(centres.some((c) => c.id === d.centre) ? d.centre : 'all');
       if (d.category) setCategory((CATEGORIES as readonly string[]).includes(d.category) ? (d.category as Category) : 'all');
-      if (d.day && DAYS.includes(d.day)) setDay(d.day);
+      const target = d.date ?? d.day;
+      if (target && indexFor(target) >= 0) setSel(indexFor(target));
     };
 
     const p = new URLSearchParams(location.search);
-    setDay(t);
+    setSel(0);
     apply({
       query: p.get('q') ?? undefined,
       centre: p.get('centre') ?? undefined,
       category: p.get('category') ?? undefined,
+      date: p.get('date') ?? undefined,
       day: (p.get('day') as Day) ?? undefined,
     });
 
@@ -93,7 +134,7 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
       clearInterval(tick);
       window.removeEventListener(EVT_TIMETABLE_FILTER, onFilter);
     };
-  }, [centres, lockedCentre]);
+  }, [centres, lockedCentre, sessions]);
 
   // Keep the URL in step so filtered views can be shared or bookmarked.
   useEffect(() => {
@@ -103,9 +144,10 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
     set('q', query.trim() || null);
     set('centre', !lockedCentre && centre !== 'all' ? centre : null);
     set('category', category !== 'all' ? category : null);
-    set('day', day !== today ? day : null);
+    url.searchParams.delete('day');
+    set('date', sel > 0 ? slots[sel]?.date ?? null : null);
     if (url.href !== location.href) history.replaceState(null, '', url);
-  }, [query, centre, category, day, today, lockedCentre]);
+  }, [query, centre, category, sel, slots, today, lockedCentre]);
 
   // Published timetables carry no live availability; only show that column when some data has it.
   const hasAvailability = useMemo(() => sessions.some((s) => s.status), [sessions]);
@@ -130,9 +172,12 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
     return counts;
   }, [filtered]);
 
+  const slot = slots[sel] ?? slots[0];
+  const day = slot.day;
+  const dayLabel = slot.date ? longDate(slot.date) : DAY_NAMES[day];
   const list = useMemo(() => filtered.filter((s) => s.day === day), [filtered, day]);
 
-  const isPast = (s: Session) => day === today && now !== null && s.end <= now;
+  const isPast = (s: Session) => slot.date !== null && slot.date === todayDate && now !== null && s.end <= now;
   const hasFilters = query.trim() !== '' || (!lockedCentre && centre !== 'all') || category !== 'all';
 
   const reset = () => {
@@ -142,7 +187,8 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
   };
 
   // If the chosen day has nothing but another day does, offer a jump.
-  const nextDayWithSessions = list.length === 0 ? DAYS.find((d) => dayCounts[d] > 0) : undefined;
+  const nextSlotWithSessions = list.length === 0 ? slots.findIndex((w) => dayCounts[w.day] > 0) : -1;
+  const nextSlot = nextSlotWithSessions >= 0 ? slots[nextSlotWithSessions] : undefined;
 
   return (
     <MotionConfig reducedMotion="user">
@@ -208,15 +254,17 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
 
           {/* Day selector */}
           <div role="group" aria-label="Day" className="scrollbar-none flex overflow-x-auto border-b border-neutral-200 px-2 sm:px-4">
-            {DAYS.map((d) => {
-              const active = d === day;
+            {slots.map((w, i) => {
+              const d = w.day;
+              const active = i === sel;
+              const isToday = w.date !== null && w.date === todayDate;
               return (
                 <button
-                  key={d}
+                  key={w.date ?? d}
                   type="button"
                   aria-pressed={active}
                   onClick={() => {
-                    setDay(d);
+                    setSel(i);
                     setExpanded(null);
                   }}
                   className={`relative flex min-w-[4.25rem] flex-1 flex-col items-center gap-0.5 px-2 pt-3 pb-2.5 text-sm transition-colors ${
@@ -224,11 +272,13 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
                   }`}
                 >
                   <span>
-                    <span className="sr-only">{DAY_NAMES[d]}</span>
-                    <span aria-hidden>{d}</span>
+                    <span className="sr-only">{w.date ? longDate(w.date) : DAY_NAMES[d]}</span>
+                    <span aria-hidden>
+                      {isToday ? 'Today' : d}
+                      {w.date && !isToday && <span className="tabular-nums"> {Number(w.date.slice(8))}</span>}
+                    </span>
                   </span>
                   <span className={`text-[0.7rem] tabular-nums ${active ? 'text-sage' : 'text-muted'}`}>
-                    {d === today ? 'Today · ' : ''}
                     {dayCounts[d]}
                     <span className="sr-only"> {dayCounts[d] === 1 ? 'session' : 'sessions'}</span>
                   </span>
@@ -242,7 +292,7 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
           <div className="flex flex-wrap items-center justify-between gap-2 px-4 pt-4 text-sm sm:px-6" aria-live="polite">
             <p className="text-muted">
               <span className="font-semibold text-ink">{list.length}</span> {list.length === 1 ? 'session' : 'sessions'} on{' '}
-              {DAY_NAMES[day]}
+              {dayLabel}
               {!lockedCentre && centre !== 'all' && <> at {centreName[centre]}</>}
             </p>
             {hasFilters && (
@@ -255,14 +305,14 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
           {list.length === 0 ? (
             <div className="px-4 py-16 text-center sm:px-6">
               <p className="font-serif text-2xl text-ink">
-                {hasFilters ? `Nothing matches on ${DAY_NAMES[day]}.` : `No sessions on ${DAY_NAMES[day]}.`}
+                {hasFilters ? `Nothing matches on ${dayLabel}.` : `No sessions on ${dayLabel}.`}
               </p>
               <p className="mt-2 text-muted">
-                {nextDayWithSessions ? (
+                {nextSlot ? (
                   <>
-                    There {dayCounts[nextDayWithSessions] === 1 ? 'is' : 'are'} {dayCounts[nextDayWithSessions]} on{' '}
-                    <button type="button" className="font-semibold text-sage underline underline-offset-4" onClick={() => setDay(nextDayWithSessions)}>
-                      {DAY_NAMES[nextDayWithSessions]}
+                    There {dayCounts[nextSlot.day] === 1 ? 'is' : 'are'} {dayCounts[nextSlot.day]} on{' '}
+                    <button type="button" className="font-semibold text-sage underline underline-offset-4" onClick={() => setSel(nextSlotWithSessions)}>
+                      {nextSlot.date ? longDate(nextSlot.date) : DAY_NAMES[nextSlot.day]}
                     </button>
                     .
                   </>
@@ -277,7 +327,7 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
               <div className="hidden px-6 pt-2 pb-4 md:block">
                 <table className="w-full text-left text-sm">
                   <caption className="sr-only">
-                    Sessions on {DAY_NAMES[day]}. Book buttons open the booking portal in a new tab.
+                    Sessions on {dayLabel}. Book buttons open the booking portal in a new tab.
                   </caption>
                   <thead>
                     <tr className="border-b border-neutral-200 text-xs font-semibold tracking-wide text-muted uppercase">
@@ -315,7 +365,7 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
                             <td className="py-4 pr-4 align-top">{!past && <StatusBadge session={s} />}</td>
                           )}
                           <td className="py-3.5 text-right align-top">
-                            <SessionAction session={s} past={past} centreName={centreName[s.centerId]} href={bookHref(s)} />
+                            <SessionAction session={s} past={past} centreName={centreName[s.centerId]} href={bookHref(s)} opens={opensLabel(slot.date)} />
                           </td>
                         </tr>
                       );
@@ -357,7 +407,7 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
                           {!past && <StatusBadge session={s} compact />}
                           <Tags tags={s.tags} inline />
                         </span>
-                        <SessionAction session={s} past={past} centreName={centreName[s.centerId]} href={bookHref(s)} />
+                        <SessionAction session={s} past={past} centreName={centreName[s.centerId]} href={bookHref(s)} opens={opensLabel(slot.date)} />
                       </div>
                       <AnimatePresence initial={false}>
                         {open && (
@@ -494,13 +544,40 @@ function Tags({ tags, inline }: { tags?: SessionTag[]; inline?: boolean }) {
   );
 }
 
-function SessionAction({ session, past, centreName, href }: { session: Session; past: boolean; centreName: string; href: string }) {
+function SessionAction({
+  session,
+  past,
+  centreName,
+  href,
+  opens,
+}: {
+  session: Session;
+  past: boolean;
+  centreName: string;
+  href: string;
+  opens: string | null;
+}) {
   if (past) return <span className="text-xs text-muted">Finished</span>;
   if (session.payOnTheDay) {
     return (
       <span className="inline-flex shrink-0 items-center rounded-lg border border-neutral-300 px-3 py-2 text-sm font-semibold whitespace-nowrap text-ink">
         Pay on the day
       </span>
+    );
+  }
+  if (opens) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-sage px-3 py-2 text-sm font-semibold whitespace-nowrap text-sage hover:bg-sage-50"
+      >
+        {opens}
+        <span className="sr-only">
+          : booking for {session.title} at {centreName} opens then (opens the booking portal in a new tab)
+        </span>
+      </a>
     );
   }
   return <BookButton session={session} centreName={centreName} href={href} />;
