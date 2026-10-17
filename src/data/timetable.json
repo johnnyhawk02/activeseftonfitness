@@ -5988,7 +5988,8 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "£2"
+    "note": "£2, pay on the day",
+    "payOnTheDay": true
   },
   {
     "id": "fb5e17b6f8",
@@ -6000,7 +6001,8 @@
     "category": "Swimming",
     "room": "Leisure Pool",
     "instructor": null,
-    "note": "£2"
+    "note": "£2, pay on the day",
+    "payOnTheDay": true
   },
   {
     "id": "5d1549b6c6",
