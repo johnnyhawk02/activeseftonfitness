@@ -30,5 +30,5 @@ npm run check    # type-check .astro/.ts/.tsx
   - **Straight to "Book now"** (`/book/details?…`) for sessions that have a `booking` reference in `timetable.json` (about 80% of them). That page shows live spaces and the price options, then checkout.
   - **Otherwise a filtered search** (`/book?siteId=…&activityGroupId=…&dateFrom=…`) for that centre and activity type from the session's start time, so it's the first result. This covers sessions that aren't bookable online as listed (e.g. flume sessions, Swim & Splash, Tots Dance) or that differ from the booking system's times.
   - Links are built in the browser because they depend on today's date.
-- Sessions with `"payOnTheDay": true` in `timetable.json` (the £2 over-60s swims) show "Pay on the day" instead of a Book button.
+- Sessions with `"payOnTheDay": true` in `timetable.json` (the £2 over-60s swims, and the £2 swims at Dunes) show "Pay on the day" instead of a Book button.
 - **Booking references go stale.** They were collected from the booking portal on `BOOKING_REFS_CHECKED` (`src/lib/shared.ts`). The portal's IDs change when a centre changes its timetable, and a stale ID lands on an empty search page, so 42 days after that date every button automatically falls back to the filtered search. Refresh the references (and bump the date) when timetables change.

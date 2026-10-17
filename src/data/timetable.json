@@ -340,7 +340,8 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Over 60s and under 16s, term time only"
+    "note": "Over 60s and under 16s (term time only), pay on the day",
+    "payOnTheDay": true
   },
   {
     "id": "8b807611be",
@@ -2885,7 +2886,8 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Over 60s and under 16s, term time only"
+    "note": "Over 60s and under 16s (term time only), pay on the day",
+    "payOnTheDay": true
   },
   {
     "id": "e1606a070f",
@@ -5794,7 +5796,8 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Over 60s and under 16s, term time only"
+    "note": "Over 60s and under 16s (term time only), pay on the day",
+    "payOnTheDay": true
   },
   {
     "id": "f3f939f6cb",
@@ -7345,7 +7348,8 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "Over 60s and under 16s, term time only"
+    "note": "Over 60s and under 16s (term time only), pay on the day",
+    "payOnTheDay": true
   },
   {
     "id": "98120c1147",
