@@ -1,0 +1,48 @@
+---
+import Logo from './Logo.astro';
+import { centers, BOOKING_URL } from '../lib/data';
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-24 border-t border-neutral-200 bg-white">
+  <div class="mx-auto grid max-w-6xl gap-12 px-4 py-14 sm:px-6 md:grid-cols-[1.2fr_2fr]">
+    <div class="space-y-4">
+      <Logo />
+      <p class="max-w-xs text-sm leading-relaxed text-muted">
+        Leisure centres, pools and outdoor sport run by Sefton Council, for every age and every ability.
+      </p>
+      <p class="text-sm">
+        <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" class="font-semibold text-sage underline underline-offset-4 hover:text-sage-hover"
+          >Book a session<span class="sr-only"> (opens in a new tab)</span></a
+        >
+      </p>
+    </div>
+    <ul class="grid gap-x-8 gap-y-6 text-sm sm:grid-cols-2 lg:grid-cols-3">
+      {
+        centers.map((c) => (
+          <li>
+            <a href={`/centres/${c.id}/`} class="font-semibold text-ink hover:text-sage hover:underline">
+              {c.name}
+            </a>
+            <p class="mt-1 text-muted">{c.address}</p>
+            <p class="text-muted">
+              <a href={`tel:${c.phone.replace(/\s/g, '')}`} class="hover:text-ink">
+                {c.phone}
+              </a>
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="border-t border-neutral-200">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-6 text-xs text-muted sm:px-6">
+      <p>© {year} Sefton Council · Active Sefton</p>
+      <ul class="flex gap-4">
+        <li><a class="hover:text-ink" href="https://www.activeseftonfitness.co.uk/privacy-policy">Privacy</a></li>
+        <li><a class="hover:text-ink" href="https://www.activeseftonfitness.co.uk/termsandconditions">Terms</a></li>
+        <li><a class="hover:text-ink" href="https://www.activeseftonfitness.co.uk/memberships">Memberships</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

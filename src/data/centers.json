@@ -1,0 +1,447 @@
+[
+  {
+    "id": "bootle",
+    "name": "Bootle Leisure Centre",
+    "shortName": "Bootle",
+    "town": "Bootle",
+    "image": "/images/centers/bootle.jpg",
+    "imageAlt": "The red-brick and blue-glass frontage of Bootle Leisure Centre across a grass lawn",
+    "summary": "A 25m pool with a moveable floor, a leisure pool with flume, sauna and steam rooms, plus a fitness suite and busy class studio in North Park.",
+    "description": "The Active Fitness suite at Bootle Leisure Centre hosts classes ranging from low-intensity yoga to high-intensity Bootcamp and Boxercise. Whatever your level of fitness, there will be a session that is right for you — in the water or out of it.",
+    "highlights": [
+      "25m Pool",
+      "Gym",
+      "Sauna & Steam"
+    ],
+    "amenities": [
+      "Active Fitness suite",
+      "25m swimming pool with moveable floor",
+      "Leisure pool with flume ride",
+      "Sports hall",
+      "Activity studio",
+      "Sauna and steam rooms",
+      "Dry-side changing rooms"
+    ],
+    "address": "North Park, Bootle L20 5JJ",
+    "phone": "0151 330 3301",
+    "hours": [
+      {
+        "days": "Mon–Fri",
+        "open": "07:00",
+        "close": "21:30"
+      },
+      {
+        "days": "Sat–Sun",
+        "open": "09:00",
+        "close": "16:00"
+      }
+    ],
+    "hoursNote": "Last fitness suite admission 8:30pm weekdays, 3:30pm weekends. The pool closes at 3:30pm at weekends.",
+    "weekly": {
+      "Mon": [
+        "07:00",
+        "21:30"
+      ],
+      "Tue": [
+        "07:00",
+        "21:30"
+      ],
+      "Wed": [
+        "07:00",
+        "21:30"
+      ],
+      "Thu": [
+        "07:00",
+        "21:30"
+      ],
+      "Fri": [
+        "07:00",
+        "21:30"
+      ],
+      "Sat": [
+        "09:00",
+        "16:00"
+      ],
+      "Sun": [
+        "09:00",
+        "16:00"
+      ]
+    },
+    "sourceUrl": "https://www.activeseftonfitness.co.uk/bootle-leisure-centre",
+    "timetableNote": "From the centre’s published timetables: classes from 7 September 2026; pool timetable for 5–25 October 2026. Swimming lessons and club sessions aren’t listed. Weekend afternoon swims can change for private party bookings."
+  },
+  {
+    "id": "crosby",
+    "name": "Crosby Lakeside Adventure Centre",
+    "shortName": "Crosby",
+    "town": "Waterloo",
+    "image": "/images/centers/crosby.jpg",
+    "imageAlt": "Crosby Lakeside Adventure Centre beside the marine lake",
+    "summary": "A refurbished gym and two activity studios on the edge of the marine lake, with paddlesports, sailing and a café overlooking the water.",
+    "description": "Crosby Lakeside features a recently refurbished Active Fitness suite with up-to-date machines and free weights, plus two activity studios for an extensive range of classes. Step outside and the lake is yours: stand-up paddleboarding, kayaking and sailing run through the year.",
+    "highlights": [
+      "Water Sports",
+      "Gym Suite",
+      "Fitness Studios",
+      "Bistro"
+    ],
+    "amenities": [
+      "Active Fitness suite",
+      "2 activity studios",
+      "Changing facilities",
+      "Marine lake water sports",
+      "Lakeside café and bistro"
+    ],
+    "address": "The Esplanade, off Cambridge Road, Waterloo L22 1RR",
+    "phone": "0151 966 6868",
+    "hours": [
+      {
+        "days": "Mon–Fri",
+        "open": "06:30",
+        "close": "22:00"
+      },
+      {
+        "days": "Sat–Sun",
+        "open": "07:00",
+        "close": "17:00"
+      }
+    ],
+    "hoursNote": "Lake sessions depend on weather and water conditions.",
+    "weekly": {
+      "Mon": [
+        "06:30",
+        "22:00"
+      ],
+      "Tue": [
+        "06:30",
+        "22:00"
+      ],
+      "Wed": [
+        "06:30",
+        "22:00"
+      ],
+      "Thu": [
+        "06:30",
+        "22:00"
+      ],
+      "Fri": [
+        "06:30",
+        "22:00"
+      ],
+      "Sat": [
+        "07:00",
+        "17:00"
+      ],
+      "Sun": [
+        "07:00",
+        "17:00"
+      ]
+    },
+    "sourceUrl": "https://www.activeseftonfitness.co.uk/crosby-lakeside",
+    "timetableNote": "From the centre’s published class timetable, from 16 January 2026. Lake activities are booked separately and aren’t listed here."
+  },
+  {
+    "id": "dunes",
+    "name": "Dunes Splash World",
+    "shortName": "Dunes",
+    "town": "Southport",
+    "image": "/images/centers/dunes.jpg",
+    "imageAlt": "Twisting water flumes above the Splash World sign at Dunes, Southport",
+    "summary": "Southport’s seafront water park and leisure centre: flumes and wave pool, a 25m pool, learner pool, spin studio and a fitness suite that overlooks the slides.",
+    "description": "Dunes is a combined leisure centre and water-based theme park on Southport’s Esplanade. The leisure side offers a 12m learner pool and a 25m main pool, while upstairs a large sprung-floor studio and a new spin studio run around 90 classes a week. The ground floor has a four-court sports hall, with four new 3G pitches outside.",
+    "highlights": [
+      "Leisure Pool",
+      "Flumes",
+      "Fitness Suite"
+    ],
+    "amenities": [
+      "Splash World leisure pool and flumes",
+      "25m swimming pool",
+      "Learner pool",
+      "Active Fitness suite",
+      "Spin studio",
+      "Activity studio",
+      "Sports hall (4 badminton courts)",
+      "Four 3G pitches",
+      "Sauna and steam room"
+    ],
+    "address": "Esplanade, Southport PR8 1RX",
+    "phone": "01704 537160",
+    "hours": [
+      {
+        "days": "Mon–Fri",
+        "open": "07:00",
+        "close": "22:00"
+      },
+      {
+        "days": "Sat–Sun",
+        "open": "09:00",
+        "close": "16:00"
+      }
+    ],
+    "hoursNote": "Last entry 9:15pm weekdays, 3:15pm weekends.",
+    "weekly": {
+      "Mon": [
+        "07:00",
+        "22:00"
+      ],
+      "Tue": [
+        "07:00",
+        "22:00"
+      ],
+      "Wed": [
+        "07:00",
+        "22:00"
+      ],
+      "Thu": [
+        "07:00",
+        "22:00"
+      ],
+      "Fri": [
+        "07:00",
+        "22:00"
+      ],
+      "Sat": [
+        "09:00",
+        "16:00"
+      ],
+      "Sun": [
+        "09:00",
+        "16:00"
+      ]
+    },
+    "sourceUrl": "https://www.activeseftonfitness.co.uk/dunes-splash-world",
+    "timetableNote": "From the centre’s published timetables: classes from 23 February 2026; pool timetable current from 1 September 2026. £2 swims are for over-60s and under-16s (term time only)."
+  },
+  {
+    "id": "litherland",
+    "name": "Litherland Sports Park",
+    "shortName": "Litherland",
+    "town": "Litherland",
+    "image": "/images/centers/litherland.jpg",
+    "imageAlt": "The exterior of Litherland Sports Park",
+    "summary": "A floodlit six-lane athletics track, 1km cycle circuit and 3G pitches, with a 40-station gym and activity studio indoors.",
+    "description": "One of the finest sports facilities in the region. The floodlit six-lane, all-weather track has full field athletics facilities and a centre pitch, alongside a 1km cycle circuit, floodlit 3G football pitches and grass pitches for adults and juniors. Indoors, the fitness suite has 40 stations and the activity studio runs a full class programme.",
+    "highlights": [
+      "Athletics Track",
+      "Floodlit 3G Pitches",
+      "Gym"
+    ],
+    "amenities": [
+      "400m six-lane athletics track",
+      "1km cycle circuit",
+      "Floodlit 3G all-weather pitches",
+      "Floodlit rugby pitch",
+      "Junior and adult grass pitches",
+      "Active Fitness suite (40 stations)",
+      "Activity studio",
+      "Meeting room"
+    ],
+    "address": "Boundary Road, Litherland L21 7LA",
+    "phone": "0151 288 6288",
+    "hours": [
+      {
+        "days": "Mon–Thu",
+        "open": "06:30",
+        "close": "21:00"
+      },
+      {
+        "days": "Fri",
+        "open": "06:30",
+        "close": "20:00"
+      },
+      {
+        "days": "Sat–Sun",
+        "open": "09:00",
+        "close": "17:00"
+      }
+    ],
+    "hoursNote": "Pitch hire is available outside class times — call the centre to book.",
+    "weekly": {
+      "Mon": [
+        "06:30",
+        "21:00"
+      ],
+      "Tue": [
+        "06:30",
+        "21:00"
+      ],
+      "Wed": [
+        "06:30",
+        "21:00"
+      ],
+      "Thu": [
+        "06:30",
+        "21:00"
+      ],
+      "Fri": [
+        "06:30",
+        "20:00"
+      ],
+      "Sat": [
+        "09:00",
+        "17:00"
+      ],
+      "Sun": [
+        "09:00",
+        "17:00"
+      ]
+    },
+    "sourceUrl": "https://www.activeseftonfitness.co.uk/litherland-sports-park",
+    "timetableNote": "From the centre’s published class timetable dated 19 September 2025 — the latest on the venue page. Track and pitch hire aren’t listed; call the centre to book."
+  },
+  {
+    "id": "meadows",
+    "name": "Meadows Leisure Centre",
+    "shortName": "Meadows",
+    "town": "Maghull",
+    "image": "/images/centers/meadows.jpg",
+    "imageAlt": "The exterior of Meadows Leisure Centre in Maghull",
+    "summary": "A five-lane 25m pool and learner pool, a sauna and steam health suite, a 65-station gym and nearly 100 classes a week across three studios.",
+    "description": "Set over two floors, Meadows has a 25m five-lane pool and a 12.5m learner pool with a changing village, family cubicles and an accessible changing room. The health suite sits poolside. Upstairs, the 65-station fitness suite is joined by a spin studio, a functional training area and two sprung-floor studios.",
+    "highlights": [
+      "25m Pool",
+      "Health Suite",
+      "Gym"
+    ],
+    "amenities": [
+      "25m five-lane swimming pool",
+      "12.5m learner pool",
+      "Health suite: sauna and steam",
+      "Active Fitness suite (65 stations)",
+      "Spin studio",
+      "Functional conditioning area",
+      "2 group fitness studios",
+      "Library"
+    ],
+    "address": "Hall Lane, Maghull L31 7BB",
+    "phone": "0151 288 6727",
+    "hours": [
+      {
+        "days": "Mon–Fri",
+        "open": "06:30",
+        "close": "22:00"
+      },
+      {
+        "days": "Sat–Sun",
+        "open": "08:00",
+        "close": "17:00"
+      }
+    ],
+    "hoursNote": "Accessible changing room and family cubicles available poolside.",
+    "weekly": {
+      "Mon": [
+        "06:30",
+        "22:00"
+      ],
+      "Tue": [
+        "06:30",
+        "22:00"
+      ],
+      "Wed": [
+        "06:30",
+        "22:00"
+      ],
+      "Thu": [
+        "06:30",
+        "22:00"
+      ],
+      "Fri": [
+        "06:30",
+        "22:00"
+      ],
+      "Sat": [
+        "08:00",
+        "17:00"
+      ],
+      "Sun": [
+        "08:00",
+        "17:00"
+      ]
+    },
+    "sourceUrl": "https://www.activeseftonfitness.co.uk/meadows-leisure-centre",
+    "timetableNote": "From the centre’s published timetables: classes from 26 January 2026, pool from 2 March 2026. Virtual classes are screen-led Les Mills sessions. Swimming lessons and club bookings aren’t listed. Availability is shown when you book."
+  },
+  {
+    "id": "netherton",
+    "name": "Netherton Activity Centre",
+    "shortName": "Netherton",
+    "town": "Netherton",
+    "image": "/images/centers/netherton.jpg",
+    "imageAlt": "The exterior of Netherton Activity Centre",
+    "summary": "A community hub with a fitness suite, badminton courts, a floodlit 3G pitch for 5- and 7-a-side, a free crèche for members and Jake’s Sensory World.",
+    "description": "The NAC has a well-equipped fitness suite — treadmills, cross trainers, cycles, rowers and a Smith machine — with a stretching area, free weights and a Power Plate station. From toddlers to teens to parents, there is something for every age, whether that is a dance session, a kickabout on the 3G or an hour to yourself while the crèche looks after the little ones.",
+    "highlights": [
+      "Fitness Suite",
+      "Badminton Courts",
+      "3G Pitch"
+    ],
+    "amenities": [
+      "Active Fitness suite",
+      "Fitness classes",
+      "Badminton courts",
+      "Floodlit 3G pitch (5 and 7-a-side)",
+      "Adult and junior grass pitches",
+      "Free crèche with membership",
+      "Jake’s Sensory World",
+      "Library"
+    ],
+    "address": "Glovers Lane, Netherton L30 3TL",
+    "phone": "0151 525 5106",
+    "hours": [
+      {
+        "days": "Mon",
+        "open": "07:00",
+        "close": "22:00"
+      },
+      {
+        "days": "Tue–Thu",
+        "open": "09:00",
+        "close": "22:00"
+      },
+      {
+        "days": "Fri",
+        "open": "07:00",
+        "close": "22:00"
+      },
+      {
+        "days": "Sat–Sun",
+        "open": "09:00",
+        "close": "16:00"
+      }
+    ],
+    "hoursNote": "The crèche is free with membership; places are limited.",
+    "weekly": {
+      "Mon": [
+        "07:00",
+        "22:00"
+      ],
+      "Tue": [
+        "09:00",
+        "22:00"
+      ],
+      "Wed": [
+        "09:00",
+        "22:00"
+      ],
+      "Thu": [
+        "09:00",
+        "22:00"
+      ],
+      "Fri": [
+        "07:00",
+        "22:00"
+      ],
+      "Sat": [
+        "09:00",
+        "16:00"
+      ],
+      "Sun": [
+        "09:00",
+        "16:00"
+      ]
+    },
+    "sourceUrl": "https://www.activeseftonfitness.co.uk/netherton-activity-centre",
+    "timetableNote": "From the centre’s published class timetable, from 3 August 2026. There are no classes at weekends. Pitch and court hire aren’t listed; call the centre to book."
+  }
+]

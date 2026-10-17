@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+@config '../../tailwind.config.mjs';
+
+@layer base {
+  html {
+    @apply bg-canvas text-ink font-sans antialiased;
+    scroll-padding-top: 5rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-canvas;
+  }
+  h1, h2, h3 {
+    @apply font-serif;
+    font-optical-sizing: auto;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    outline: 2px solid #2c4a3e;
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Command palette (native <dialog>) */
+dialog.palette {
+  margin: 10vh auto auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  width: min(640px, calc(100vw - 2rem));
+  max-height: 75vh;
+  overflow: visible;
+}
+dialog.palette::backdrop {
+  background: rgb(26 26 26 / 0.35);
+  backdrop-filter: blur(2px);
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog.palette[open] > div {
+    animation: palette-in 140ms ease-out;
+  }
+  dialog.palette[open]::backdrop {
+    animation: fade-in 140ms ease-out;
+  }
+}
+@keyframes palette-in {
+  from { opacity: 0; transform: translateY(-6px) scale(0.985); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+}
+
+/* Banner dismissal is applied before paint by an inline script in Layout. */
+html.notice-dismissed [data-notice] {
+  display: none;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

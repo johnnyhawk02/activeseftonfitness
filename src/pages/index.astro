@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import CenterGrid from '../components/CenterGrid.astro';
+import Timetable from '../components/Timetable.tsx';
+import { centers, sessions } from '../lib/data';
+---
+
+<Layout>
+  <Hero />
+  <CenterGrid />
+
+  <section id="timetable" aria-labelledby="timetable-heading" class="mx-auto max-w-6xl scroll-mt-24 px-4 pt-24 sm:px-6">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <p class="text-sm font-semibold text-sage">This week</p>
+        <h2 id="timetable-heading" class="mt-2 text-4xl font-medium text-ink sm:text-5xl">Classes &amp; sessions</h2>
+      </div>
+      <p class="max-w-md text-muted">
+        Swims, classes and gym sessions across all six centres, from each centre’s published timetable. Booking opens in our booking portal in a new tab.
+      </p>
+    </div>
+    <div class="mt-8">
+      <Timetable client:idle sessions={sessions} centres={centers.map(({ id, name, shortName }) => ({ id, name, shortName }))} />
+    </div>
+  </section>
+</Layout>

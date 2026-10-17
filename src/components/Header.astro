@@ -1,0 +1,49 @@
+---
+import Logo from './Logo.astro';
+import Kbd from './Kbd.astro';
+import { BOOKING_URL } from '../lib/data';
+
+const path = Astro.url.pathname;
+const home = path === '/' ? '' : '/';
+---
+
+<header class="sticky top-0 z-40 border-b border-neutral-200 bg-canvas/90 backdrop-blur supports-[backdrop-filter]:bg-canvas/80">
+  <div class="mx-auto flex h-16 max-w-6xl items-center gap-4 px-4 sm:px-6">
+    <a href="/" class="mr-auto rounded-md" aria-label="Active Sefton home">
+      <Logo />
+    </a>
+
+    <nav aria-label="Primary" class="hidden items-center gap-1 text-sm font-medium md:flex">
+      <a href={`${home}#centres`} class="rounded-md px-3 py-2 text-muted hover:bg-white hover:text-ink">Centres</a>
+      <a href={`${home}#timetable`} class="rounded-md px-3 py-2 text-muted hover:bg-white hover:text-ink">Timetable</a>
+      <a href="https://www.activeseftonfitness.co.uk/memberships" class="rounded-md px-3 py-2 text-muted hover:bg-white hover:text-ink">Memberships</a>
+    </nav>
+
+    <button
+      type="button"
+      data-open-palette
+      class="flex items-center gap-2 rounded-lg border border-neutral-200 bg-white px-2.5 py-2 text-sm text-muted shadow-soft hover:border-neutral-300 hover:text-ink sm:min-w-52 sm:px-3"
+      aria-label="Search classes and centres"
+    >
+      <svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <span class="hidden flex-1 text-left sm:inline">Search…</span>
+      <Kbd />
+    </button>
+
+    <a
+      href={BOOKING_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hidden rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white hover:bg-sage-hover sm:inline-flex"
+      >Book online<span class="sr-only"> (opens in a new tab)</span></a
+    >
+  </div>
+
+  <nav aria-label="Primary (mobile)" class="flex gap-1 border-t border-neutral-200 px-2 text-sm font-medium md:hidden">
+    <a href={`${home}#centres`} class="flex-1 py-2.5 text-center text-muted">Centres</a>
+    <a href={`${home}#timetable`} class="flex-1 py-2.5 text-center text-muted">Timetable</a>
+    <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 text-center font-semibold text-sage"
+      >Book<span class="sr-only"> online (opens in a new tab)</span></a
+    >
+  </nav>
+</header>

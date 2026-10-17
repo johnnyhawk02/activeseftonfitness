@@ -1,0 +1,115 @@
+// Constants, types and helpers with no data imports — safe for client islands.
+
+export const BOOKING_URL = 'https://activesefton.gladstonego.cloud/book';
+
+export const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] as const;
+export type Day = (typeof DAYS)[number];
+
+export const DAY_NAMES: Record<Day, string> = {
+  Mon: 'Monday',
+  Tue: 'Tuesday',
+  Wed: 'Wednesday',
+  Thu: 'Thursday',
+  Fri: 'Friday',
+  Sat: 'Saturday',
+  Sun: 'Sunday',
+};
+
+export const CATEGORIES = ['Swimming', 'Gym', 'Group Fitness', 'Sports'] as const;
+export type Category = (typeof CATEGORIES)[number];
+
+export type Center = {
+  id: string;
+  name: string;
+  shortName: string;
+  town: string;
+  image: string;
+  imageAlt: string;
+  summary: string;
+  description: string;
+  highlights: string[];
+  amenities: string[];
+  address: string;
+  phone: string;
+  hours: { days: string; open: string; close: string }[];
+  hoursNote: string;
+  timetableNote?: string;
+  weekly: Record<Day, [string, string]>;
+  sourceUrl: string;
+};
+
+export type SessionTag = 'Virtual' | 'Youth' | 'New' | 'Extra charge';
+
+export type Session = {
+  id: string;
+  centerId: string;
+  day: Day;
+  start: string;
+  end: string;
+  title: string;
+  category: Category;
+  room: string;
+  instructor: string | null;
+  /** Live availability, where known. Real published timetables don't include it. */
+  capacity?: number;
+  spacesLeft?: number;
+  status?: 'Available' | 'Filling Fast';
+  tags?: SessionTag[];
+  /** Short qualifier from the published timetable, e.g. "2.5 lanes" or "Families only". */
+  note?: string;
+};
+
+export type Notice = { id: string; tone: 'info' | 'warning'; message: string; link?: { label: string; href: string } };
+
+/** `/images/centers/bootle.jpg` → srcset of the WebP variants written by scripts/download-images.mjs */
+export function imageSrcSet(image: string) {
+  const base = image.replace(/\.jpg$/, '');
+  return `${base}-480.webp 480w, ${base}-960.webp 960w`;
+}
+
+/** 24h "07:30" → "7:30am" */
+export function formatTime(t: string) {
+  const [h, m] = t.split(':').map(Number);
+  const suffix = h >= 12 ? 'pm' : 'am';
+  const h12 = h % 12 || 12;
+  return m === 0 ? `${h12}${suffix}` : `${h12}:${String(m).padStart(2, '0')}${suffix}`;
+}
+
+/** Today's weekday in UK time, as a Day key. */
+export function todayKey(now = new Date()): Day {
+  const name = new Intl.DateTimeFormat('en-GB', { weekday: 'short', timeZone: 'Europe/London' }).format(now);
+  return (DAYS as readonly string[]).includes(name) ? (name as Day) : 'Mon';
+}
+
+export type ClassIndexEntry = { title: string; category: Category; centerIds: string[]; count: number };
+
+// Cross-island events. Islands hydrate independently, so these go through window.
+export const EVT_PALETTE_OPEN = 'as:palette-open';
+export const EVT_TIMETABLE_FILTER = 'as:timetable-filter';
+export type TimetableFilterDetail = Partial<{ centre: string; category: string; day: Day; query: string }>;
+
+export function openPalette() {
+  window.dispatchEvent(new CustomEvent(EVT_PALETTE_OPEN));
+}
+
+/**
+ * Ask the timetable to filter. The URL is updated as well, because the timetable island
+ * hydrates on visibility and may not be listening yet — it reads the URL when it mounts.
+ * A new query starts a fresh search: category and (unless given) centre are cleared.
+ */
+export function filterTimetable(detail: TimetableFilterDetail) {
+  const url = new URL(location.href);
+  const set = (k: string, v?: string) => (v ? url.searchParams.set(k, v) : url.searchParams.delete(k));
+  if (detail.query !== undefined) {
+    set('q', detail.query || undefined);
+    set('category', detail.category);
+    set('centre', detail.centre);
+  } else {
+    if (detail.centre) set('centre', detail.centre);
+    if (detail.category) set('category', detail.category);
+  }
+  if (detail.day) set('day', detail.day);
+  url.hash = 'timetable';
+  history.replaceState(null, '', url);
+  window.dispatchEvent(new CustomEvent(EVT_TIMETABLE_FILTER, { detail }));
+}

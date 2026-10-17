@@ -1,0 +1,45 @@
+---
+import { notices } from '../lib/data';
+const notice = notices[0];
+---
+
+{
+  notice && (
+    <div
+      data-notice={notice.id}
+      role="region"
+      aria-label="Service update"
+      class:list={[
+        'border-b text-sm',
+        notice.tone === 'warning' ? 'border-amber-200 bg-amber-50 text-amber-950' : 'border-sage-100 bg-sage-50 text-sage',
+      ]}
+    >
+      <div class="mx-auto flex max-w-6xl items-start gap-3 px-4 py-2.5 sm:items-center sm:px-6">
+        <svg aria-hidden="true" class="mt-0.5 size-4 shrink-0 sm:mt-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        <p class="flex-1 leading-snug">
+          <span class="font-semibold">Service update:</span> {notice.message}
+          {notice.link && (
+            <a href={notice.link.href} class="ml-1 font-semibold underline underline-offset-2 hover:no-underline">
+              {notice.link.label}
+            </a>
+          )}
+        </p>
+        <button
+          type="button"
+          data-dismiss-notice
+          class="-m-1.5 rounded-md p-1.5 hover:bg-black/5"
+          aria-label="Dismiss service update"
+        >
+          <svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+  )
+}
+
+<script is:inline define:vars={{ id: notice?.id }}>
+  document.querySelector('[data-dismiss-notice]')?.addEventListener('click', function () {
+    document.documentElement.classList.add('notice-dismissed');
+    try { localStorage.setItem('as-notice-dismissed', id); } catch (e) {}
+  });
+</script>
