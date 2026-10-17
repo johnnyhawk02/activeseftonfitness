@@ -59,6 +59,8 @@ export type Session = {
   tags?: SessionTag[];
   /** Short qualifier from the published timetable, e.g. "2.5 lanes" or "Families only". */
   note?: string;
+  /** Not bookable online: pay at reception on the day. */
+  payOnTheDay?: boolean;
   /** The matching slot in the booking system, for a link straight to its "Book now" page. */
   booking?: BookingRef;
 };

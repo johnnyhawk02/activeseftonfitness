@@ -315,7 +315,7 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
                             <td className="py-4 pr-4 align-top">{!past && <StatusBadge session={s} />}</td>
                           )}
                           <td className="py-3.5 text-right align-top">
-                            {past ? <span className="text-xs text-muted">Finished</span> : <BookButton session={s} centreName={centreName[s.centerId]} href={bookHref(s)} />}
+                            <SessionAction session={s} past={past} centreName={centreName[s.centerId]} href={bookHref(s)} />
                           </td>
                         </tr>
                       );
@@ -357,11 +357,7 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
                           {!past && <StatusBadge session={s} compact />}
                           <Tags tags={s.tags} inline />
                         </span>
-                        {past ? (
-                          <span className="text-xs text-muted">Finished</span>
-                        ) : (
-                          <BookButton session={s} centreName={centreName[s.centerId]} href={bookHref(s)} />
-                        )}
+                        <SessionAction session={s} past={past} centreName={centreName[s.centerId]} href={bookHref(s)} />
                       </div>
                       <AnimatePresence initial={false}>
                         {open && (
@@ -496,6 +492,18 @@ function Tags({ tags, inline }: { tags?: SessionTag[]; inline?: boolean }) {
       ))}
     </span>
   );
+}
+
+function SessionAction({ session, past, centreName, href }: { session: Session; past: boolean; centreName: string; href: string }) {
+  if (past) return <span className="text-xs text-muted">Finished</span>;
+  if (session.payOnTheDay) {
+    return (
+      <span className="inline-flex shrink-0 items-center rounded-lg border border-neutral-300 px-3 py-2 text-sm font-semibold whitespace-nowrap text-ink">
+        Pay on the day
+      </span>
+    );
+  }
+  return <BookButton session={session} centreName={centreName} href={href} />;
 }
 
 function BookButton({ session, centreName, href }: { session: Session; centreName: string; href: string }) {

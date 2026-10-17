@@ -25,7 +25,8 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "£2"
+    "note": "£2, pay on the day",
+    "payOnTheDay": true
   },
   {
     "id": "8e134c2d47",
@@ -487,7 +488,8 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "£2"
+    "note": "£2, pay on the day",
+    "payOnTheDay": true
   },
   {
     "id": "26d8105b10",
@@ -2329,7 +2331,8 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "£2"
+    "note": "£2, pay on the day",
+    "payOnTheDay": true
   },
   {
     "id": "74bc41a207",
@@ -3278,7 +3281,8 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "£2"
+    "note": "£2, pay on the day",
+    "payOnTheDay": true
   },
   {
     "id": "64f51fab6e",
@@ -3728,7 +3732,8 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "£2"
+    "note": "£2, pay on the day",
+    "payOnTheDay": true
   },
   {
     "id": "4355f7fb50",
@@ -5582,7 +5587,8 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "£2"
+    "note": "£2, pay on the day",
+    "payOnTheDay": true
   },
   {
     "id": "77282488db",
@@ -6435,7 +6441,8 @@
     "category": "Swimming",
     "room": "Main Pool",
     "instructor": null,
-    "note": "£2"
+    "note": "£2, pay on the day",
+    "payOnTheDay": true
   },
   {
     "id": "1ebf30e361",
