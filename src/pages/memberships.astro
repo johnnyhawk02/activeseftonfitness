@@ -56,9 +56,9 @@ const listNames = (names: string[]) => names.slice(0, -1).join(', ') + ' or ' + 
     <section id="join-setup" aria-labelledby="join-setup-heading" data-join-setup data-memberships-url={portal.membershipsUrl} data-fallback-url={joinUrl} class="mt-14 scroll-mt-24 rounded-2xl border border-neutral-200 bg-white p-6 shadow-soft transition-shadow sm:p-8">
       <h2 id="join-setup-heading" class="text-2xl font-medium text-ink">Joining online?</h2>
       <p class="mt-1.5 text-sm text-muted">
-        Pick your home centre and payment day, then press <strong class="font-semibold text-ink">Join online</strong> on a membership. Our booking portal opens in a new tab with it already chosen, ready to pay.
+        Pick your home centre here, then choose how to pay on a membership and press <strong class="font-semibold text-ink">Join online</strong>. Our booking portal opens in a new tab with it already chosen, ready to pay.
       </p>
-      <div class="mt-5 grid gap-5 lg:grid-cols-[1fr_auto] lg:gap-10">
+      <div class="mt-5">
         <fieldset>
           <legend class="text-xs font-semibold tracking-[0.12em] text-muted uppercase">Home centre</legend>
           <div class="mt-2.5 flex flex-wrap gap-2">
@@ -68,21 +68,6 @@ const listNames = (names: string[]) => names.slice(0, -1).join(', ') + ' or ' + 
                   <input type="radio" name="join-centre" value={c.bookingSiteId} data-name={c.shortName} class="peer sr-only" />
                   <span class="inline-flex rounded-full border border-neutral-200 bg-white px-3.5 py-2 text-sm font-medium text-ink peer-checked:border-brand peer-checked:bg-brand peer-checked:text-white peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brand hover:border-brand">
                     {c.shortName}
-                  </span>
-                </label>
-              ))
-            }
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend class="text-xs font-semibold tracking-[0.12em] text-muted uppercase">Direct Debit taken on the</legend>
-          <div class="mt-2.5 flex gap-2">
-            {
-              portal.paymentDays.map((d, i) => (
-                <label class="cursor-pointer">
-                  <input type="radio" name="join-day" value={d.key} checked={i === 0} class="peer sr-only" />
-                  <span class="inline-flex rounded-full border border-neutral-200 bg-white px-3.5 py-2 text-sm font-medium text-ink peer-checked:border-brand peer-checked:bg-brand peer-checked:text-white peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brand hover:border-brand">
-                    {d.label} of the month
                   </span>
                 </label>
               ))
@@ -123,6 +108,15 @@ const listNames = (names: string[]) => names.slice(0, -1).join(', ') + ' or ' + 
                     <span class="text-sm text-muted">a month</span>
                   </p>
                   <p class="mt-1.5 text-sm text-muted">{p.minimumMonths}-month minimum contract</p>
+                  <p class="mt-1 text-sm text-ink">
+                    or <span class="font-semibold tabular-nums">£{p.annualPrice}</span> a year, paid upfront{' '}
+                    {p.join.some((j) => j.annualPrice) && (
+                      <span class="text-muted">
+                        ({p.join.filter((j) => j.annualPrice).map((j) => `${j.label} £${j.annualPrice}`).join(', ')})
+                      </span>
+                    )}
+                  </p>
+                  {p.annualNote && <p class="mt-1 text-xs text-muted">{p.annualNote}</p>}
 
                   <p class="mt-5 text-sm font-semibold text-ink">{p.includes}</p>
                   <p class="mt-2 text-sm text-muted">
@@ -144,7 +138,20 @@ const listNames = (names: string[]) => names.slice(0, -1).join(', ') + ' or ' + 
                   )}
 
                   <div class="mt-auto pt-6">
-                    <div class:list={['grid gap-2', p.join.length > 1 && 'grid-cols-3']}>
+                    <fieldset data-pay>
+                      <legend class="text-xs font-semibold tracking-[0.12em] text-muted uppercase">How to pay</legend>
+                      <div class="mt-2 grid grid-cols-3 gap-1 rounded-lg bg-neutral-100 p-1">
+                        {portal.paymentOptions.map((o, i) => (
+                          <label class="cursor-pointer">
+                            <input type="radio" name={`pay-${p.id}`} value={o.key} checked={i === 0} class="peer sr-only" />
+                            <span class="flex h-full items-center justify-center rounded-md px-1 py-1.5 text-center text-xs leading-tight font-semibold text-muted peer-checked:bg-white peer-checked:text-ink peer-checked:shadow-soft peer-focus-visible:outline-2 peer-focus-visible:outline-brand hover:text-ink">
+                              {o.label}
+                            </span>
+                          </label>
+                        ))}
+                      </div>
+                    </fieldset>
+                    <div class:list={['mt-3 grid gap-2', p.join.length > 1 && 'grid-cols-3']}>
                       {p.join.map((j) => (
                         <a
                           href={joinUrl}
@@ -152,7 +159,8 @@ const listNames = (names: string[]) => names.slice(0, -1).join(', ') + ' or ' + 
                           rel="noopener noreferrer"
                           data-join
                           data-member-type={j.memberType}
-                          data-group-tag={j.groupTag}
+                          data-monthly={j.monthly}
+                          data-annual={j.annual}
                           data-sites={siteIdsOf(p)}
                           class:list={[
                             'flex justify-center rounded-lg px-3 py-3 text-center text-sm font-semibold aria-disabled:cursor-not-allowed aria-disabled:opacity-50',
@@ -184,7 +192,7 @@ const listNames = (names: string[]) => names.slice(0, -1).join(', ') + ' or ' + 
         <span class="font-serif text-3xl text-brand">1</span>
         <h3 class="mt-2 text-xl font-medium text-ink">Online</h3>
         <p class="mt-2 text-sm leading-relaxed text-muted">
-          Pick your home centre and payment day above, then press Join online on a membership. You’ll land on it in our booking portal, ready to pay.
+          Pick your home centre above, choose how to pay on a membership (monthly Direct Debit on the 1st or 17th, or yearly), then press Join online. You’ll land on it in our booking portal, ready to pay.
         </p>
         <a href="#join-setup" class="mt-4 inline-block text-sm font-semibold text-brand underline underline-offset-4 hover:text-brand-hover">Choose a centre</a>
       </li>
@@ -206,7 +214,7 @@ const listNames = (names: string[]) => names.slice(0, -1).join(', ') + ' or ' + 
       </li>
     </ol>
     <p class="mt-8 text-xs text-muted">
-      Prices from <a href={sourceUrl} class="underline underline-offset-2 hover:text-ink">activeseftonfitness.co.uk</a>, checked {checkedLabel}. Every membership is paid monthly.
+      Prices from <a href={sourceUrl} class="underline underline-offset-2 hover:text-ink">activeseftonfitness.co.uk</a>, checked {checkedLabel}. Yearly prices are paid upfront.
     </p>
   </section>
 </Layout>
@@ -231,7 +239,6 @@ const listNames = (names: string[]) => names.slice(0, -1).join(', ') + ' or ' + 
 
   function update() {
     const centre = picked('join-centre');
-    const day = picked('join-day')?.value ?? 'DD1st';
     if (centre) hint.classList.add('hidden');
     for (const a of document.querySelectorAll<HTMLAnchorElement>('a[data-join]')) {
       const sites = (a.dataset.sites ?? '').split(',');
@@ -245,14 +252,17 @@ const listNames = (names: string[]) => names.slice(0, -1).join(', ') + ' or ' + 
       if (ok) a.removeAttribute('aria-disabled');
       else a.setAttribute('aria-disabled', 'true');
       if (centre && ok) {
-        a.href = membershipJoinUrl(membershipsUrl, centre.value, { memberType: a.dataset.memberType!, groupTag: a.dataset.groupTag! }, day);
+        const card = a.closest('li')!;
+        const payment = card.querySelector<HTMLInputElement>('[data-pay] input:checked')?.value ?? 'DD1st';
+        const { memberType = '', monthly = '', annual = '' } = a.dataset;
+        a.href = membershipJoinUrl(membershipsUrl, centre.value, { memberType, monthly, annual }, payment);
       } else {
         a.href = fallbackUrl;
       }
     }
   }
 
-  setup.addEventListener('change', (e) => {
+  document.addEventListener('change', (e) => {
     const t = e.target as HTMLInputElement;
     if (t.name === 'join-centre') {
       try {

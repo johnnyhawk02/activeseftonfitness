@@ -91,6 +91,10 @@ export type MembershipPlan = {
   ages?: string;
   /** Pounds per month. */
   price: number;
+  /** Pounds a year, paid upfront ("Annual" in the portal). */
+  annualPrice: number;
+  /** Shown under the yearly price, e.g. when it's another membership's yearly version. */
+  annualNote?: string;
   minimumMonths: number;
   includes: string;
   /** Centre ids from centers.json the membership covers. */
@@ -107,8 +111,11 @@ export type MembershipJoin = {
   label?: string;
   /** Portal "member type" key, e.g. "Adult", "concession". */
   memberType: string;
-  /** Portal membership group key, e.g. "Inclusive" (committed), "Swimonly". */
-  groupTag: string;
+  /** Portal membership group keys for paying monthly by Direct Debit, and yearly upfront. */
+  monthly: string;
+  annual: string;
+  /** When this option's yearly price differs from the plan's (Saver+). */
+  annualPrice?: number;
 };
 
 export type Memberships = {
@@ -121,8 +128,8 @@ export type Memberships = {
     membershipsUrl: string;
     /** When the portal codes in each plan's `join` were last checked. */
     checked: string;
-    /** Direct Debit collection days the portal offers ("membership duration" keys). */
-    paymentDays: { key: string; label: string }[];
+    /** How to pay: the portal's "membership duration" keys (Direct Debit on the 1st or 17th, or yearly). */
+    paymentOptions: { key: string; label: string }[];
   };
   phone: string;
   benefits: string[];
@@ -131,11 +138,13 @@ export type Memberships = {
 };
 
 /**
- * Deep link into the portal's join flow with the home centre, membership and Direct Debit day already
+ * Deep link into the portal's join flow with the home centre, membership and way of paying already
  * chosen, so it opens on that membership's price with "Continue To Payment". The portal needs all four.
+ * `payment` is a `paymentOptions` key: "DD1st", "DD17th" or "Annual".
  */
-export function membershipJoinUrl(membershipsUrl: string, siteId: string, join: MembershipJoin, paymentDay: string) {
-  const params = new URLSearchParams({ siteId, memberType: join.memberType, membershipDuration: paymentDay, groupTag: join.groupTag });
+export function membershipJoinUrl(membershipsUrl: string, siteId: string, join: Pick<MembershipJoin, 'memberType' | 'monthly' | 'annual'>, payment: string) {
+  const groupTag = payment === 'Annual' ? join.annual : join.monthly;
+  const params = new URLSearchParams({ siteId, memberType: join.memberType, membershipDuration: payment, groupTag });
   return `${membershipsUrl}?${params}`;
 }
 

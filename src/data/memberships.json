@@ -5,9 +5,10 @@
   "portal": {
     "membershipsUrl": "https://activesefton.gladstonego.cloud/memberships",
     "checked": "2026-10-19",
-    "paymentDays": [
-      { "key": "DD1st", "label": "1st" },
-      { "key": "DD17th", "label": "17th" }
+    "paymentOptions": [
+      { "key": "DD1st", "label": "Monthly, 1st" },
+      { "key": "DD17th", "label": "Monthly, 17th" },
+      { "key": "Annual", "label": "Yearly" }
     ]
   },
   "phone": "0151 934 2297",
@@ -40,8 +41,9 @@
       "centres": ["bootle", "crosby-lakeside", "dunes", "litherland", "meadows", "netherton"],
       "featured": true,
       "join": [
-        { "memberType": "Adult", "groupTag": "Inclusive" }
-      ]
+        { "memberType": "Adult", "monthly": "Inclusive", "annual": "Inclusive" }
+      ],
+      "annualPrice": 363
     },
     {
       "id": "single-flexible",
@@ -53,8 +55,10 @@
       "includes": "Gym, swim and exercise classes",
       "centres": ["bootle", "crosby-lakeside", "dunes", "litherland", "meadows", "netherton"],
       "join": [
-        { "memberType": "Adult", "groupTag": "noncommitted" }
-      ]
+        { "memberType": "Adult", "monthly": "noncommitted", "annual": "Inclusive" }
+      ],
+      "annualPrice": 363,
+      "annualNote": "Paid yearly it’s the Committed membership."
     },
     {
       "id": "concessions",
@@ -66,10 +70,11 @@
       "centres": ["bootle", "crosby-lakeside", "dunes", "litherland", "meadows", "netherton"],
       "eligibility": "For students, and for people with a GP referral or on the Choices or Active Workforce schemes.",
       "join": [
-        { "label": "Student", "memberType": "concession", "groupTag": "student" },
-        { "label": "Workforce", "memberType": "concession", "groupTag": "workforce" },
-        { "label": "Saver+", "memberType": "concession", "groupTag": "SaverMembership" }
-      ]
+        { "label": "Student", "memberType": "concession", "monthly": "student", "annual": "StudentAnnual" },
+        { "label": "Workforce", "memberType": "concession", "monthly": "workforce", "annual": "WorkforceAnnual" },
+        { "label": "Saver+", "memberType": "concession", "monthly": "SaverMembership", "annual": "12", "annualPrice": 323 }
+      ],
+      "annualPrice": 308
     },
     {
       "id": "corporate",
@@ -82,8 +87,9 @@
       "centres": ["bootle", "crosby-lakeside", "dunes", "litherland", "meadows", "netherton"],
       "eligibility": "Qualification required — call us to check you’re eligible.",
       "join": [
-        { "memberType": "Corporate", "groupTag": "Corporate1" }
-      ]
+        { "memberType": "Corporate", "monthly": "Corporate1", "annual": "CorpAnnual" }
+      ],
+      "annualPrice": 330
     },
     {
       "id": "swim-only",
@@ -94,8 +100,9 @@
       "includes": "Swimming only",
       "centres": ["bootle", "dunes", "meadows"],
       "join": [
-        { "memberType": "Adult", "groupTag": "Swimonly" }
-      ]
+        { "memberType": "Adult", "monthly": "Swimonly", "annual": "SwimOnlyannual" }
+      ],
+      "annualPrice": 297
     },
     {
       "id": "youth",
@@ -107,8 +114,9 @@
       "includes": "Gym, swim and youth exercise classes",
       "centres": ["bootle", "crosby-lakeside", "dunes", "litherland", "meadows", "netherton"],
       "join": [
-        { "memberType": "Youth", "groupTag": "YouthInclusive" }
-      ]
+        { "memberType": "Youth", "monthly": "YouthInclusive", "annual": "YouthInclusive" }
+      ],
+      "annualPrice": 220
     },
     {
       "id": "junior-swim",
@@ -120,8 +128,9 @@
       "includes": "Swimming only",
       "centres": ["bootle", "dunes", "meadows"],
       "join": [
-        { "memberType": "Junior", "groupTag": "Swimonly" }
-      ]
+        { "memberType": "Junior", "monthly": "Swimonly", "annual": "Swimonly" }
+      ],
+      "annualPrice": 187
     }
   ]
 }
