@@ -1,24 +1,14 @@
 ---
-// Official Active Sefton mark and wordmark; regenerate the files with `npm run brand`.
+// Official Active Sefton wordmark; regenerate the files with `npm run brand`.
 interface Props { class?: string }
 const { class: className } = Astro.props;
 ---
 
-<span class:list={['inline-flex items-center gap-2.5', className]}>
-  <img
-    src="/images/brand/mark-64.webp"
-    srcset="/images/brand/mark-64.webp 2x, /images/brand/mark-96.webp 3x"
-    alt=""
-    width="32"
-    height="32"
-    class="size-8 shrink-0 rounded-md"
-  />
-  <img
-    src="/images/brand/wordmark-64.webp"
-    srcset="/images/brand/wordmark-64.webp 2x, /images/brand/wordmark-96.webp 3x"
-    alt="Active Sefton"
-    width="233"
-    height="32"
-    class="h-6 w-auto sm:h-7"
-  />
-</span>
+<img
+  src="/images/brand/wordmark-64.webp"
+  srcset="/images/brand/wordmark-64.webp 2x, /images/brand/wordmark-96.webp 3x"
+  alt="Active Sefton"
+  width="233"
+  height="32"
+  class:list={['h-7 w-auto sm:h-8', className]}
+/>
