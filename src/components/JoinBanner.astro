@@ -1,6 +1,7 @@
 ---
-// Big "Not a member yet?" panel with a Join online button, shown under the menu on the home and App pages.
-import { BOOKING_URL, memberships } from '../lib/data';
+// Small floating "Not a member yet?" card with a Join online button, on the home and App pages.
+// It slides in at the bottom of the screen; closing it is remembered in this browser.
+import { memberships } from '../lib/data';
 
 interface Props {
   /** Line under the heading; "{price}" is replaced by the cheapest monthly price. */
@@ -8,28 +9,61 @@ interface Props {
 }
 
 const fromPrice = Math.min(...memberships.plans.map((p) => p.price));
-const { message = 'One membership, six centres. Memberships start at £{price} a month.' } = Astro.props;
+const { message = 'One membership, six centres, from £{price} a month.' } = Astro.props;
 const text = message.replace('{price}', String(fromPrice));
 ---
 
-<aside aria-labelledby="join-heading" class="bg-brand text-white">
-  <div class="mx-auto grid max-w-6xl items-center gap-6 px-4 py-10 sm:px-6 md:grid-cols-[1fr_auto] md:gap-12 md:py-12">
-    <div>
-      <h2 id="join-heading" class="text-4xl leading-tight font-medium sm:text-5xl">Not a member yet?</h2>
-      <p class="mt-3 max-w-xl text-lg leading-relaxed text-white/85">
-        {text}
-      </p>
-    </div>
-    <div class="flex flex-col items-start gap-3 md:items-center">
-      <a
-        href="/memberships/"
-        class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-10 py-5 text-xl font-semibold text-brand shadow-soft hover:bg-brand-50 sm:w-auto"
-        >Join online
-        <svg aria-hidden="true" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white underline underline-offset-4 hover:text-white/80"
-        >Or book a one-off session<span class="sr-only"> (opens in a new tab)</span></a
-      >
-    </div>
-  </div>
+<aside
+  data-join-float
+  hidden
+  aria-labelledby="join-heading"
+  class="join-float fixed inset-x-3 bottom-3 z-30 rounded-2xl bg-brand p-5 pr-12 text-white shadow-[0_16px_40px_-12px_rgba(26,26,26,0.45)] sm:inset-x-auto sm:right-5 sm:bottom-5 sm:w-[22rem]"
+  style="margin-bottom: env(safe-area-inset-bottom)"
+>
+  <button
+    type="button"
+    data-join-close
+    aria-label="Close"
+    class="absolute top-3 right-3 grid size-8 place-items-center rounded-full text-white/80 hover:bg-white/15 hover:text-white"
+  >
+    <svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+  <h2 id="join-heading" class="text-xl font-medium">Not a member yet?</h2>
+  <p class="mt-1 text-sm leading-relaxed text-white/85">{text}</p>
+  <a href="/memberships/" class="mt-4 inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-brand hover:bg-brand-50"
+    >Join online
+    <svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
 </aside>
+
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    .join-float:not([hidden]) {
+      animation: join-in 300ms ease-out 600ms both;
+    }
+  }
+  @keyframes join-in {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    var KEY = 'as-join-dismissed';
+    var card = document.querySelector('[data-join-float]');
+    if (!card) return;
+    try {
+      if (localStorage.getItem(KEY)) return;
+    } catch (e) {}
+    card.hidden = false;
+    card.querySelector('[data-join-close]').addEventListener('click', function () {
+      card.hidden = true;
+      try {
+        localStorage.setItem(KEY, '1');
+      } catch (e) {}
+    });
+  })();
+</script>
