@@ -174,6 +174,25 @@ export type AppInfo = {
   guides: AppGuide[];
 };
 
+/**
+ * What joining costs today when paying monthly by Direct Debit, as the booking portal works it out
+ * (checked against its quotes on 2026-10-19). You pay a pro-rata for each day from today up to the day
+ * before your first collection, at the monthly price × 12 ÷ 365. If that first collection is less than
+ * 17 days away, the first full month is also paid today and Direct Debits start a month later.
+ * `fee` is a yearly scheme fee charged on joining (Saver+, £15).
+ */
+export function monthlyJoinCost(monthly: number, collectionDay: 1 | 17, fee = 0, today = londonDateKey()) {
+  const [y, m, d] = today.split('-').map(Number);
+  const collection = new Date(Date.UTC(y, m - 1 + (d > collectionDay ? 1 : 0), collectionDay));
+  const days = Math.round((collection.getTime() - Date.UTC(y, m - 1, d)) / 86_400_000);
+  const proRata = Math.round(((monthly * 12) / 365) * days * 100) / 100;
+  const firstMonthUpfront = days < 17;
+  const firstDebit = firstMonthUpfront ? new Date(Date.UTC(collection.getUTCFullYear(), collection.getUTCMonth() + 1, collectionDay)) : collection;
+  const lastProRataDay = addDays(collection.toISOString().slice(0, 10), -1);
+  const total = Math.round((proRata + (firstMonthUpfront ? monthly : 0) + fee) * 100) / 100;
+  return { total, proRata, days, lastProRataDay, firstMonthUpfront, firstDebit: firstDebit.toISOString().slice(0, 10) };
+}
+
 export type Notice = { id: string; tone: 'info' | 'warning'; message: string; link?: { label: string; href: string } };
 
 /** `/images/centers/bootle.jpg` → srcset of the WebP variants written by scripts/download-images.mjs */
