@@ -55,10 +55,8 @@
       "includes": "Gym, swim and exercise classes",
       "centres": ["bootle", "crosby-lakeside", "dunes", "litherland", "meadows", "netherton"],
       "join": [
-        { "memberType": "Adult", "monthly": "noncommitted", "annual": "Inclusive" }
-      ],
-      "annualPrice": 363,
-      "annualNote": "Paid yearly it’s the Committed membership."
+        { "memberType": "Adult", "monthly": "noncommitted" }
+      ]
     },
     {
       "id": "concessions",

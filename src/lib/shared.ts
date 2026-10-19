@@ -91,8 +91,8 @@ export type MembershipPlan = {
   ages?: string;
   /** Pounds per month. */
   price: number;
-  /** Pounds a year, paid upfront ("Annual" in the portal). */
-  annualPrice: number;
+  /** Pounds a year, paid upfront ("Annual" in the portal). Left out when it can't be paid yearly. */
+  annualPrice?: number;
   /** Shown under the yearly price, e.g. when it's another membership's yearly version. */
   annualNote?: string;
   minimumMonths: number;
@@ -113,7 +113,7 @@ export type MembershipJoin = {
   memberType: string;
   /** Portal membership group keys for paying monthly by Direct Debit, and yearly upfront. */
   monthly: string;
-  annual: string;
+  annual?: string;
   /** When this option's yearly price differs from the plan's (Saver+). */
   annualPrice?: number;
 };
@@ -143,8 +143,14 @@ export type Memberships = {
  * `payment` is a `paymentOptions` key: "DD1st", "DD17th" or "Annual".
  */
 export function membershipJoinUrl(membershipsUrl: string, siteId: string, join: Pick<MembershipJoin, 'memberType' | 'monthly' | 'annual'>, payment: string) {
-  const groupTag = payment === 'Annual' ? join.annual : join.monthly;
-  const params = new URLSearchParams({ siteId, memberType: join.memberType, membershipDuration: payment, groupTag });
+  // A plan with no yearly version only offers the Direct Debit choices; fall back to the 1st just in case.
+  const yearly = payment === 'Annual' && join.annual;
+  const params = new URLSearchParams({
+    siteId,
+    memberType: join.memberType,
+    membershipDuration: yearly ? 'Annual' : payment === 'Annual' ? 'DD1st' : payment,
+    groupTag: yearly ? join.annual! : join.monthly,
+  });
   return `${membershipsUrl}?${params}`;
 }
 
