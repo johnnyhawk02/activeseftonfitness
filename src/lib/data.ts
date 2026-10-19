@@ -2,13 +2,15 @@
 import centersJson from '../data/centers.json';
 import timetableJson from '../data/timetable.json';
 import noticesJson from '../data/notices.json';
-import type { Center, Category, ClassIndexEntry, Notice, Session } from './shared';
+import membershipsJson from '../data/memberships.json';
+import type { Center, Category, ClassIndexEntry, Memberships, Notice, Session } from './shared';
 
 export * from './shared';
 
 export const centers = centersJson as Center[];
 export const sessions = timetableJson as Session[];
 export const notices = noticesJson as Notice[];
+export const memberships = membershipsJson as Memberships;
 
 export const centerById = Object.fromEntries(centers.map((c) => [c.id, c])) as Record<string, Center>;
 

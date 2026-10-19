@@ -17,6 +17,7 @@ npm run check    # type-check .astro/.ts/.tsx
 | --- | --- |
 | Venues (address, hours, facilities, images) | `src/data/centers.json` |
 | Weekly sessions | `src/data/timetable.json` |
+| Membership prices and what's included (`/memberships`) | `src/data/memberships.json` — copied from the live memberships page; bump `checked` when you re-check prices |
 | Top-of-page service notice | `src/data/notices.json` — change the `id` to re-show it to people who dismissed the last one |
 | Colours / fonts | `tailwind.config.mjs` (loaded via `@config` in `src/styles/global.css`) |
 | Booking URL and deep links | `BOOKING_URL` / `sessionBookingUrl()` in `src/lib/shared.ts`; each centre's booking code is `bookingSiteId` in `centers.json` |

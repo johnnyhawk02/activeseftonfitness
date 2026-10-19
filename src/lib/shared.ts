@@ -81,7 +81,39 @@ export type BookingRef = {
 export const BOOKING_REFS_CHECKED = '2026-10-17';
 const BOOKING_REFS_MAX_AGE_DAYS = 42;
 
-export type Notice = { id: string; tone: 'info' | 'warning'; message: string; link?: { label: string; href: string } };
+export type MembershipPlan = {
+  id: string;
+  /** Id of the `groups` entry it's listed under. */
+  group: string;
+  name: string;
+  /** Second line of the name, e.g. "Committed". */
+  variant?: string;
+  ages?: string;
+  /** Pounds per month. */
+  price: number;
+  minimumMonths: number;
+  includes: string;
+  /** Centre ids from centers.json the membership covers. */
+  centres: string[];
+  /** Who qualifies, for memberships that need proof. */
+  eligibility?: string;
+  signUp: 'online-or-centre' | 'centre';
+  featured?: boolean;
+};
+
+export type Memberships = {
+  sourceUrl: string;
+  /** When prices were last copied from the live site. */
+  checked: string;
+  /** Where "Join online" goes: the booking portal's centre picker, then its membership list. */
+  joinUrl: string;
+  phone: string;
+  benefits: string[];
+  groups: { id: string; title: string; intro: string }[];
+  plans: MembershipPlan[];
+};
+
+export type Notice ={ id: string; tone: 'info' | 'warning'; message: string; link?: { label: string; href: string } };
 
 /** `/images/centers/bootle.jpg` → srcset of the WebP variants written by scripts/download-images.mjs */
 export function imageSrcSet(image: string) {
