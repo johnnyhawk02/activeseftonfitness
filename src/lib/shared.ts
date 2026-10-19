@@ -139,6 +139,25 @@ export function membershipJoinUrl(membershipsUrl: string, siteId: string, join: 
   return `${membershipsUrl}?${params}`;
 }
 
+export type AppGuide = {
+  id: string;
+  title: string;
+  /** Under public/, e.g. "/videos/app/login.mp4", with a poster frame beside it. */
+  video: string;
+  poster: string;
+  points: string[];
+};
+
+export type AppInfo = {
+  sourceUrl: string;
+  checked: string;
+  stores: { appStore: string; googlePlay: string };
+  forgottenPasswordUrl: string;
+  /** Completes "To have an account you need…". */
+  accountNeeds: string[];
+  guides: AppGuide[];
+};
+
 export type Notice = { id: string; tone: 'info' | 'warning'; message: string; link?: { label: string; href: string } };
 
 /** `/images/centers/bootle.jpg` → srcset of the WebP variants written by scripts/download-images.mjs */

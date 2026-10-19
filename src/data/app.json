@@ -1,0 +1,47 @@
+{
+  "sourceUrl": "https://www.activeseftonfitness.co.uk/app-how-to",
+  "checked": "2026-10-19",
+  "stores": {
+    "appStore": "https://apps.apple.com/gb/app/active-sefton/id6753793453",
+    "googlePlay": "https://play.google.com/store/apps/details?id=com.innovatise.seftoncouncil"
+  },
+  "forgottenPasswordUrl": "https://activesefton.gladstonego.cloud/auth/forgotten-password",
+  "accountNeeds": [
+    "a membership with us, or",
+    "to have booked something online before — an account was created for you when you did."
+  ],
+  "guides": [
+    {
+      "id": "login",
+      "title": "Logging in and using the dashboard",
+      "video": "/videos/app/login.mp4",
+      "poster": "/videos/app/login.jpg",
+      "points": [
+        "Log in with your Active Sefton account — the same email and password you use to book online.",
+        "Never set a password for your account? Use “Forgotten password” with the email we have for you, and you’ll be sent a link to set one."
+      ]
+    },
+    {
+      "id": "booking",
+      "title": "Making a booking and cancelling",
+      "video": "/videos/app/booking.mp4",
+      "poster": "/videos/app/booking.jpg",
+      "points": [
+        "Book classes and activities straight from the app.",
+        "If a booking didn’t need paying for, you can cancel it yourself in the app. If you can’t make a class, please cancel — it frees your place for someone on the waiting list.",
+        "For paid bookings, cancellations and refunds are handled by the centre you booked with, so get in touch with them."
+      ]
+    },
+    {
+      "id": "group-booking",
+      "title": "Booking for more than one person",
+      "video": "/videos/app/group-booking.mp4",
+      "poster": "/videos/app/group-booking.jpg",
+      "points": [
+        "Add other people when you book swimming, Splash World and more.",
+        "When you’re logged in you’re included in the group automatically. Switch yourself off if you’re booking just for others.",
+        "Confirm the group, pay, and your booking is confirmed."
+      ]
+    }
+  ]
+}

@@ -6,6 +6,7 @@ import { BOOKING_URL } from '../lib/data';
 const path = Astro.url.pathname;
 const home = path === '/' ? '' : '/';
 const onMemberships = path.startsWith('/memberships');
+const onApp = path.startsWith('/app');
 ---
 
 <header class="sticky top-0 z-40 border-b border-neutral-200 bg-canvas/90 backdrop-blur supports-[backdrop-filter]:bg-canvas/80">
@@ -21,6 +22,11 @@ const onMemberships = path.startsWith('/memberships');
         href="/memberships/"
         aria-current={onMemberships ? 'page' : undefined}
         class:list={['rounded-md px-3 py-2 hover:bg-white hover:text-ink', onMemberships ? 'text-ink' : 'text-muted']}>Memberships</a
+      >
+      <a
+        href="/app/"
+        aria-current={onApp ? 'page' : undefined}
+        class:list={['rounded-md px-3 py-2 hover:bg-white hover:text-ink', onApp ? 'text-ink' : 'text-muted']}>App</a
       >
     </nav>
 
