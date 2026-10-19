@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { appInfo } from '../lib/data';
+import { appInfo, BOOKING_URL, memberships } from '../lib/data';
 
 const { stores, forgottenPasswordUrl, accountNeeds, guides, sourceUrl, checked } = appInfo;
+const fromPrice = Math.min(...memberships.plans.map((p) => p.price));
 const checkedLabel = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(checked));
 const storeLinks = [
   { href: stores.appStore, small: 'Download on the', big: 'App Store', label: 'Get the Active Sefton app on the App Store' },
@@ -14,6 +15,21 @@ const storeLinks = [
   title="The Active Sefton app — how to use it"
   description="Get the Active Sefton app for iPhone or Android, and watch short guides to logging in, booking and cancelling classes, and booking for a group."
 >
+  <aside aria-labelledby="join-heading" class="bg-brand text-white">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-3 px-4 py-4 sm:px-6">
+      <p class="flex-1 basis-72 text-sm leading-relaxed">
+        <strong id="join-heading" class="font-semibold">Not a member yet?</strong>{' '}
+        <span class="text-white/85">Memberships start at £{fromPrice} a month, and joining online gives you an account to log in to the app with.</span>
+      </p>
+      <div class="flex flex-wrap items-center gap-x-5 gap-y-2">
+        <a href="/memberships/" class="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-brand hover:bg-brand-50">Join online</a>
+        <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white underline underline-offset-4 hover:text-white/80"
+          >Or book a one-off session<span class="sr-only"> (opens in a new tab)</span></a
+        >
+      </div>
+    </div>
+  </aside>
+
   <header class="border-b border-neutral-200">
     <div class="mx-auto grid max-w-6xl gap-10 px-4 pt-10 pb-14 sm:px-6 lg:grid-cols-[1fr_1fr] lg:gap-14 lg:pt-14">
       <div class="flex flex-col">
