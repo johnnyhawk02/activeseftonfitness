@@ -25,9 +25,9 @@
     "NHS Health Checks"
   ],
   "groups": [
-    { "id": "adult", "title": "Adult memberships", "intro": "Gym, swim and classes at all six centres." },
-    { "id": "reduced", "title": "Concessions and corporate", "intro": "The full membership at a lower price, if you qualify." },
-    { "id": "swim-youth", "title": "Swimming and young people", "intro": "Swim-only memberships and memberships for under-17s." }
+    { "id": "adult", "title": "Adult memberships", "intro": "Gym, swim and exercise classes at all six centres." },
+    { "id": "reduced", "title": "Concessions and corporate", "intro": "Gym, swim and exercise classes at all six centres, for less if you qualify." },
+    { "id": "swim-youth", "title": "Swimming and young people", "intro": "Swim-only memberships, and Youth for 11–16s." }
   ],
   "plans": [
     {
@@ -108,7 +108,7 @@
       "ages": "Ages 11–16",
       "price": 20,
       "minimumMonths": 3,
-      "includes": "Gym, swim and youth exercise classes",
+      "includes": "Gym, swim and youth classes, with reduced hours",
       "centres": ["bootle", "crosby-lakeside", "dunes", "litherland", "meadows", "netherton"],
       "join": [
         { "memberType": "Youth", "monthly": "YouthInclusive", "annual": "YouthInclusive" }

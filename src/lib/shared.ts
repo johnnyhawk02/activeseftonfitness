@@ -93,8 +93,6 @@ export type MembershipPlan = {
   price: number;
   /** Pounds a year, paid upfront ("Annual" in the portal). Left out when it can't be paid yearly. */
   annualPrice?: number;
-  /** Shown under the yearly price, e.g. when it's another membership's yearly version. */
-  annualNote?: string;
   minimumMonths: number;
   includes: string;
   /** Centre ids from centers.json the membership covers. */

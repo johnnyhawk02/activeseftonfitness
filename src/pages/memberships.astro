@@ -6,6 +6,8 @@ const { benefits, groups, plans, joinUrl, portal, phone, checked, sourceUrl } = 
 const tel = `tel:${phone.replace(/\s/g, '')}`;
 const fromPrice = Math.min(...plans.filter((p) => p.group === 'adult').map((p) => p.price));
 const checkedLabel = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(checked));
+// Most memberships include gym, swim and classes at every centre; the group intro says so, cards only note differences.
+const STANDARD_INCLUDES = 'Gym, swim and exercise classes';
 const centresOf = (p: MembershipPlan) => p.centres.map((id) => centerById[id]).filter(Boolean);
 const siteIdsOf = (p: MembershipPlan) => centresOf(p).map((c) => c.bookingSiteId).join(',');
 const listNames = (names: string[]) => names.slice(0, -1).join(', ') + ' or ' + names[names.length - 1];
@@ -89,7 +91,7 @@ const listNames = (names: string[]) => names.slice(0, -1).join(', ') + ' or ' + 
               .filter((p) => p.group === g.id)
               .map((p) => (
                 <li
-                  class="flex flex-col rounded-2xl border border-neutral-200 bg-white p-6 shadow-soft"
+                  class="flex flex-col rounded-2xl border border-neutral-200 bg-white p-5 shadow-soft"
                   data-monthly-price={p.price}
                   data-annual-price={p.annualPrice}
                   data-fees={JSON.stringify(p.join.filter((j) => j.annualFee).map((j) => ({ label: j.label, fee: j.annualFee, annual: j.annualPrice })))}
@@ -104,69 +106,51 @@ const listNames = (names: string[]) => names.slice(0, -1).join(', ') + ' or ' + 
 
                   {/* Monthly prices show until the visitor picks Yearly; the script swaps the two blocks. */}
                   <div data-price="monthly">
-                    <p class="mt-5 flex items-baseline gap-1.5">
-                      <span class="font-serif text-5xl leading-none text-ink tabular-nums">£{p.price}</span>
+                    <p class="mt-4 flex items-baseline gap-1.5">
+                      <span class="font-serif text-4xl leading-none text-ink tabular-nums">£{p.price}</span>
                       <span class="text-sm text-muted">a month</span>
                     </p>
-                    <p class="mt-1.5 text-sm text-muted">{p.minimumMonths}-month minimum contract</p>
-                    {p.annualPrice && (
-                      <p class="mt-1 text-sm text-ink">
-                        or <span class="font-semibold tabular-nums">£{p.annualPrice}</span> a year, paid upfront
-                      </p>
-                    )}
-                    {p.join
-                      .filter((j) => j.annualFee)
-                      .map((j) => (
-                        <p class="mt-1 text-sm text-ink">
-                          <span class="font-semibold">{j.label}</span> adds a £{j.annualFee} annual fee
-                          {j.annualPrice && <span class="text-muted"> (£{j.annualPrice} if you pay yearly)</span>}.
-                        </p>
-                      ))}
+                    <p class="mt-1.5 text-sm text-muted">
+                      {p.minimumMonths}-month minimum{p.annualPrice && <> · or <span class="font-semibold text-ink">£{p.annualPrice}</span> a year</>}
+                    </p>
                   </div>
                   {p.annualPrice && (
                     <div data-price="annual" hidden>
-                      <p class="mt-5 flex items-baseline gap-1.5">
-                        <span class="font-serif text-5xl leading-none text-ink tabular-nums">£{p.annualPrice}</span>
+                      <p class="mt-4 flex items-baseline gap-1.5">
+                        <span class="font-serif text-4xl leading-none text-ink tabular-nums">£{p.annualPrice}</span>
                         <span class="text-sm text-muted">a year</span>
                       </p>
-                      <p class="mt-1.5 text-sm text-muted">Paid upfront for 12 months</p>
-                      <p class="mt-1 text-sm text-ink">
-                        or <span class="font-semibold tabular-nums">£{p.price}</span> a month by Direct Debit
+                      <p class="mt-1.5 text-sm text-muted">
+                        Paid upfront · or <span class="font-semibold text-ink">£{p.price}</span> a month
                       </p>
-                      {p.join
-                        .filter((j) => j.annualPrice && j.annualPrice !== p.annualPrice)
-                        .map((j) => (
-                          <p class="mt-1 text-sm text-ink">
-                            <span class="font-semibold">{j.label}</span> is £{j.annualPrice} a year{j.annualFee && `, including its £${j.annualFee} fee`}.
-                          </p>
-                        ))}
                     </div>
                   )}
-                  {p.annualNote && <p class="mt-1 text-xs text-muted">{p.annualNote}</p>}
-
-                  <p class="mt-5 text-sm font-semibold text-ink">{p.includes}</p>
-                  <p class="mt-2 text-sm text-muted">
-                    {p.centres.length === 6 ? 'At all six centres:' : `At ${p.centres.length} pools:`}{' '}
-                    {centresOf(p).map((c, i, all) => (
-                      <>
-                        <a href={`/centres/${c.id}/`} class="text-ink underline decoration-neutral-300 underline-offset-2 hover:text-brand hover:decoration-brand">
-                          {c.shortName}
-                        </a>
-                        {i < all.length - 1 ? ', ' : ''}
-                      </>
+                  {p.join
+                    .filter((j) => j.annualFee)
+                    .map((j) => (
+                      <p class="mt-1 text-sm text-muted">
+                        <span class="font-semibold text-ink">{j.label}</span> adds a £{j.annualFee} annual fee.
+                      </p>
                     ))}
-                  </p>
 
+                  {p.includes !== STANDARD_INCLUDES && (
+                    <p class="mt-3 text-sm font-semibold text-ink">
+                      {p.includes}
+                      {p.centres.length < centers.length && (
+                        <span class="font-normal text-muted">, at {listNames(centresOf(p).map((c) => c.shortName)).replace(' or ', ' and ')}</span>
+                      )}
+                    </p>
+                  )}
                   {p.eligibility && (
-                    <p class="mt-4 rounded-lg bg-brand-50 px-3 py-2.5 text-sm text-ink">
-                      <span class="font-semibold">Who qualifies:</span> {p.eligibility}
+                    <p class="mt-3 text-xs leading-relaxed text-muted">
+                      <span class="font-semibold text-ink">Who qualifies:</span> {p.eligibility}
                     </p>
                   )}
 
-                  <div class="mt-auto pt-6">
+                  <div class="mt-auto pt-5">
                     <fieldset data-pay>
-                      <legend class="text-xs font-semibold tracking-[0.12em] text-muted uppercase">How to pay</legend>
-                      <div class:list={['mt-2 grid gap-1 rounded-lg bg-neutral-100 p-1', p.annualPrice ? 'grid-cols-3' : 'grid-cols-2']}>
+                      <legend class="sr-only">How to pay</legend>
+                      <div class:list={['grid gap-1 rounded-lg bg-neutral-100 p-1', p.annualPrice ? 'grid-cols-3' : 'grid-cols-2']}>
                         {portal.paymentOptions.filter((o) => o.key !== 'Annual' || p.annualPrice).map((o) => (
                           <label class="cursor-pointer">
                             <input type="radio" name={`pay-${p.id}`} value={o.key} class="peer sr-only" />
@@ -197,9 +181,11 @@ const listNames = (names: string[]) => names.slice(0, -1).join(', ') + ' or ' + 
                         </a>
                       ))}
                     </div>
-                    <p class="mt-2 text-center text-xs text-muted" data-join-note={p.centres.length < centers.length ? `Home centre must be ${listNames(centresOf(p).map((c) => c.shortName))}` : undefined}>
-                      {p.join.length > 1 ? 'Join online as one of these, or sign up at any centre' : 'Or sign up at any of these centres'}
-                    </p>
+                    {p.centres.length < centers.length && (
+                      <p class="mt-2 hidden text-center text-xs font-semibold text-brand-red" data-join-note>
+                        Home centre must be {listNames(centresOf(p).map((c) => c.shortName))}
+                      </p>
+                    )}
                   </div>
                 </li>
               ))}
@@ -321,11 +307,7 @@ const listNames = (names: string[]) => names.slice(0, -1).join(', ') + ' or ' + 
       const sites = (a.dataset.sites ?? '').split(',');
       const ok = !centre || sites.includes(centre.value);
       const note = a.closest('li')?.querySelector<HTMLElement>('[data-join-note]');
-      if (note) {
-        note.dataset.default ??= note.textContent ?? '';
-        note.textContent = ok ? note.dataset.default : (note.dataset.joinNote ?? '');
-        note.classList.toggle('!text-brand-red', !ok);
-      }
+      note?.classList.toggle('hidden', ok);
       // Greyed out until a way to pay is picked, and for good when the centre doesn't sell it.
       a.dataset.blocked = !ok ? 'centre' : !payment ? 'payment' : '';
       if (ok && payment) a.removeAttribute('aria-disabled');
