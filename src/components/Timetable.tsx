@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState, useId } from 'react';
 import { AnimatePresence, LazyMotion, MotionConfig, domAnimation, m } from 'framer-motion';
-import { ChevronDown, Dumbbell, ExternalLink, Search, Trophy, Users, Waves, X } from 'lucide-react';
+import { ChevronDown, ExternalLink, Search, Users, Waves, X } from 'lucide-react';
 import {
   BOOKING_URL,
   CATEGORIES,
@@ -32,9 +32,7 @@ type Props = {
 
 const CATEGORY_ICONS: Record<Category, typeof Waves> = {
   Swimming: Waves,
-  Gym: Dumbbell,
   'Group Fitness': Users,
-  Sports: Trophy,
 };
 
 /** Bookings open a week ahead, so the tabs cover the next 8 days. */
@@ -206,7 +204,7 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Filter: Spin, Lane Swim, Pilates…"
                 autoComplete="off"
-                className="w-full rounded-lg border border-neutral-300 bg-canvas py-3 pr-10 pl-10 text-base text-ink placeholder:text-muted focus:border-sage focus:bg-white focus:outline-none [&::-webkit-search-cancel-button]:hidden"
+                className="w-full rounded-lg border border-neutral-300 bg-canvas py-3 pr-10 pl-10 text-base text-ink placeholder:text-muted focus:border-brand focus:bg-white focus:outline-none [&::-webkit-search-cancel-button]:hidden"
               />
               {query && (
                 <button
@@ -276,11 +274,11 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
                       {w.date && !isToday && <span className="tabular-nums"> {Number(w.date.slice(8))}</span>}
                     </span>
                   </span>
-                  <span className={`text-[0.7rem] tabular-nums ${active ? 'text-sage' : 'text-muted'}`}>
+                  <span className={`text-[0.7rem] tabular-nums ${active ? 'text-brand' : 'text-muted'}`}>
                     {dayCounts[d]}
                     <span className="sr-only"> {dayCounts[d] === 1 ? 'session' : 'sessions'}</span>
                   </span>
-                  {active && <m.span layoutId="day-underline" className="absolute inset-x-2 -bottom-px h-0.5 rounded-full bg-sage" />}
+                  {active && <m.span layoutId="day-underline" className="absolute inset-x-2 -bottom-px h-0.5 rounded-full bg-brand" />}
                 </button>
               );
             })}
@@ -294,7 +292,7 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
               {!lockedCentre && centre !== 'all' && <> at {centreName[centre]}</>}
             </p>
             {hasFilters && (
-              <button type="button" onClick={reset} className="font-semibold text-sage underline underline-offset-4 hover:text-sage-hover">
+              <button type="button" onClick={reset} className="font-semibold text-brand underline underline-offset-4 hover:text-brand-hover">
                 Clear filters
               </button>
             )}
@@ -309,7 +307,7 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
                 {nextSlot ? (
                   <>
                     There {dayCounts[nextSlot.day] === 1 ? 'is' : 'are'} {dayCounts[nextSlot.day]} on{' '}
-                    <button type="button" className="font-semibold text-sage underline underline-offset-4" onClick={() => setSel(nextSlotWithSessions)}>
+                    <button type="button" className="font-semibold text-brand underline underline-offset-4" onClick={() => setSel(nextSlotWithSessions)}>
                       {nextSlot.date ? longDate(nextSlot.date) : DAY_NAMES[nextSlot.day]}
                     </button>
                     .
@@ -379,7 +377,7 @@ export default function Timetable({ sessions, centres, lockedCentre }: Props) {
                   const past = isPast(s);
                   const panelId = `session-${s.id}`;
                   return (
-                    <li key={s.id} className={`overflow-hidden rounded-xl border ${open ? 'border-sage/40 bg-white' : 'border-neutral-200 bg-white'}`}>
+                    <li key={s.id} className={`overflow-hidden rounded-xl border ${open ? 'border-brand/40 bg-white' : 'border-neutral-200 bg-white'}`}>
                       <button
                         type="button"
                         aria-expanded={open}
@@ -477,7 +475,7 @@ function Chip({ pressed, onClick, children }: { pressed: boolean; onClick: () =>
       aria-pressed={pressed}
       onClick={onClick}
       className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
-        pressed ? 'border-sage bg-sage text-white' : 'border-neutral-200 bg-white text-ink hover:border-neutral-400'
+        pressed ? 'border-brand bg-brand text-white' : 'border-neutral-200 bg-white text-ink hover:border-neutral-400'
       }`}
     >
       {children}
@@ -502,10 +500,10 @@ function StatusBadge({ session, compact }: { session: Session; compact?: boolean
     <span className="inline-flex flex-wrap items-center gap-x-2 gap-y-1">
       <span
         className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-semibold ${
-          filling ? 'bg-amber-50 text-amber-900 ring-1 ring-amber-200' : 'bg-sage-50 text-sage ring-1 ring-sage-100'
+          filling ? 'bg-amber-50 text-amber-900 ring-1 ring-amber-200' : 'bg-brand-50 text-brand ring-1 ring-brand-100'
         }`}
       >
-        <span aria-hidden className={`size-1.5 rounded-full ${filling ? 'bg-amber-600' : 'bg-sage-hover'}`} />
+        <span aria-hidden className={`size-1.5 rounded-full ${filling ? 'bg-amber-600' : 'bg-brand-hover'}`} />
         {session.status}
       </span>
       {!compact && (
@@ -532,7 +530,7 @@ function Tags({ tags, inline }: { tags?: SessionTag[]; inline?: boolean }) {
         <span
           key={t}
           className={`rounded px-1.5 py-px text-[0.68rem] font-semibold ${
-            t === 'New' ? 'bg-sage text-white' : t === 'Extra charge' ? 'bg-amber-50 text-amber-900 ring-1 ring-amber-200' : 'bg-neutral-100 text-ink'
+            t === 'New' ? 'bg-brand text-white' : t === 'Extra charge' ? 'bg-amber-50 text-amber-900 ring-1 ring-amber-200' : 'bg-neutral-100 text-ink'
           }`}
         >
           {TAG_LABELS[t]}
@@ -569,7 +567,7 @@ function SessionAction({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-sage px-3 py-2 text-sm font-semibold whitespace-nowrap text-sage hover:bg-sage-50"
+        className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-brand px-3 py-2 text-sm font-semibold whitespace-nowrap text-brand hover:bg-brand-50"
       >
         {opens}
         <span className="sr-only">
@@ -587,7 +585,7 @@ function BookButton({ session, centreName, href }: { session: Session; centreNam
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-lg bg-sage px-3.5 py-2 text-sm font-semibold whitespace-nowrap text-white hover:bg-sage-hover"
+      className="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-lg bg-brand px-3.5 py-2 text-sm font-semibold whitespace-nowrap text-white hover:bg-brand-hover"
     >
       Book Session
       <span className="sr-only">

@@ -15,7 +15,7 @@ export const DAY_NAMES: Record<Day, string> = {
   Sun: 'Sunday',
 };
 
-export const CATEGORIES = ['Swimming', 'Gym', 'Group Fitness', 'Sports'] as const;
+export const CATEGORIES = ['Swimming', 'Group Fitness'] as const;
 export type Category = (typeof CATEGORIES)[number];
 
 export type Center = {

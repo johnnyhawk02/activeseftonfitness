@@ -72,9 +72,9 @@
     "timetableNote": "From the centre’s published timetables: classes from 7 September 2026; pool timetable for 5–25 October 2026. Swimming lessons and club sessions aren’t listed. Weekend afternoon swims can change for private party bookings. Public, lane, adults-only and calm-waters swims are taken from the online booking system (week of 19 October 2026), as the printed pool timetable shows when the pool is open rather than bookable sessions."
   },
   {
-    "id": "crosby",
+    "id": "crosby-lakeside",
     "name": "Crosby Lakeside Adventure Centre",
-    "shortName": "Crosby",
+    "shortName": "Crosby Lakeside",
     "bookingSiteId": "CLAC",
     "town": "Waterloo",
     "image": "/images/centers/crosby.jpg",

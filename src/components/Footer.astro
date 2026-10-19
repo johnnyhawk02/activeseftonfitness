@@ -12,7 +12,7 @@ const year = new Date().getFullYear();
         Leisure centres, pools and outdoor sport run by Sefton Council, for every age and every ability.
       </p>
       <p class="text-sm">
-        <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" class="font-semibold text-sage underline underline-offset-4 hover:text-sage-hover"
+        <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" class="font-semibold text-brand underline underline-offset-4 hover:text-brand-hover"
           >Book a session<span class="sr-only"> (opens in a new tab)</span></a
         >
       </p>
@@ -21,7 +21,7 @@ const year = new Date().getFullYear();
       {
         centers.map((c) => (
           <li>
-            <a href={`/centres/${c.id}/`} class="font-semibold text-ink hover:text-sage hover:underline">
+            <a href={`/centres/${c.id}/`} class="font-semibold text-ink hover:text-brand hover:underline">
               {c.name}
             </a>
             <p class="mt-1 text-muted">{c.address}</p>

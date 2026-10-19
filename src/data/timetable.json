@@ -48,7 +48,7 @@
   },
   {
     "id": "b4aec4ba59",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Mon",
     "start": "06:35",
     "end": "07:05",
@@ -119,12 +119,12 @@
   },
   {
     "id": "b00df10cda",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Mon",
     "start": "07:00",
     "end": "07:30",
     "title": "Core",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "tags": [
@@ -174,7 +174,7 @@
   },
   {
     "id": "04bbaa0d11",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Mon",
     "start": "07:15",
     "end": "07:45",
@@ -199,7 +199,7 @@
     "start": "07:30",
     "end": "08:00",
     "title": "HIIT",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -480,7 +480,7 @@
     "start": "09:30",
     "end": "10:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -492,7 +492,7 @@
   },
   {
     "id": "cfa2769bd7",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Mon",
     "start": "09:30",
     "end": "10:00",
@@ -517,7 +517,7 @@
     "start": "09:30",
     "end": "10:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -589,7 +589,7 @@
     "start": "09:30",
     "end": "10:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null
   },
@@ -625,7 +625,7 @@
   },
   {
     "id": "e6770985e3",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Mon",
     "start": "10:00",
     "end": "10:45",
@@ -777,7 +777,7 @@
   },
   {
     "id": "e7a0092d59",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Mon",
     "start": "11:00",
     "end": "12:00",
@@ -1073,7 +1073,7 @@
   },
   {
     "id": "00d786863b",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Mon",
     "start": "13:00",
     "end": "13:45",
@@ -1227,7 +1227,7 @@
   },
   {
     "id": "e735ba0bdc",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Mon",
     "start": "15:00",
     "end": "15:45",
@@ -1426,7 +1426,7 @@
   },
   {
     "id": "9d908607c3",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Mon",
     "start": "17:00",
     "end": "17:30",
@@ -1600,7 +1600,7 @@
   },
   {
     "id": "f01c4f1409",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Mon",
     "start": "18:00",
     "end": "18:45",
@@ -1620,7 +1620,7 @@
   },
   {
     "id": "fd8f8a5c2c",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Mon",
     "start": "18:00",
     "end": "19:00",
@@ -1743,7 +1743,7 @@
   },
   {
     "id": "a74ea06932",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Mon",
     "start": "18:15",
     "end": "18:45",
@@ -1768,7 +1768,7 @@
     "start": "18:30",
     "end": "19:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -1785,7 +1785,7 @@
     "start": "18:30",
     "end": "19:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -1831,7 +1831,7 @@
   },
   {
     "id": "d17b6f2682",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Mon",
     "start": "19:00",
     "end": "19:45",
@@ -1848,7 +1848,7 @@
   },
   {
     "id": "22345c0504",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Mon",
     "start": "19:00",
     "end": "19:45",
@@ -2034,7 +2034,7 @@
   },
   {
     "id": "92b3734c89",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Mon",
     "start": "20:00",
     "end": "20:30",
@@ -2191,12 +2191,12 @@
   },
   {
     "id": "ebc5cd222f",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Tue",
     "start": "07:00",
     "end": "07:30",
     "title": "Bootcamp",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "tags": [
@@ -2228,7 +2228,7 @@
   },
   {
     "id": "c67dd700e8",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Tue",
     "start": "07:15",
     "end": "07:45",
@@ -2253,7 +2253,7 @@
     "start": "07:30",
     "end": "08:00",
     "title": "HIIT",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -2340,7 +2340,7 @@
   },
   {
     "id": "ae9cafe1f0",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Tue",
     "start": "08:15",
     "end": "09:15",
@@ -2500,7 +2500,7 @@
     "start": "09:30",
     "end": "10:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -2572,7 +2572,7 @@
     "start": "09:30",
     "end": "10:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null
   },
@@ -2595,7 +2595,7 @@
   },
   {
     "id": "77f1aa6678",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Tue",
     "start": "10:00",
     "end": "10:30",
@@ -3000,7 +3000,7 @@
   },
   {
     "id": "cddde77f6e",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Tue",
     "start": "12:30",
     "end": "13:00",
@@ -3073,7 +3073,7 @@
     "start": "13:00",
     "end": "13:30",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "tags": [
@@ -3112,7 +3112,7 @@
   },
   {
     "id": "fa1fed5f8b",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Tue",
     "start": "13:30",
     "end": "14:15",
@@ -3255,7 +3255,7 @@
   },
   {
     "id": "6ccfbc2406",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Tue",
     "start": "16:00",
     "end": "16:45",
@@ -3420,7 +3420,7 @@
   },
   {
     "id": "f6e4fa8acb",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Tue",
     "start": "17:00",
     "end": "17:30",
@@ -3457,7 +3457,7 @@
   },
   {
     "id": "8fae8bc66b",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Tue",
     "start": "17:30",
     "end": "18:15",
@@ -3634,7 +3634,7 @@
   },
   {
     "id": "808ae0d2d0",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Tue",
     "start": "18:15",
     "end": "19:15",
@@ -3671,7 +3671,7 @@
   },
   {
     "id": "eecfb1d93f",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Tue",
     "start": "18:30",
     "end": "19:15",
@@ -3706,7 +3706,7 @@
     "start": "18:30",
     "end": "19:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -3826,7 +3826,7 @@
   },
   {
     "id": "15f26cd001",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Tue",
     "start": "19:15",
     "end": "20:15",
@@ -3966,7 +3966,7 @@
   },
   {
     "id": "ede1027dc0",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Tue",
     "start": "20:00",
     "end": "20:45",
@@ -4180,7 +4180,7 @@
   },
   {
     "id": "acfa2d17f2",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Wed",
     "start": "07:00",
     "end": "07:30",
@@ -4197,7 +4197,7 @@
   },
   {
     "id": "bf5a2ade27",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Wed",
     "start": "07:00",
     "end": "07:30",
@@ -4257,7 +4257,7 @@
     "start": "07:30",
     "end": "08:00",
     "title": "HIIT",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -4399,7 +4399,7 @@
   },
   {
     "id": "2e1a84e8bf",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Wed",
     "start": "08:15",
     "end": "09:00",
@@ -4509,7 +4509,7 @@
   },
   {
     "id": "7a42929901",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Wed",
     "start": "09:15",
     "end": "09:45",
@@ -4568,7 +4568,7 @@
     "start": "09:30",
     "end": "10:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -4657,7 +4657,7 @@
     "start": "09:30",
     "end": "10:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null
   },
@@ -4676,7 +4676,7 @@
   },
   {
     "id": "4355f7fb50",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Wed",
     "start": "10:00",
     "end": "10:45",
@@ -4782,7 +4782,7 @@
     "start": "10:30",
     "end": "11:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -4828,7 +4828,7 @@
   },
   {
     "id": "5833a107d3",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Wed",
     "start": "11:00",
     "end": "12:00",
@@ -5012,7 +5012,7 @@
   },
   {
     "id": "afe6075432",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Wed",
     "start": "12:15",
     "end": "12:45",
@@ -5226,7 +5226,7 @@
   },
   {
     "id": "8d8d1256c6",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Wed",
     "start": "15:00",
     "end": "15:45",
@@ -5281,7 +5281,7 @@
   },
   {
     "id": "8bd8f2d94c",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Wed",
     "start": "16:00",
     "end": "16:45",
@@ -5440,7 +5440,7 @@
   },
   {
     "id": "e03f667a6f",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Wed",
     "start": "17:00",
     "end": "17:30",
@@ -5497,7 +5497,7 @@
   },
   {
     "id": "930831301d",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Wed",
     "start": "17:15",
     "end": "18:00",
@@ -5617,7 +5617,7 @@
   },
   {
     "id": "de7f5611e9",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Wed",
     "start": "18:00",
     "end": "19:00",
@@ -5702,7 +5702,7 @@
   },
   {
     "id": "1ec6c95f67",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Wed",
     "start": "18:15",
     "end": "19:00",
@@ -5792,7 +5792,7 @@
     "start": "18:30",
     "end": "19:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -5809,7 +5809,7 @@
     "start": "18:30",
     "end": "19:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -5886,7 +5886,7 @@
   },
   {
     "id": "28d07fb21e",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Wed",
     "start": "19:00",
     "end": "19:45",
@@ -5946,7 +5946,7 @@
     "start": "19:15",
     "end": "20:00",
     "title": "Kayak Taster",
-    "category": "Sports",
+    "category": "Group Fitness",
     "room": "Main Pool",
     "instructor": null,
     "note": "Book online only",
@@ -5959,7 +5959,7 @@
   },
   {
     "id": "b16aa7a399",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Wed",
     "start": "19:15",
     "end": "20:00",
@@ -6158,7 +6158,7 @@
   },
   {
     "id": "c337bae9f0",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Thu",
     "start": "06:35",
     "end": "07:05",
@@ -6216,12 +6216,12 @@
   },
   {
     "id": "86d912c28c",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Thu",
     "start": "07:00",
     "end": "07:30",
     "title": "Bootcamp",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "tags": [
@@ -6291,7 +6291,7 @@
   },
   {
     "id": "7ef9462087",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Thu",
     "start": "07:20",
     "end": "07:50",
@@ -6316,7 +6316,7 @@
     "start": "07:30",
     "end": "08:00",
     "title": "HIIT",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -6421,7 +6421,7 @@
   },
   {
     "id": "b12901b0a1",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Thu",
     "start": "08:15",
     "end": "09:00",
@@ -6627,7 +6627,7 @@
     "start": "09:30",
     "end": "10:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -6644,7 +6644,7 @@
     "start": "09:30",
     "end": "10:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -6696,7 +6696,7 @@
     "start": "09:30",
     "end": "10:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null
   },
@@ -6719,7 +6719,7 @@
   },
   {
     "id": "bec9dba166",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Thu",
     "start": "10:00",
     "end": "10:30",
@@ -7052,7 +7052,7 @@
   },
   {
     "id": "9bbc0ca104",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Thu",
     "start": "12:15",
     "end": "12:45",
@@ -7126,7 +7126,7 @@
   },
   {
     "id": "034e4469c6",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Thu",
     "start": "12:30",
     "end": "13:00",
@@ -7175,7 +7175,7 @@
   },
   {
     "id": "11a2db1508",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Thu",
     "start": "13:00",
     "end": "13:45",
@@ -7354,7 +7354,7 @@
   },
   {
     "id": "f193b2476c",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Thu",
     "start": "15:00",
     "end": "15:45",
@@ -7625,7 +7625,7 @@
   },
   {
     "id": "bda4fe2935",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Thu",
     "start": "17:30",
     "end": "18:15",
@@ -7716,7 +7716,7 @@
   },
   {
     "id": "b554373bb5",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Thu",
     "start": "18:00",
     "end": "18:30",
@@ -7804,7 +7804,7 @@
   },
   {
     "id": "14d13bce23",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Thu",
     "start": "18:15",
     "end": "19:15",
@@ -7846,7 +7846,7 @@
     "start": "18:30",
     "end": "19:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -7913,7 +7913,7 @@
   },
   {
     "id": "fbb6e67de7",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Thu",
     "start": "19:00",
     "end": "19:45",
@@ -7967,7 +7967,7 @@
   },
   {
     "id": "de85054bf4",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Thu",
     "start": "19:15",
     "end": "20:15",
@@ -8038,7 +8038,7 @@
   },
   {
     "id": "d63625d82b",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Thu",
     "start": "20:00",
     "end": "20:45",
@@ -8193,7 +8193,7 @@
   },
   {
     "id": "21a9185716",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Fri",
     "start": "07:00",
     "end": "07:30",
@@ -8265,7 +8265,7 @@
   },
   {
     "id": "2ecbf8581d",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Fri",
     "start": "07:15",
     "end": "07:45",
@@ -8430,7 +8430,7 @@
   },
   {
     "id": "384e32c575",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Fri",
     "start": "08:15",
     "end": "09:00",
@@ -8562,7 +8562,7 @@
     "start": "09:30",
     "end": "10:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -8574,7 +8574,7 @@
   },
   {
     "id": "008839888c",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Fri",
     "start": "09:30",
     "end": "10:30",
@@ -8596,7 +8596,7 @@
     "start": "09:30",
     "end": "10:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -8648,7 +8648,7 @@
     "start": "09:30",
     "end": "10:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null
   },
@@ -8790,7 +8790,7 @@
   },
   {
     "id": "588594fe97",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Fri",
     "start": "11:00",
     "end": "11:45",
@@ -8948,7 +8948,7 @@
   },
   {
     "id": "bef13436ea",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Fri",
     "start": "12:00",
     "end": "12:30",
@@ -9059,7 +9059,7 @@
     "start": "12:30",
     "end": "13:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -9103,7 +9103,7 @@
   },
   {
     "id": "5a62b19064",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Fri",
     "start": "13:00",
     "end": "13:45",
@@ -9249,7 +9249,7 @@
   },
   {
     "id": "1cca63ceac",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Fri",
     "start": "15:00",
     "end": "15:45",
@@ -9516,7 +9516,7 @@
   },
   {
     "id": "4ba1510b2b",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Fri",
     "start": "17:15",
     "end": "18:15",
@@ -9558,7 +9558,7 @@
     "start": "17:30",
     "end": "18:00",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "tags": [
@@ -9658,7 +9658,7 @@
   },
   {
     "id": "3b66764844",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Fri",
     "start": "18:30",
     "end": "19:15",
@@ -9675,7 +9675,7 @@
   },
   {
     "id": "bbcbcaa0c2",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Fri",
     "start": "18:30",
     "end": "19:00",
@@ -9746,7 +9746,7 @@
   },
   {
     "id": "d5521a4d9b",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Fri",
     "start": "19:00",
     "end": "19:45",
@@ -9891,7 +9891,7 @@
   },
   {
     "id": "21d83f1bc7",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Sat",
     "start": "07:15",
     "end": "08:00",
@@ -9912,7 +9912,7 @@
   },
   {
     "id": "f92d0634de",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Sat",
     "start": "08:00",
     "end": "09:00",
@@ -10022,7 +10022,7 @@
   },
   {
     "id": "444c818743",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Sat",
     "start": "09:15",
     "end": "10:15",
@@ -10044,7 +10044,7 @@
     "start": "09:15",
     "end": "10:00",
     "title": "Circuits",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Gym (Mezzanine)",
     "instructor": null,
     "booking": {
@@ -10125,7 +10125,7 @@
   },
   {
     "id": "8a215158c1",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Sat",
     "start": "10:00",
     "end": "10:30",
@@ -10265,12 +10265,12 @@
   },
   {
     "id": "ce931e6352",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Sat",
     "start": "10:30",
     "end": "11:00",
     "title": "HIIT",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "note": "End time misprinted on the published sheet — check when booking",
@@ -10283,7 +10283,7 @@
   },
   {
     "id": "8711ca31a9",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Sat",
     "start": "10:30",
     "end": "11:30",
@@ -10533,7 +10533,7 @@
   },
   {
     "id": "bd1f449548",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Sat",
     "start": "13:00",
     "end": "13:45",
@@ -10697,7 +10697,7 @@
   },
   {
     "id": "6f20272d8a",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Sat",
     "start": "15:00",
     "end": "15:45",
@@ -10718,7 +10718,7 @@
   },
   {
     "id": "3e5cf56b42",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Sun",
     "start": "07:15",
     "end": "08:00",
@@ -10861,7 +10861,7 @@
   },
   {
     "id": "86c991e9c6",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Sun",
     "start": "09:15",
     "end": "10:15",
@@ -10923,7 +10923,7 @@
     "start": "10:00",
     "end": "10:30",
     "title": "Synergy",
-    "category": "Gym",
+    "category": "Group Fitness",
     "room": "Fitness Suite",
     "instructor": null,
     "booking": {
@@ -11010,7 +11010,7 @@
   },
   {
     "id": "7678402d5f",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Sun",
     "start": "10:15",
     "end": "10:45",
@@ -11047,7 +11047,7 @@
   },
   {
     "id": "95a65aa336",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Sun",
     "start": "10:30",
     "end": "11:30",
@@ -11352,7 +11352,7 @@
   },
   {
     "id": "362142715a",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Sun",
     "start": "13:00",
     "end": "13:45",
@@ -11528,7 +11528,7 @@
   },
   {
     "id": "4925d0562d",
-    "centerId": "crosby",
+    "centerId": "crosby-lakeside",
     "day": "Sun",
     "start": "15:00",
     "end": "15:45",

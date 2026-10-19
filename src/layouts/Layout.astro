@@ -13,7 +13,7 @@ interface Props {
 
 const {
   title = 'Active Sefton — Leisure centres, pools and classes in Sefton',
-  description = 'Swimming, gyms, fitness classes and sport at six Sefton Council leisure centres: Bootle, Crosby, Dunes Southport, Litherland, Meadows Maghull and Netherton.',
+  description = 'Swimming, gyms, fitness classes and sport at six Sefton Council leisure centres: Bootle, Crosby Lakeside, Dunes Southport, Litherland, Meadows Maghull and Netherton.',
 } = Astro.props;
 
 const paletteCentres = centers.map(({ id, name, shortName, town, highlights }) => ({ id, name, shortName, town, highlights }));
@@ -29,7 +29,8 @@ const noticeId = notices[0]?.id ?? '';
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#FAF9F6" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />

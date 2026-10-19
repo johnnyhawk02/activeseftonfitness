@@ -5,6 +5,7 @@ Static rebuild of activeseftonfitness.co.uk — Astro 7 + React islands + Tailwi
 ```bash
 npm install
 npm run images   # download venue photos + generate WebP variants into public/images/centers/
+npm run brand    # rebuild logo + favicon files in public/ from brand/mark.webp and brand/wordmark.webp
 npm run dev      # http://localhost:4321
 npm run build    # static site in dist/
 npm run check    # type-check .astro/.ts/.tsx

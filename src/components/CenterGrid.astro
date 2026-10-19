@@ -5,7 +5,7 @@ import { centers, imageSrcSet, formatTime } from '../lib/data';
 <section id="centres" aria-labelledby="centres-heading" class="mx-auto max-w-6xl scroll-mt-24 px-4 pt-20 sm:px-6">
   <div class="flex flex-wrap items-end justify-between gap-4">
     <div>
-      <p class="text-sm font-semibold text-sage">Our centres</p>
+      <p class="text-sm font-semibold text-brand">Our centres</p>
       <h2 id="centres-heading" class="mt-2 text-4xl font-medium text-ink sm:text-5xl">Six places to get moving</h2>
     </div>
     <p class="max-w-md text-muted">One Active Sefton membership works at every centre. Pick the one closest to you, or the one with the pool, pitch or class you want.</p>
@@ -31,7 +31,7 @@ import { centers, imageSrcSet, formatTime } from '../lib/data';
           <div class="flex flex-1 flex-col p-6">
             <p class="text-xs font-semibold tracking-[0.12em] text-muted uppercase">{c.town}</p>
             <h3 class="mt-1.5 text-2xl font-medium text-ink">
-              <a href={`/centres/${c.id}/`} class="hover:text-sage">
+              <a href={`/centres/${c.id}/`} class="hover:text-brand">
                 {c.name}
               </a>
             </h3>
@@ -39,7 +39,7 @@ import { centers, imageSrcSet, formatTime } from '../lib/data';
 
             <ul class="mt-4 flex flex-wrap gap-1.5" aria-label="Highlights">
               {c.highlights.map((h) => (
-                <li class="rounded-md border border-sage-100 bg-sage-50 px-2 py-1 text-xs font-medium text-sage">{h}</li>
+                <li class="rounded-md border border-brand-100 bg-brand-50 px-2 py-1 text-xs font-medium text-brand">{h}</li>
               ))}
             </ul>
 
@@ -58,7 +58,7 @@ import { centers, imageSrcSet, formatTime } from '../lib/data';
               <a
                 href={`/?centre=${c.id}#timetable`}
                 data-filter-centre={c.id}
-                class="inline-flex flex-1 items-center justify-center rounded-lg bg-sage px-4 py-2.5 text-sm font-semibold text-white hover:bg-sage-hover"
+                class="inline-flex flex-1 items-center justify-center rounded-lg bg-brand px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-hover"
               >
                 View schedule<span class="sr-only"> for {c.name}</span>
               </a>

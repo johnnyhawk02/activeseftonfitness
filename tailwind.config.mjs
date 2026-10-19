@@ -7,11 +7,14 @@ export default {
         canvas: '#FAF9F6',
         ink: '#1A1A1A',
         muted: '#525252',
-        sage: {
-          DEFAULT: '#2C4A3E',
-          hover: '#4A7C59',
-          50: '#F1F5F2',
-          100: '#E1EAE4',
+        // Active Sefton logo colours: wordmark blue, mark blue, the red dot.
+        brand: {
+          DEFAULT: '#055BAD',
+          hover: '#044A8D',
+          sky: '#0280BA',
+          red: '#E8000B',
+          50: '#EEF4FB',
+          100: '#DCE8F6',
         },
       },
       fontFamily: {

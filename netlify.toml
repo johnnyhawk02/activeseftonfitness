@@ -14,3 +14,9 @@
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# Crosby was renamed to Crosby Lakeside (Crosby Baths is a different, non-Active Sefton pool).
+[[redirects]]
+  from = "/centres/crosby"
+  to = "/centres/crosby-lakeside"
+  status = 301

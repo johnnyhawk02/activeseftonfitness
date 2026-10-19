@@ -1,16 +1,24 @@
 ---
+// Official Active Sefton mark and wordmark; regenerate the files with `npm run brand`.
 interface Props { class?: string }
 const { class: className } = Astro.props;
 ---
 
 <span class:list={['inline-flex items-center gap-2.5', className]}>
-  <svg aria-hidden="true" viewBox="0 0 32 32" class="size-8 shrink-0">
-    <rect width="32" height="32" rx="8" fill="#2C4A3E" />
-    <path d="M7 21c3.2-2.4 6-2.4 9 0s5.8 2.4 9 0" fill="none" stroke="#FAF9F6" stroke-width="2.2" stroke-linecap="round" />
-    <circle cx="16" cy="11.5" r="3.2" fill="#FAF9F6" />
-  </svg>
-  <span class="leading-none">
-    <span class="block font-serif text-[1.35rem] font-semibold tracking-tight text-ink">Active Sefton</span>
-    <span class="mt-0.5 block text-[0.68rem] font-semibold tracking-[0.12em] text-muted uppercase">Sefton Council Leisure</span>
-  </span>
+  <img
+    src="/images/brand/mark-64.webp"
+    srcset="/images/brand/mark-64.webp 2x, /images/brand/mark-96.webp 3x"
+    alt=""
+    width="32"
+    height="32"
+    class="size-8 shrink-0 rounded-md"
+  />
+  <img
+    src="/images/brand/wordmark-64.webp"
+    srcset="/images/brand/wordmark-64.webp 2x, /images/brand/wordmark-96.webp 3x"
+    alt="Active Sefton"
+    width="233"
+    height="32"
+    class="h-6 w-auto sm:h-7"
+  />
 </span>

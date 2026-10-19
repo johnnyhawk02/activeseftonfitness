@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowRight, CalendarDays, CornerDownLeft, Dumbbell, ExternalLink, MapPin, Search, Trophy, Users, Waves } from 'lucide-react';
+import { ArrowRight, CalendarDays, CornerDownLeft, ExternalLink, MapPin, Search, Users, Waves } from 'lucide-react';
 import { BOOKING_URL, EVT_PALETTE_OPEN, filterTimetable, type Category, type ClassIndexEntry } from '../lib/shared';
 
 type CentreItem = { id: string; name: string; shortName: string; town: string; highlights: string[] };
@@ -21,9 +21,7 @@ type Item = {
 
 const CATEGORY_ICONS: Record<Category, typeof Waves> = {
   Swimming: Waves,
-  Gym: Dumbbell,
   'Group Fitness': Users,
-  Sports: Trophy,
 };
 
 declare global {
@@ -197,7 +195,7 @@ export default function CommandPalette({ centres, classes }: Props) {
     >
       <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl">
         <div className="flex items-center gap-3 border-b border-neutral-200 px-4">
-          <Search aria-hidden className="size-5 shrink-0 text-sage" />
+          <Search aria-hidden className="size-5 shrink-0 text-brand" />
           <input
             ref={inputRef}
             type="text"
@@ -245,11 +243,11 @@ export default function CommandPalette({ centres, classes }: Props) {
                   data-index={i}
                   onMouseMove={() => setActive(i)}
                   onClick={() => choose(item)}
-                  className={`flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 ${selected ? 'bg-sage-50' : ''}`}
+                  className={`flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 ${selected ? 'bg-brand-50' : ''}`}
                 >
                   <span
                     className={`grid size-8 shrink-0 place-items-center rounded-md border ${
-                      selected ? 'border-sage-100 bg-white text-sage' : 'border-neutral-200 bg-canvas text-muted'
+                      selected ? 'border-brand-100 bg-white text-brand' : 'border-neutral-200 bg-canvas text-muted'
                     }`}
                   >
                     <Icon aria-hidden className="size-4" />
@@ -260,9 +258,9 @@ export default function CommandPalette({ centres, classes }: Props) {
                   </span>
                   {selected &&
                     (item.external ? (
-                      <ExternalLink aria-hidden className="size-4 text-sage" />
+                      <ExternalLink aria-hidden className="size-4 text-brand" />
                     ) : (
-                      <ArrowRight aria-hidden className="size-4 text-sage" />
+                      <ArrowRight aria-hidden className="size-4 text-brand" />
                     ))}
                 </div>
               </li>
