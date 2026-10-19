@@ -191,6 +191,23 @@ export function monthlyJoinCost(monthly: number, collectionDay: 1 | 17, fee = 0,
   return { total, proRata, days, lastProRataDay, firstMonthUpfront, firstDebit: firstDebit.toISOString().slice(0, 10) };
 }
 
+export type Service = {
+  id: string;
+  name: string;
+  /** Short label over the name, e.g. "Free · ages 40–74". */
+  tag: string;
+  summary: string;
+  /** Under public/, with -480/-960 WebP variants beside it. */
+  image: string;
+  imageAlt: string;
+  /** A logo rather than a photo: shown whole on white instead of cropped. */
+  logo?: boolean;
+  /** The live site's page with the full details. */
+  url: string;
+};
+
+export type Services = { sourceUrl: string; checked: string; services: Service[] };
+
 export type Notice = { id: string; tone: 'info' | 'warning'; message: string; link?: { label: string; href: string } };
 
 /** `/images/centers/bootle.jpg` → srcset of the WebP variants written by scripts/download-images.mjs */

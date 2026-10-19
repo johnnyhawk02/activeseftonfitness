@@ -19,6 +19,7 @@ npm run check    # type-check .astro/.ts/.tsx
 | Weekly sessions | `src/data/timetable.json` |
 | Membership prices and what's included (`/memberships`) | `src/data/memberships.json` — copied from the live memberships page; bump `checked` when you re-check prices |
 | App store links and how-to guides (`/app`) | `src/data/app.json`; the videos and their poster frames are in `public/videos/app/` (720p copies of the live site's videos) |
+| Health programmes (`/services`): Weigh Forward, MOVE IT, NHS Health Checks, Exercise Referral, home workouts | `src/data/services.json`; photos in `public/images/services/`. “Find out more” links go to each programme's page on the live site |
 | Top-of-page service notice | `src/data/notices.json` — change the `id` to re-show it to people who dismissed the last one |
 | Colours / fonts | `tailwind.config.mjs` (loaded via `@config` in `src/styles/global.css`) |
 | Booking URL and deep links | `BOOKING_URL` / `sessionBookingUrl()` in `src/lib/shared.ts`; each centre's booking code is `bookingSiteId` in `centers.json` |

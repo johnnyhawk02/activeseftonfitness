@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { services as data, imageSrcSet } from '../lib/data';
+
+const { services, sourceUrl, checked } = data;
+const checkedLabel = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(checked));
+---
+
+<Layout
+  title="Health services — Active Sefton"
+  description="Free and supported health programmes from Active Sefton: Weigh Forward, MOVE IT for 5–16s, NHS Health Checks, the Exercise Referral Programme and workouts at home."
+>
+  <header class="border-b border-neutral-200">
+    <div class="mx-auto max-w-6xl px-4 pt-10 pb-12 sm:px-6 lg:pt-14">
+      <nav aria-label="Breadcrumb" class="text-sm text-muted">
+        <ol class="flex gap-2">
+          <li><a href="/" class="hover:text-ink hover:underline">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page">Health services</li>
+        </ol>
+      </nav>
+      <p class="mt-8 text-sm font-semibold text-brand">Member services</p>
+      <h1 class="mt-2 max-w-3xl text-5xl leading-[1.05] font-medium text-ink sm:text-6xl">Keeping Sefton <em class="font-normal text-brand">fit and healthy.</em></h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+        Beyond the gyms and pools, we run programmes to help with healthy eating, weight, heart health and getting active again, several of them free.
+      </p>
+    </div>
+  </header>
+
+  <div class="mx-auto max-w-6xl px-4 pt-14 sm:px-6">
+    <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        services.map((s) => (
+          <li class="flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-soft">
+            <div class:list={['aspect-[3/2] overflow-hidden border-b border-neutral-200', s.logo ? 'bg-white' : 'bg-neutral-100']}>
+              <img
+                src={s.image.replace('.jpg', '-960.webp')}
+                srcset={imageSrcSet(s.image)}
+                sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
+                alt={s.imageAlt}
+                width="960"
+                height="640"
+                loading="lazy"
+                decoding="async"
+                class:list={['size-full', s.logo ? 'object-contain p-6' : 'object-cover']}
+              />
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <p class="text-xs font-semibold tracking-[0.12em] text-brand uppercase">{s.tag}</p>
+              <h2 class="mt-2 text-2xl leading-tight font-medium text-ink">{s.name}</h2>
+              <p class="mt-3 text-sm leading-relaxed text-muted">{s.summary}</p>
+              <a
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-brand hover:text-brand-hover"
+              >
+                Find out more
+                <svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                <span class="sr-only"> about {s.name} (opens in a new tab)</span>
+              </a>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="mt-10 text-xs text-muted">
+      From <a href={sourceUrl} class="underline underline-offset-2 hover:text-ink">activeseftonfitness.co.uk</a>, checked {checkedLabel}. “Find out more” opens each programme’s page there.
+    </p>
+  </div>
+</Layout>

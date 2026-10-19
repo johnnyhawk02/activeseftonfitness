@@ -7,6 +7,7 @@ const path = Astro.url.pathname;
 const home = path === '/' ? '' : '/';
 const onMemberships = path.startsWith('/memberships');
 const onApp = path.startsWith('/app');
+const onServices = path.startsWith('/services');
 ---
 
 <header class="sticky top-0 z-40 border-b border-neutral-200 bg-canvas/90 backdrop-blur supports-[backdrop-filter]:bg-canvas/80">
@@ -28,12 +29,17 @@ const onApp = path.startsWith('/app');
         aria-current={onApp ? 'page' : undefined}
         class:list={['rounded-md px-3 py-2 hover:bg-white hover:text-ink', onApp ? 'text-ink' : 'text-muted']}>App</a
       >
+      <a
+        href="/services/"
+        aria-current={onServices ? 'page' : undefined}
+        class:list={['rounded-md px-3 py-2 hover:bg-white hover:text-ink', onServices ? 'text-ink' : 'text-muted']}>Health</a
+      >
     </nav>
 
     <button
       type="button"
       data-open-palette
-      class="flex items-center gap-2 rounded-lg border border-neutral-200 bg-white px-2.5 py-2 text-sm text-muted shadow-soft hover:border-neutral-300 hover:text-ink sm:min-w-52 sm:px-3"
+      class="flex items-center gap-2 rounded-lg border border-neutral-200 bg-white px-2.5 py-2 text-sm text-muted shadow-soft hover:border-neutral-300 hover:text-ink sm:px-3 lg:min-w-52"
       aria-label="Search classes and centres"
     >
       <svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
@@ -45,7 +51,7 @@ const onApp = path.startsWith('/app');
       href={BOOKING_URL}
       target="_blank"
       rel="noopener noreferrer"
-      class="hidden rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-hover sm:inline-flex"
+      class="hidden rounded-lg bg-brand px-4 py-2 text-sm font-semibold whitespace-nowrap text-white hover:bg-brand-hover sm:inline-flex"
       >Book online<span class="sr-only"> (opens in a new tab)</span></a
     >
   </div>

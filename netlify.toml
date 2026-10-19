@@ -31,3 +31,9 @@
   from = "/app-how-to"
   to = "/app/"
   status = 301
+
+# Old activeseftonfitness.co.uk address for member/health services.
+[[redirects]]
+  from = "/sefton-other-services"
+  to = "/services/"
+  status = 301

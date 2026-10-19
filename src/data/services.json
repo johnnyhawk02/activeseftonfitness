@@ -1,0 +1,52 @@
+{
+  "sourceUrl": "https://www.activeseftonfitness.co.uk/sefton-other-services",
+  "checked": "2026-10-19",
+  "services": [
+    {
+      "id": "weigh-forward",
+      "name": "Weigh Forward",
+      "tag": "Healthy eating",
+      "summary": "A programme that gives you real, accurate nutrition information. It's designed for the people of Sefton and run by trained specialists.",
+      "image": "/images/services/weigh-forward.jpg",
+      "imageAlt": "Shopping for fresh food in a supermarket",
+      "url": "https://www.activeseftonfitness.co.uk/weighforward"
+    },
+    {
+      "id": "move-it",
+      "name": "MOVE IT",
+      "tag": "Free · ages 5–16",
+      "summary": "A free local weight-management service for children and young people aged 5–16 who are above their ideal weight and would benefit from a healthier lifestyle.",
+      "image": "/images/services/move-it.jpg",
+      "imageAlt": "MOVE IT logo",
+      "logo": true,
+      "url": "https://www.activeseftonfitness.co.uk/move-it"
+    },
+    {
+      "id": "nhs-health-check",
+      "name": "NHS Health Checks",
+      "tag": "Free · ages 40–74",
+      "summary": "If you're 40 to 74 you may be eligible for a free NHS Health Check, which helps prevent heart disease, stroke, diabetes and kidney disease. If you don't already have one of these, you can have a check every five years.",
+      "image": "/images/services/nhs-health-check.jpg",
+      "imageAlt": "A health professional with a clipboard talking to a patient",
+      "url": "https://www.activeseftonfitness.co.uk/nhshealth-checks"
+    },
+    {
+      "id": "exercise-referral",
+      "name": "Exercise Referral Programme",
+      "tag": "Ages 16+",
+      "summary": "A 12-week supported programme for people aged 16 and over with moderate to high risk heart conditions, buddy referrals included. Choose from gym sessions, swimming, classes, walking and cycling groups and community activities.",
+      "image": "/images/services/exercise-referral.jpg",
+      "imageAlt": "An older man stretching outdoors",
+      "url": "https://www.activeseftonfitness.co.uk/exercise-referral"
+    },
+    {
+      "id": "home-workouts",
+      "name": "Workouts at home",
+      "tag": "Online",
+      "summary": "Can't get to a centre? Our gym staff have put together online classes and recorded workouts that are simple to do at home.",
+      "image": "/images/services/home-workouts.jpg",
+      "imageAlt": "A woman exercising on a mat at home",
+      "url": "https://www.activeseftonfitness.co.uk/active-sefton"
+    }
+  ]
+}
