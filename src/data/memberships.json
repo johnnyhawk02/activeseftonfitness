@@ -39,7 +39,6 @@
       "minimumMonths": 12,
       "includes": "Gym, swim and exercise classes",
       "centres": ["bootle", "crosby-lakeside", "dunes", "litherland", "meadows", "netherton"],
-      "featured": true,
       "join": [
         { "memberType": "Adult", "monthly": "Inclusive", "annual": "Inclusive" }
       ],
@@ -70,7 +69,7 @@
       "join": [
         { "label": "Student", "memberType": "concession", "monthly": "student", "annual": "StudentAnnual" },
         { "label": "Workforce", "memberType": "concession", "monthly": "workforce", "annual": "WorkforceAnnual" },
-        { "label": "Saver+", "memberType": "concession", "monthly": "SaverMembership", "annual": "12", "annualPrice": 323 }
+        { "label": "Saver+", "memberType": "concession", "monthly": "SaverMembership", "annual": "12", "annualPrice": 323, "annualFee": 15 }
       ],
       "annualPrice": 308
     },

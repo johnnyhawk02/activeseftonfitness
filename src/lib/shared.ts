@@ -101,7 +101,6 @@ export type MembershipPlan = {
   centres: string[];
   /** Who qualifies, for memberships that need proof. */
   eligibility?: string;
-  featured?: boolean;
   /** The booking portal's codes for it; several when the portal splits it (concessions). */
   join: MembershipJoin[];
 };
@@ -116,6 +115,8 @@ export type MembershipJoin = {
   annual?: string;
   /** When this option's yearly price differs from the plan's (Saver+). */
   annualPrice?: number;
+  /** A yearly scheme fee charged on top of the monthly price, and included in `annualPrice` (Saver+, £15). */
+  annualFee?: number;
 };
 
 export type Memberships = {
