@@ -83,14 +83,39 @@ const storeLinks = [
       guides.map((g, i) => (
         <section
           aria-labelledby={`guide-${g.id}`}
-          class:list={['grid items-center gap-8 md:grid-cols-[minmax(0,300px)_1fr] md:gap-14', i === 0 ? 'mt-14' : 'mt-14 border-t border-neutral-200 pt-14']}
+          class:list={['grid items-center gap-8 md:grid-cols-[minmax(0,320px)_1fr] md:gap-16', i === 0 ? 'mt-14' : 'mt-14 border-t border-neutral-200 pt-14']}
         >
-          {/* Portrait phone screen recordings (406×720). */}
-          <div class="mx-auto w-full max-w-[280px] overflow-hidden rounded-[1.75rem] border-[6px] border-ink bg-ink shadow-soft md:max-w-none">
-            <video controls preload="none" playsinline poster={g.poster} width="406" height="720" class="aspect-[406/720] w-full bg-ink" aria-labelledby={`guide-${g.id}`}>
-              <source src={g.video} type="video/mp4" />
-              <a href={g.video}>Download the video</a>
-            </video>
+          {/*
+            Phone mock-up. The recordings (406×720) have blue bands either side of the app; the screen is a
+            9:19 window with object-cover, which crops the bands away, and rounded corners mask the edges.
+          */}
+          <div class="relative mx-auto w-full max-w-[300px] md:max-w-none">
+            <span aria-hidden="true" class="absolute top-24 -left-[3px] h-10 w-[3px] rounded-l bg-neutral-700"></span>
+            <span aria-hidden="true" class="absolute top-36 -left-[3px] h-14 w-[3px] rounded-l bg-neutral-700"></span>
+            <span aria-hidden="true" class="absolute top-32 -right-[3px] h-20 w-[3px] rounded-r bg-neutral-700"></span>
+            <div class="rounded-[3rem] bg-ink p-3 shadow-[0_24px_48px_-16px_rgba(26,26,26,0.35)] ring-1 ring-neutral-700/60">
+              <div class="relative overflow-hidden rounded-[2.25rem] bg-black">
+                <div aria-hidden="true" class="flex h-9 items-center justify-center">
+                  <span class="h-[18px] w-20 rounded-full bg-neutral-900 ring-1 ring-neutral-800"></span>
+                </div>
+                <video
+                  controls
+                  preload="metadata"
+                  playsinline
+                  poster={g.poster}
+                  width="406"
+                  height="720"
+                  class="block aspect-[9/19] w-full object-cover"
+                  aria-labelledby={`guide-${g.id}`}
+                >
+                  <source src={g.video} type="video/mp4" />
+                  <a href={g.video}>Download the video</a>
+                </video>
+                <div aria-hidden="true" class="flex h-7 items-center justify-center">
+                  <span class="h-1 w-24 rounded-full bg-neutral-600"></span>
+                </div>
+              </div>
+            </div>
           </div>
           <div>
             <p class="font-serif text-3xl text-brand">{i + 1}</p>
