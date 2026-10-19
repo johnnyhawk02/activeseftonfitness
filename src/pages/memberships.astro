@@ -1,12 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { centerById, memberships, type MembershipPlan } from '../lib/data';
+import { centers, centerById, memberships, type MembershipPlan } from '../lib/data';
 
-const { benefits, groups, plans, joinUrl, phone, checked, sourceUrl } = memberships;
+const { benefits, groups, plans, joinUrl, portal, phone, checked, sourceUrl } = memberships;
 const tel = `tel:${phone.replace(/\s/g, '')}`;
 const fromPrice = Math.min(...plans.filter((p) => p.group === 'adult').map((p) => p.price));
 const checkedLabel = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(checked));
 const centresOf = (p: MembershipPlan) => p.centres.map((id) => centerById[id]).filter(Boolean);
+const siteIdsOf = (p: MembershipPlan) => centresOf(p).map((c) => c.bookingSiteId).join(',');
+const listNames = (names: string[]) => names.slice(0, -1).join(', ') + ' or ' + names[names.length - 1];
 ---
 
 <Layout
@@ -30,13 +32,7 @@ const centresOf = (p: MembershipPlan) => p.centres.map((id) => centerById[id]).f
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="#plans" class="rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-hover">Compare memberships</a>
-          <a
-            href={joinUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="rounded-lg border border-neutral-300 bg-white px-5 py-3 text-sm font-semibold text-ink hover:border-neutral-400"
-            >Join online<span class="sr-only"> (opens in a new tab)</span></a
-          >
+          <a href="#join-setup" class="rounded-lg border border-neutral-300 bg-white px-5 py-3 text-sm font-semibold text-ink hover:border-neutral-400">Join online</a>
         </div>
       </div>
 
@@ -57,6 +53,45 @@ const centresOf = (p: MembershipPlan) => p.centres.map((id) => centerById[id]).f
   </header>
 
   <div id="plans" class="mx-auto max-w-6xl scroll-mt-24 px-4 sm:px-6">
+    <section id="join-setup" aria-labelledby="join-setup-heading" data-join-setup data-memberships-url={portal.membershipsUrl} data-fallback-url={joinUrl} class="mt-14 scroll-mt-24 rounded-2xl border border-neutral-200 bg-white p-6 shadow-soft transition-shadow sm:p-8">
+      <h2 id="join-setup-heading" class="text-2xl font-medium text-ink">Joining online?</h2>
+      <p class="mt-1.5 text-sm text-muted">
+        Pick your home centre and payment day, then press <strong class="font-semibold text-ink">Join online</strong> on a membership. Our booking portal opens in a new tab with it already chosen, ready to pay.
+      </p>
+      <div class="mt-5 grid gap-5 lg:grid-cols-[1fr_auto] lg:gap-10">
+        <fieldset>
+          <legend class="text-xs font-semibold tracking-[0.12em] text-muted uppercase">Home centre</legend>
+          <div class="mt-2.5 flex flex-wrap gap-2">
+            {
+              centers.map((c) => (
+                <label class="cursor-pointer">
+                  <input type="radio" name="join-centre" value={c.bookingSiteId} data-name={c.shortName} class="peer sr-only" />
+                  <span class="inline-flex rounded-full border border-neutral-200 bg-white px-3.5 py-2 text-sm font-medium text-ink peer-checked:border-brand peer-checked:bg-brand peer-checked:text-white peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brand hover:border-brand">
+                    {c.shortName}
+                  </span>
+                </label>
+              ))
+            }
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="text-xs font-semibold tracking-[0.12em] text-muted uppercase">Direct Debit taken on the</legend>
+          <div class="mt-2.5 flex gap-2">
+            {
+              portal.paymentDays.map((d, i) => (
+                <label class="cursor-pointer">
+                  <input type="radio" name="join-day" value={d.key} checked={i === 0} class="peer sr-only" />
+                  <span class="inline-flex rounded-full border border-neutral-200 bg-white px-3.5 py-2 text-sm font-medium text-ink peer-checked:border-brand peer-checked:bg-brand peer-checked:text-white peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brand hover:border-brand">
+                    {d.label} of the month
+                  </span>
+                </label>
+              ))
+            }
+          </div>
+        </fieldset>
+      </div>
+      <p data-join-hint class="mt-4 hidden text-sm font-semibold text-brand-red" role="status">Choose your home centre first.</p>
+    </section>
     {
       groups.map((g) => (
         <section aria-labelledby={`group-${g.id}`} class="pt-16">
@@ -109,28 +144,28 @@ const centresOf = (p: MembershipPlan) => p.centres.map((id) => centerById[id]).f
                   )}
 
                   <div class="mt-auto pt-6">
-                    {p.signUp === 'online-or-centre' ? (
-                      <a
-                        href={joinUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class:list={[
-                          'flex justify-center rounded-lg px-5 py-3 text-sm font-semibold',
-                          p.featured ? 'bg-brand text-white hover:bg-brand-hover' : 'border border-neutral-300 bg-white text-ink hover:border-brand hover:text-brand',
-                        ]}
-                      >
-                        Join online<span class="sr-only"> — {p.name} {p.variant ?? ''} (opens in a new tab)</span>
-                      </a>
-                    ) : (
-                      <a
-                        href={tel}
-                        class="flex justify-center rounded-lg border border-neutral-300 bg-white px-5 py-3 text-sm font-semibold text-ink hover:border-brand hover:text-brand"
-                      >
-                        Call {phone}
-                      </a>
-                    )}
-                    <p class="mt-2 text-center text-xs text-muted">
-                      {p.signUp === 'online-or-centre' ? 'Or sign up at any of these centres' : 'Sign up in centre only — not online'}
+                    <div class:list={['grid gap-2', p.join.length > 1 && 'grid-cols-3']}>
+                      {p.join.map((j) => (
+                        <a
+                          href={joinUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          data-join
+                          data-member-type={j.memberType}
+                          data-group-tag={j.groupTag}
+                          data-sites={siteIdsOf(p)}
+                          class:list={[
+                            'flex justify-center rounded-lg px-3 py-3 text-center text-sm font-semibold aria-disabled:cursor-not-allowed aria-disabled:opacity-50',
+                            p.featured ? 'bg-brand text-white hover:bg-brand-hover' : 'border border-neutral-300 bg-white text-ink hover:border-brand hover:text-brand',
+                          ]}
+                        >
+                          {j.label ?? 'Join online'}
+                          <span class="sr-only"> — {p.name} {p.variant ?? ''} (opens in a new tab)</span>
+                        </a>
+                      ))}
+                    </div>
+                    <p class="mt-2 text-center text-xs text-muted" data-join-note={p.centres.length < centers.length ? `Home centre must be ${listNames(centresOf(p).map((c) => c.shortName))}` : undefined}>
+                      {p.join.length > 1 ? 'Join online as one of these, or sign up at any centre' : 'Or sign up at any of these centres'}
                     </p>
                   </div>
                 </li>
@@ -149,11 +184,9 @@ const centresOf = (p: MembershipPlan) => p.centres.map((id) => centerById[id]).f
         <span class="font-serif text-3xl text-brand">1</span>
         <h3 class="mt-2 text-xl font-medium text-ink">Online</h3>
         <p class="mt-2 text-sm leading-relaxed text-muted">
-          Choose your home centre in our booking portal, then pick a membership and pay. Swim only is the one membership you can’t buy online.
+          Pick your home centre and payment day above, then press Join online on a membership. You’ll land on it in our booking portal, ready to pay.
         </p>
-        <a href={joinUrl} target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-sm font-semibold text-brand underline underline-offset-4 hover:text-brand-hover"
-          >Join online<span class="sr-only"> (opens in a new tab)</span></a
-        >
+        <a href="#join-setup" class="mt-4 inline-block text-sm font-semibold text-brand underline underline-offset-4 hover:text-brand-hover">Choose a centre</a>
       </li>
       <li class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-soft">
         <span class="font-serif text-3xl text-brand">2</span>
@@ -177,3 +210,68 @@ const centresOf = (p: MembershipPlan) => p.centres.map((id) => centerById[id]).f
     </p>
   </section>
 </Layout>
+
+<script>
+  import { membershipJoinUrl } from '../lib/shared';
+
+  // Join buttons fall back to the portal's centre picker (no JS, or no centre chosen yet). Once a home
+  // centre is picked they deep-link to that membership, unless it isn't sold there (swim at Crosby).
+  const STORE = 'as-join-centre';
+  const setup = document.querySelector<HTMLElement>('[data-join-setup]')!;
+  const { membershipsUrl = '', fallbackUrl = '' } = setup.dataset;
+  const hint = setup.querySelector<HTMLElement>('[data-join-hint]')!;
+  const radios = (name: string) => [...setup.querySelectorAll<HTMLInputElement>(`input[name="${name}"]`)];
+  const picked = (name: string) => radios(name).find((r) => r.checked);
+
+  try {
+    const saved = localStorage.getItem(STORE);
+    const r = radios('join-centre').find((x) => x.value === saved);
+    if (r) r.checked = true;
+  } catch {}
+
+  function update() {
+    const centre = picked('join-centre');
+    const day = picked('join-day')?.value ?? 'DD1st';
+    if (centre) hint.classList.add('hidden');
+    for (const a of document.querySelectorAll<HTMLAnchorElement>('a[data-join]')) {
+      const sites = (a.dataset.sites ?? '').split(',');
+      const ok = !centre || sites.includes(centre.value);
+      const note = a.closest('li')?.querySelector<HTMLElement>('[data-join-note]');
+      if (note) {
+        note.dataset.default ??= note.textContent ?? '';
+        note.textContent = ok ? note.dataset.default : (note.dataset.joinNote ?? '');
+        note.classList.toggle('!text-brand-red', !ok);
+      }
+      if (ok) a.removeAttribute('aria-disabled');
+      else a.setAttribute('aria-disabled', 'true');
+      if (centre && ok) {
+        a.href = membershipJoinUrl(membershipsUrl, centre.value, { memberType: a.dataset.memberType!, groupTag: a.dataset.groupTag! }, day);
+      } else {
+        a.href = fallbackUrl;
+      }
+    }
+  }
+
+  setup.addEventListener('change', (e) => {
+    const t = e.target as HTMLInputElement;
+    if (t.name === 'join-centre') {
+      try {
+        localStorage.setItem(STORE, t.value);
+      } catch {}
+    }
+    update();
+  });
+
+  document.addEventListener('click', (e) => {
+    const a = (e.target as Element).closest?.<HTMLAnchorElement>('a[data-join]');
+    if (!a) return;
+    if (a.hasAttribute('aria-disabled')) return e.preventDefault();
+    if (picked('join-centre')) return;
+    e.preventDefault();
+    hint.classList.remove('hidden');
+    setup.scrollIntoView({ block: 'center' });
+    radios('join-centre')[0]?.focus({ preventScroll: true });
+  });
+
+  update();
+</script>

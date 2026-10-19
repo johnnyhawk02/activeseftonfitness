@@ -97,23 +97,49 @@ export type MembershipPlan = {
   centres: string[];
   /** Who qualifies, for memberships that need proof. */
   eligibility?: string;
-  signUp: 'online-or-centre' | 'centre';
   featured?: boolean;
+  /** The booking portal's codes for it; several when the portal splits it (concessions). */
+  join: MembershipJoin[];
+};
+
+export type MembershipJoin = {
+  /** Button label when a plan has more than one. */
+  label?: string;
+  /** Portal "member type" key, e.g. "Adult", "concession". */
+  memberType: string;
+  /** Portal membership group key, e.g. "Inclusive" (committed), "Swimonly". */
+  groupTag: string;
 };
 
 export type Memberships = {
   sourceUrl: string;
   /** When prices were last copied from the live site. */
   checked: string;
-  /** Where "Join online" goes: the booking portal's centre picker, then its membership list. */
+  /** Where "Join online" goes before a home centre is chosen: the booking portal's centre picker. */
   joinUrl: string;
+  portal: {
+    membershipsUrl: string;
+    /** When the portal codes in each plan's `join` were last checked. */
+    checked: string;
+    /** Direct Debit collection days the portal offers ("membership duration" keys). */
+    paymentDays: { key: string; label: string }[];
+  };
   phone: string;
   benefits: string[];
   groups: { id: string; title: string; intro: string }[];
   plans: MembershipPlan[];
 };
 
-export type Notice ={ id: string; tone: 'info' | 'warning'; message: string; link?: { label: string; href: string } };
+/**
+ * Deep link into the portal's join flow with the home centre, membership and Direct Debit day already
+ * chosen, so it opens on that membership's price with "Continue To Payment". The portal needs all four.
+ */
+export function membershipJoinUrl(membershipsUrl: string, siteId: string, join: MembershipJoin, paymentDay: string) {
+  const params = new URLSearchParams({ siteId, memberType: join.memberType, membershipDuration: paymentDay, groupTag: join.groupTag });
+  return `${membershipsUrl}?${params}`;
+}
+
+export type Notice = { id: string; tone: 'info' | 'warning'; message: string; link?: { label: string; href: string } };
 
 /** `/images/centers/bootle.jpg` → srcset of the WebP variants written by scripts/download-images.mjs */
 export function imageSrcSet(image: string) {

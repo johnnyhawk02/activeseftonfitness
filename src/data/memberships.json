@@ -2,6 +2,14 @@
   "sourceUrl": "https://www.activeseftonfitness.co.uk/memberships",
   "checked": "2026-10-19",
   "joinUrl": "https://activesefton.gladstonego.cloud/site-finder",
+  "portal": {
+    "membershipsUrl": "https://activesefton.gladstonego.cloud/memberships",
+    "checked": "2026-10-19",
+    "paymentDays": [
+      { "key": "DD1st", "label": "1st" },
+      { "key": "DD17th", "label": "17th" }
+    ]
+  },
   "phone": "0151 934 2297",
   "benefits": [
     "One membership, six leisure centres",
@@ -30,8 +38,10 @@
       "minimumMonths": 12,
       "includes": "Gym, swim and exercise classes",
       "centres": ["bootle", "crosby-lakeside", "dunes", "litherland", "meadows", "netherton"],
-      "signUp": "online-or-centre",
-      "featured": true
+      "featured": true,
+      "join": [
+        { "memberType": "Adult", "groupTag": "Inclusive" }
+      ]
     },
     {
       "id": "single-flexible",
@@ -42,7 +52,9 @@
       "minimumMonths": 3,
       "includes": "Gym, swim and exercise classes",
       "centres": ["bootle", "crosby-lakeside", "dunes", "litherland", "meadows", "netherton"],
-      "signUp": "online-or-centre"
+      "join": [
+        { "memberType": "Adult", "groupTag": "noncommitted" }
+      ]
     },
     {
       "id": "concessions",
@@ -53,7 +65,11 @@
       "includes": "Gym, swim and exercise classes",
       "centres": ["bootle", "crosby-lakeside", "dunes", "litherland", "meadows", "netherton"],
       "eligibility": "For students, and for people with a GP referral or on the Choices or Active Workforce schemes.",
-      "signUp": "online-or-centre"
+      "join": [
+        { "label": "Student", "memberType": "concession", "groupTag": "student" },
+        { "label": "Workforce", "memberType": "concession", "groupTag": "workforce" },
+        { "label": "Saver+", "memberType": "concession", "groupTag": "SaverMembership" }
+      ]
     },
     {
       "id": "corporate",
@@ -65,7 +81,9 @@
       "includes": "Gym, swim and exercise classes",
       "centres": ["bootle", "crosby-lakeside", "dunes", "litherland", "meadows", "netherton"],
       "eligibility": "Qualification required — call us to check you’re eligible.",
-      "signUp": "online-or-centre"
+      "join": [
+        { "memberType": "Corporate", "groupTag": "Corporate1" }
+      ]
     },
     {
       "id": "swim-only",
@@ -75,7 +93,9 @@
       "minimumMonths": 3,
       "includes": "Swimming only",
       "centres": ["bootle", "dunes", "meadows"],
-      "signUp": "centre"
+      "join": [
+        { "memberType": "Adult", "groupTag": "Swimonly" }
+      ]
     },
     {
       "id": "youth",
@@ -86,7 +106,9 @@
       "minimumMonths": 3,
       "includes": "Gym, swim and youth exercise classes",
       "centres": ["bootle", "crosby-lakeside", "dunes", "litherland", "meadows", "netherton"],
-      "signUp": "online-or-centre"
+      "join": [
+        { "memberType": "Youth", "groupTag": "YouthInclusive" }
+      ]
     },
     {
       "id": "junior-swim",
@@ -97,7 +119,9 @@
       "minimumMonths": 3,
       "includes": "Swimming only",
       "centres": ["bootle", "dunes", "meadows"],
-      "signUp": "online-or-centre"
+      "join": [
+        { "memberType": "Junior", "groupTag": "Swimonly" }
+      ]
     }
   ]
 }
