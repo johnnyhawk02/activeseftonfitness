@@ -56,8 +56,7 @@ import { centers, imageSrcSet, formatTime } from '../lib/data';
 
             <div class="mt-auto flex items-center gap-3 pt-6">
               <a
-                href={`/?centre=${c.id}#timetable`}
-                data-filter-centre={c.id}
+                href={`/timetable/?centre=${c.id}`}
                 class="inline-flex flex-1 items-center justify-center rounded-lg bg-brand px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-hover"
               >
                 View schedule<span class="sr-only"> for {c.name}</span>
@@ -75,17 +74,3 @@ import { centers, imageSrcSet, formatTime } from '../lib/data';
     }
   </ul>
 </section>
-
-<script>
-  import { filterTimetable } from '../lib/shared';
-
-  // On the home page, "View schedule" filters the timetable in place instead of reloading.
-  document.addEventListener('click', (e) => {
-    const link = (e.target as HTMLElement).closest<HTMLAnchorElement>('[data-filter-centre]');
-    const timetable = document.getElementById('timetable');
-    if (!link || !timetable) return;
-    e.preventDefault();
-    filterTimetable({ centre: link.dataset.filterCentre! });
-    timetable.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
-  });
-</script>

@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Timetable from '../components/Timetable.tsx';
+import { centers, sessions } from '../lib/data';
+---
+
+<Layout
+  title="Classes & sessions timetable — Active Sefton"
+  description="Swims, fitness classes and gym sessions at all six Active Sefton centres for the next 8 days, with links to book online."
+>
+  <section id="timetable" aria-labelledby="timetable-heading" class="mx-auto max-w-6xl scroll-mt-24 px-4 pt-10 sm:px-6 lg:pt-14">
+    <nav aria-label="Breadcrumb" class="text-sm text-muted">
+      <ol class="flex gap-2">
+        <li><a href="/" class="hover:text-ink hover:underline">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li aria-current="page">Timetable</li>
+      </ol>
+    </nav>
+    <div class="mt-8 flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <p class="text-sm font-semibold text-brand">The next 8 days</p>
+        <h1 id="timetable-heading" class="mt-2 text-5xl leading-[1.05] font-medium text-ink sm:text-6xl">Classes &amp; sessions</h1>
+      </div>
+      <p class="max-w-md text-muted">
+        Swims, classes and gym sessions across all six centres, from each centre’s published timetable. Booking opens in our booking portal in a new tab.
+      </p>
+    </div>
+    <div class="mt-8">
+      <Timetable client:load sessions={sessions} centres={centers.map(({ id, name, shortName, bookingSiteId }) => ({ id, name, shortName, bookingSiteId }))} />
+    </div>
+  </section>
+</Layout>

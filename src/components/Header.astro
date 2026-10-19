@@ -8,6 +8,7 @@ const home = path === '/' ? '' : '/';
 const onMemberships = path.startsWith('/memberships');
 const onApp = path.startsWith('/app');
 const onServices = path.startsWith('/services');
+const onTimetable = path.startsWith('/timetable');
 ---
 
 <header class="sticky top-0 z-40 border-b border-neutral-200 bg-canvas/90 backdrop-blur supports-[backdrop-filter]:bg-canvas/80">
@@ -18,7 +19,11 @@ const onServices = path.startsWith('/services');
 
     <nav aria-label="Primary" class="hidden items-center gap-1 text-sm font-medium md:flex">
       <a href={`${home}#centres`} class="rounded-md px-3 py-2 text-muted hover:bg-white hover:text-ink">Centres</a>
-      <a href={`${home}#timetable`} class="rounded-md px-3 py-2 text-muted hover:bg-white hover:text-ink">Timetable</a>
+      <a
+        href="/timetable/"
+        aria-current={onTimetable ? 'page' : undefined}
+        class:list={['rounded-md px-3 py-2 hover:bg-white hover:text-ink', onTimetable ? 'text-ink' : 'text-muted']}>Timetable</a
+      >
       <a
         href="/memberships/"
         aria-current={onMemberships ? 'page' : undefined}
@@ -58,7 +63,7 @@ const onServices = path.startsWith('/services');
 
   <nav aria-label="Primary (mobile)" class="flex gap-1 border-t border-neutral-200 px-2 text-sm font-medium md:hidden">
     <a href={`${home}#centres`} class="flex-1 py-2.5 text-center text-muted">Centres</a>
-    <a href={`${home}#timetable`} class="flex-1 py-2.5 text-center text-muted">Timetable</a>
+    <a href="/timetable/" aria-current={onTimetable ? 'page' : undefined} class:list={['flex-1 py-2.5 text-center', onTimetable ? 'text-ink' : 'text-muted']}>Timetable</a>
     <a href="/memberships/" aria-current={onMemberships ? 'page' : undefined} class:list={['flex-1 py-2.5 text-center', onMemberships ? 'text-ink' : 'text-muted']}>Memberships</a>
     <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 text-center font-semibold text-brand"
       >Book<span class="sr-only"> online (opens in a new tab)</span></a

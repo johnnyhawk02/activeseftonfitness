@@ -31,7 +31,7 @@ declare global {
   }
 }
 
-/** Show a class in the timetable: in place on the home page, otherwise navigate there. */
+/** Show a class in the timetable: in place on the timetable page, otherwise go there. */
 function showInTimetable(query: string, centre?: string) {
   const timetable = document.getElementById('timetable');
   if (timetable && !timetable.dataset.locked) {
@@ -43,7 +43,7 @@ function showInTimetable(query: string, centre?: string) {
   if (query) params.set('q', query);
   if (centre) params.set('centre', centre);
   const qs = params.toString();
-  location.href = `/${qs ? `?${qs}` : ''}#timetable`;
+  location.href = `/timetable/${qs ? `?${qs}` : ''}`;
 }
 
 export default function CommandPalette({ centres, classes }: Props) {

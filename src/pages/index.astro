@@ -3,8 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import JoinBanner from '../components/JoinBanner.astro';
 import CenterGrid from '../components/CenterGrid.astro';
-import Timetable from '../components/Timetable.tsx';
-import { centers, sessions } from '../lib/data';
+import { sessions } from '../lib/data';
 ---
 
 <Layout>
@@ -12,18 +11,20 @@ import { centers, sessions } from '../lib/data';
   <Hero />
   <CenterGrid />
 
-  <section id="timetable" aria-labelledby="timetable-heading" class="mx-auto max-w-6xl scroll-mt-24 px-4 pt-24 sm:px-6">
-    <div class="flex flex-wrap items-end justify-between gap-4">
-      <div>
-        <p class="text-sm font-semibold text-brand">The next 8 days</p>
-        <h2 id="timetable-heading" class="mt-2 text-4xl font-medium text-ink sm:text-5xl">Classes &amp; sessions</h2>
-      </div>
-      <p class="max-w-md text-muted">
-        Swims, classes and gym sessions across all six centres, from each centre’s published timetable. Booking opens in our booking portal in a new tab.
-      </p>
-    </div>
-    <div class="mt-8">
-      <Timetable client:idle sessions={sessions} centres={centers.map(({ id, name, shortName, bookingSiteId }) => ({ id, name, shortName, bookingSiteId }))} />
-    </div>
+  <section aria-labelledby="timetable-cta" class="mx-auto max-w-6xl px-4 pt-24 sm:px-6">
+    <a
+      href="/timetable/"
+      class="group flex flex-col gap-4 rounded-2xl border border-neutral-200 bg-white p-6 shadow-soft hover:border-brand sm:flex-row sm:items-center sm:justify-between sm:p-8"
+    >
+      <span>
+        <span class="block text-sm font-semibold text-brand">The next 8 days</span>
+        <span id="timetable-cta" class="mt-1 block font-serif text-3xl font-medium text-ink sm:text-4xl">Classes &amp; sessions timetable</span>
+        <span class="mt-2 block text-muted">{sessions.length} swims, classes and gym sessions a week across all six centres.</span>
+      </span>
+      <span class="inline-flex shrink-0 items-center gap-2 self-start rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-white group-hover:bg-brand-hover sm:self-center"
+        >See the timetable
+        <svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </a>
   </section>
 </Layout>
